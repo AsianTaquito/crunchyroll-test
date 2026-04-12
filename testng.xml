@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    Crunchyroll Test Suite
+    preserve-order="true" guarantees classes run in the exact sequence listed below.
+    Each class picks up the shared browser session where the previous one left off.
+-->
+<suite name="CrunchyrollTestSuite" preserve-order="true" verbose="2">
+    <test name="CrunchyrollTests" preserve-order="true">
+        <classes>
+            <class name="TestCases.LoginTest"/>
+            <class name="TestCases.ProfileManagementTest"/>
+            <class name="TestCases.HomePageTest"/>
+            <class name="TestCases.SearchTest"/>
+            <class name="TestCases.NavigationTest"/>
+            <class name="TestCases.SubServicesTest"/>
+            <class name="TestCases.SettingsTest"/>
+            <class name="TestCases.ShowTest"/>
+        </classes>
+    </test>
+</suite>
+
