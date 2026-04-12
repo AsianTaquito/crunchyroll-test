@@ -27,8 +27,8 @@ public class ProfileManagementTest extends BaseTest {
                 "Should be back at login page (or home as guest) after logout, got: " + url);
         System.out.println("Logout works. Now at: " + url);
 
-        loginWithValidCredentials();   // re-establishes the session
-        System.out.println("Successfully logged back in.");
+        loginWithValidCredentials();
+        System.out.println("Successfully logged back in.\n");
     }
 
 
@@ -121,7 +121,7 @@ public class ProfileManagementTest extends BaseTest {
         clickElement(By.cssSelector("[data-t='save-profile-btn'], [data-t='create-profile-btn'], " +
                                     "button[type='submit'], [class*='save-btn'], [class*='create-btn']"));
         try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
-        System.out.println("New profile created successfully.");
+        System.out.println("New profile created successfully.\n");
     }
 
 
@@ -154,7 +154,7 @@ public class ProfileManagementTest extends BaseTest {
             toggle.click();
             System.out.println("User setting edited – test passed.");
         } catch (TimeoutException e) {
-            System.out.println("Toggle not found on profile edit page – test passed with partial verification.");
+            System.out.println("Toggle not found on profile edit page – test passed with partial verification.\n");
         }
     }
 
@@ -182,7 +182,7 @@ public class ProfileManagementTest extends BaseTest {
                                     "[aria-label*='Delete profile']"));
         clickElement(By.cssSelector("[data-t='confirm-btn'], [class*='confirm-btn'], " +
                                     "button[class*='confirm'], [aria-label*='Confirm']"));
-        System.out.println("Test profile deleted – test passed.");
+        System.out.println("Test profile deleted – test passed.\n");
     }
 
 
@@ -203,6 +203,6 @@ public class ProfileManagementTest extends BaseTest {
         sebiProfile.click();
 
         wait.until(ExpectedConditions.urlContains("crunchyroll.com"));
-        System.out.println("Switched to profile: Sebi – test passed.");
+        System.out.println("Switched to profile: Sebi – test passed.\n");
     }
 }

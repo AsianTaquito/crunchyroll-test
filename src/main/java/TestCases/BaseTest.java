@@ -34,8 +34,8 @@ public class BaseTest {
 
     // ── Shared credentials ────────────────────────────────────────────────────
     // Replace with real values before running the suite
-    protected static final String VALID_EMAIL    = "Mouye.martin@gmail.com";
-    protected static final String VALID_PASSWORD = "Alfonse-6952!";
+    protected static final String VALID_EMAIL    = "";
+    protected static final String VALID_PASSWORD = "";
 
     // Saved between runs so the CAPTCHA only ever has to be solved once
     private static final String COOKIE_FILE = "crunchyroll_session.cookies";

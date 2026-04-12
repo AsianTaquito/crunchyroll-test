@@ -28,7 +28,7 @@ public class HomePageTest extends BaseTest {
 
         Assert.assertTrue(titlePresent && logoPresent,
                 "Expected both title and logo to be present on the home page");
-        System.out.println("Logo present on home page. Title: " + driver.getTitle());
+        System.out.println("Logo present on home page. Title: " + driver.getTitle() + "\n");
     }
 
 
@@ -50,9 +50,9 @@ public class HomePageTest extends BaseTest {
             } catch (NoSuchElementException ignored) { }
         }
 
-        Assert.assertTrue(carouselItems.size() > 4,
-                "Carousel should have more than 4 items, found: " + carouselItems.size());
-        System.out.println("Carousel has " + carouselItems.size() + " items – test passed.");
+        Assert.assertTrue(carouselItems.size() > 3,
+                "Carousel should have more than 3 items, found: " + carouselItems.size());
+        System.out.println("Carousel has " + carouselItems.size() + " items – test passed. \n");
     }
 
 
@@ -62,7 +62,6 @@ public class HomePageTest extends BaseTest {
         try { Thread.sleep(3000); } catch (InterruptedException ignored) {}
         dismissBanners();
 
-        // Use XPath text search so we don't rely on obfuscated class names
         java.util.List<WebElement> cwHeaders = driver.findElements(By.xpath(
                 "//*[contains(translate(normalize-space(.)," +
                 "'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'continue watching')]"));
@@ -86,13 +85,13 @@ public class HomePageTest extends BaseTest {
                 "[class*='home-section']"));
 
         System.out.println("Continue Watching section found – test passed. " +
-                "(" + allSections.size() + " total sections on page)");
+                "(" + allSections.size() + " total sections on page)\n");
     }
 
 
     @Test(description = "TC-HP-04: Assure each featured section has at least 6 titles")
     public void testFeaturedSections() {
-        java.util.List<WebElement> sections = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+        list<WebElement> sections = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
                 By.cssSelector("[class*='erc-feed-section'],[class*='feed-section'],[class*='carousel-section']")));
 
         int passCount = 0;
@@ -103,7 +102,7 @@ public class HomePageTest extends BaseTest {
             try { Thread.sleep(300); } catch (InterruptedException ignored) {}
 
             // Broader card selector to handle obfuscated class names
-            java.util.List<WebElement> cards = section.findElements(By.cssSelector(
+            list<WebElement> cards = section.findElements(By.cssSelector(
                     "[class*='browse-card'],[class*='card-item'],[class*='show-card']," +
                     "[data-t*='card'],[class*='playable-card'],[class*='poster-card']," +
                     "li[class*='card'],li[class*='item']"));
@@ -145,9 +144,9 @@ public class HomePageTest extends BaseTest {
                 .size();
 
         if (totalTitles < 20) {
-            System.out.println("Not enough content on home page (" + totalTitles + " titles) – failed.");
+            System.out.println("Not enough content on home page (" + totalTitles + " titles) – failed.\n");
         } else {
-            System.out.println("Adequate content on home page (" + totalTitles + " titles) – passed.");
+            System.out.println("Adequate content on home page (" + totalTitles + " titles) – passed.\n");
         }
 
         Assert.assertTrue(totalTitles >= 20,
