@@ -34,18 +34,33 @@ public class SettingsTest extends BaseTest {
 
     }
 
-    @Test(description = "TC-ST-03: User can toggle autoplay setting")
-    public void testAutoplaySetting() {
+    @Test(description = "TC-ST-03: User can toggle notification settings ")
+    public void testNotifSettings() {
+        /*already in  settings from st-01 so just click- <a class="erc-account-nav-link" aria-label="" tabindex="0" data-t="account-nav-notifications" href="/account/notifications"><span class="text--gq6o- text--is-regular--M4487 text--is-l--iccTo">Email Notifications</span></a>
+        double check pressing that button went to https://www.crunchyroll.com/account/notifications- if true move on if not fail test
+        check if this toggle is on or off- <div class="toggle--euBHq toggle--is-checked--1b3CX toggle--is-full-width--K4YNn toggle-all-notifications"><label role="switch" aria-label="All Notifications" tabindex="0" aria-checked="true" class="toggle__controls--hn7in"><input class="toggle__input-element--Eru44" data-t="toggle-all-notifications" type="checkbox" checked="" name="toggle_all_notifications"><span class="text--gq6o- text--is-bold--yth2a text--is-m--pqiL- toggle__label--3kOF0">All Notifications</span><div class="toggle__switch--dlUNu"><div class="toggle__switch-icon--XDeV8"><svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-t="circle_checkmark_filled-svg" aria-hidden="true" role="img"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.332-2.957 1.414 1.414-5.207 5.207-2.957-2.957 1.414-1.414 1.543 1.543 3.793-3.793Z"></path></svg></div></div></label></div>
+        if toggle on turn it off and pass test
+        if toggle off turn it on and pass test*/
+    }
+
+    @Test(description = "TC-ST-04: User should be able to change email info if needed")
+    public void testChangeAccountInfo() {
+
+        /*still in settings so just click- <a class="erc-account-nav-link state-active" aria-label="" tabindex="0" data-t="account-nav-email" href="/account/email" aria-current="page"><span class="text--gq6o- text--is-regular--M4487 text--is-l--iccTo">Email</span></a>
+        assure that clicking the above took us to https://www.crunchyroll.com/account/email
+        click - <div class="actions-section"><button aria-label="" tabindex="0" class="button--xqVd0 button--is-type-one--3uIzT action-button" data-t="change-email-btn" type="button"><span class="call-to-action--PEidl call-to-action--is-m--RVdkI button__cta--LOqDH">Send email change link</span></button></div>
+        if all work test passed print out "change email link sent- check email"
+        */
 
     }
 
-    @Test(description = "TC-ST-04: User can change video quality setting")
-    public void testVideoQuality() {
+    @Test(description = "TC-ST-05: User can access customer support link")
+    public void testCustomerSupport() {
+        /* no need to navigate anywhere link is on same page
+        click - <a aria-label="" tabindex="0" class="page-action-link" href="https://help.crunchyroll.com/hc/en-us" target="_blank" data-t="customer-support-link">Customer Support</a>
+        assure that that takes user to https://help.crunchyroll.com/hc/en-us (should open in new tab make sure to close tab after test is done)
+         */
 
-    }
-
-    @Test(description = "TC-ST-05: User can toggle notification preferences")
-    public void testNotificationSettings() {
 
     }
 }

@@ -13,15 +13,13 @@ import java.util.List;
 
 public class HomePageTest extends BaseTest {
 
-    // ── Locators ──────────────────────────────────────────────────────────────
+    // Locators
 
-    // Logo: <a href="/discover" class="erc-logo state-scalable" aria-label="Crunchyroll logo">
-    //   SVGs inside carry data-t="crunchyroll-horizontal-svg" / data-t="crunchyroll-logo-only-svg"
     private static final By LOGO = By.cssSelector(
             "a.erc-logo, a[href='/discover'][aria-label*='logo'], " +
             "[data-t='crunchyroll-horizontal-svg'], [data-t='crunchyroll-logo-only-svg']");
 
-    // Hero carousel container
+    // Hero carousel
     private static final By HERO_CAROUSEL = By.cssSelector(
             "[class*='erc-hero-carousel'], [class*='hero-carousel'], [data-t*='hero-carousel']");
 
@@ -51,23 +49,12 @@ public class HomePageTest extends BaseTest {
             "[class*='playable-card'], [class*='poster-card'], " +
             "li[class*='card'], li[class*='item']");
 
-    // ── Setup ─────────────────────────────────────────────────────────────────
 
-    /**
-     * Ensures the browser is on the Crunchyroll home page before every test in
-     * this class, regardless of which page a prior test class left behind.
-     */
-    @BeforeClass
-    public void navigateToHome() {
-        driver.get(BASE_URL);
-        dismissBanners();
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
-    }
-
-    // ── Tests ─────────────────────────────────────────────────────────────────
+    // Tests
 
     @Test(description = "TC-HP-01: Assure homepage displays title & logo")
     public void titleANDlogo() {
+
         // Title check
         boolean titlePresent = driver.getTitle().contains("Crunchyroll");
         Assert.assertTrue(titlePresent,
@@ -84,6 +71,7 @@ public class HomePageTest extends BaseTest {
 
     @Test(description = "TC-HP-02: Test home page carousel")
     public void testCarousel() {
+
         // Wait for the hero carousel to be present (it loads asynchronously)
         List<WebElement> carousels = wait.until(
                 ExpectedConditions.presenceOfAllElementsLocatedBy(HERO_CAROUSEL));
@@ -92,7 +80,9 @@ public class HomePageTest extends BaseTest {
 
         // Scroll the carousel into view so lazy-loaded slides initialise
         scrollToElement(carousels.getFirst());
-        try { Thread.sleep(800); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(800);
+        } catch (InterruptedException ignored) {}
 
         // Verify at least one slide is present
         List<WebElement> slides = driver.findElements(CAROUSEL_SLIDES);
@@ -105,7 +95,10 @@ public class HomePageTest extends BaseTest {
 
         // Click next and wait for the animation
         nextButtons.getLast().click();
-        try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ignored) {}
 
         // Pagination dots confirm the carousel is fully initialised
         List<WebElement> paginationDots = driver.findElements(By.cssSelector(
@@ -119,15 +112,19 @@ public class HomePageTest extends BaseTest {
 
     @Test(description = "TC-HP-03: Assure Continue Watching section is displayed")
     public void testContinueWatching() {
+
         // Scroll down to trigger lazy-loaded sections, then back to top
         for (int i = 0; i < 3; i++) {
             scrollToBottom();
             try { Thread.sleep(800); } catch (InterruptedException ignored) {}
         }
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
-        try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
 
-        // Find any element whose visible text contains "continue watching" (case-insensitive)
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ignored) {}
+
+        // Find any element whose visible text contains "continue watching"
         List<WebElement> cwHeaders = driver.findElements(By.xpath(
                 "//*[contains(translate(normalize-space(.)," +
                 "'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'continue watching')]"));
@@ -136,10 +133,16 @@ public class HomePageTest extends BaseTest {
         if (cwHeaders.isEmpty()) {
             driver.get(BASE_URL);
             dismissBanners();
-            try { Thread.sleep(3000); } catch (InterruptedException ignored) {}
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException ignored) {}
+
             for (int i = 0; i < 3; i++) {
                 scrollToBottom();
-                try { Thread.sleep(800); } catch (InterruptedException ignored) {}
+                try {
+                    Thread.sleep(800);
+                } catch (InterruptedException ignored) {}
             }
             cwHeaders = driver.findElements(By.xpath(
                     "//*[contains(translate(normalize-space(.)," +
@@ -157,12 +160,14 @@ public class HomePageTest extends BaseTest {
 
     @Test(description = "TC-HP-04: Assure each featured section has at least 6 titles")
     public void testFeaturedSections() {
+
         List<WebElement> sections = wait.until(
                 ExpectedConditions.presenceOfAllElementsLocatedBy(FEED_SECTIONS));
 
         int passCount = 0;
         int failCount = 0;
 
+        //Count how many content cards are within each section
         for (WebElement section : sections) {
             scrollToElement(section);
             try { Thread.sleep(400); } catch (InterruptedException ignored) {}
@@ -196,10 +201,14 @@ public class HomePageTest extends BaseTest {
 
     @Test(description = "TC-HP-05: Assure home page has adequate content")
     public void testHPcontent() {
+
         // Scroll repeatedly to trigger infinite-scroll / lazy loading
         for (int i = 0; i < 5; i++) {
             scrollToBottom();
-            try { Thread.sleep(800); } catch (InterruptedException ignored) {}
+
+            try {
+                Thread.sleep(800);
+            } catch (InterruptedException ignored) {}
         }
 
         int totalTitles = driver.findElements(CONTENT_CARDS).size();

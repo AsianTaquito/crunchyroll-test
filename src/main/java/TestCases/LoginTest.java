@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    private static final String INVALID_EMAIL    = "invalid_user@example.com";
     private static final String INVALID_PASSWORD = "WrongPassword!";
 
 
@@ -71,7 +70,7 @@ public class LoginTest extends BaseTest {
                 By.cssSelector("input[name='password']")));
 
         emailField.clear();
-        emailField.sendKeys(INVALID_EMAIL);
+        emailField.sendKeys(VALID_EMAIL);
         passwordField.clear();
         passwordField.sendKeys(INVALID_PASSWORD);
 
