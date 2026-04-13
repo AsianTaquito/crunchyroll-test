@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -16,29 +15,24 @@ public class ShowTest extends BaseTest {
 
 
     // Series hero logo / title area
-    // <div class="hero-logo---Zh2A" data-t="series-hero-logo">
     private static final By SERIES_TITLE = By.cssSelector(
             "[data-t='series-hero-logo'], h1, [class*='hero-title'], [class*='series-hero__title']");
 
     // Synopsis / description
-    // <div class="erc-series-description details-section-item">
     private static final By SERIES_DESCRIPTION = By.cssSelector(
             "[class*='erc-series-description'], [class*='series-description'], " +
             "[data-t='series-description']");
 
     // Metadata detail rows: audio, subtitles, genres, content advisory
-    // <dl data-t="detail-row-audio-language">, <dl data-t="detail-row-genres">
     private static final By SERIES_METADATA = By.cssSelector(
             "[data-t='detail-row-audio-language'], [data-t='detail-row-genres'], " +
             "[data-t='detail-row-subtitles-language'], [class*='details-item'][data-t]");
 
-    // Episode cards  <div class="playable-card--GnRbX" data-t="episode-card ">
-    // data-t has a trailing space so use ^= (starts-with) instead of =
+    // Episode cards
     private static final By EPISODE_CARDS = By.cssSelector(
             "[data-t^='episode-card'], [class*='playable-card--']");
 
-    // Season dropdown trigger (custom component – NOT a native <select>)
-    // <div role="button" aria-label="Seasons" class="dropdown-trigger--P--FX …">
+    // Season dropdown trigger
     private static final By SEASON_DROPDOWN = By.cssSelector(
             "[aria-label='Seasons'][role='button'], " +
             "[class*='erc-seasons-select'] [role='button'], " +
@@ -49,8 +43,6 @@ public class ShowTest extends BaseTest {
             "[role='option'], [class*='season-list-item'], [class*='dropdown-item']");
 
     // Video player
-    // <div id="player-container" aria-label="Video Player">  /  <video id="bitmovinplayer-video-null">
-    // <div data-testid="player-controls-root">
     private static final By VIDEO_PLAYER = By.cssSelector(
             "video, [id='player-container'], [data-testid='player-controls-root'], " +
             "[class*='video-player'], [class*='player-container']");
@@ -59,13 +51,24 @@ public class ShowTest extends BaseTest {
 
     @Test(description = "TC-VP-01: Verify series info properly displays")
     public void seriesInfo() {
-        // Hero logo: <div class="hero-logo---Zh2A" data-t="series-hero-logo">
+        // Click logo to navigate back to home page
+        clickElement(By.cssSelector("a.erc-logo, a[href='/discover']"));
+        wait.until(ExpectedConditions.urlContains("/discover"));
+        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
+
+        // Click on One Piece from the home page feed
+        clickElement(By.cssSelector("a[href='/series/GRMG8ZQZR/one-piece']"));
+        wait.until(ExpectedConditions.urlContains("one-piece"));
+        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+
+        // check info
+        // series "Hero" logo/title
         boolean titlePresent = isElementPresent(SERIES_TITLE);
 
-        // Description: <div class="erc-series-description details-section-item"><p>…</p></div>
+        // Description
         boolean descPresent = isElementPresent(SERIES_DESCRIPTION);
 
-        // Metadata rows: <dl data-t="detail-row-audio-language">, <dl data-t="detail-row-genres">, …
+        // Metadata rows
         boolean metaPresent = isElementPresent(SERIES_METADATA);
 
         Assert.assertTrue(titlePresent, "Series title/logo should be displayed");
@@ -79,8 +82,9 @@ public class ShowTest extends BaseTest {
     @Test(description = "TC-VP-03: Verify episode details display correctly",
           dependsOnMethods = "seriesInfo")
     public void episodeDetails() {
+
+        //still on one piece page from previous test
         // Wait for episode cards to load
-        // <div class="playable-card--GnRbX" data-t="episode-card ">
         List<WebElement> episodes = wait.until(
                 ExpectedConditions.presenceOfAllElementsLocatedBy(EPISODE_CARDS));
 
@@ -88,22 +92,19 @@ public class ShowTest extends BaseTest {
 
         WebElement first = episodes.getFirst();
         scrollToElement(first);
-        try { Thread.sleep(300); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException ignored) {}
 
-        // Title — available in regular card body:
-        // <h3 class="playable-card__title--rgmp7"><a>E146 - Quit Dreaming!…</a></h3>
-        // Also present inside the hover DOM (hidden until hover):
-        // <h3 data-t="episode-title">…</h3>
+        // Title
         boolean hasTitle = !first.findElements(By.cssSelector(
                 "h3[class*='playable-card__title'], [data-t='episode-title']")).isEmpty();
 
-        // Sub/Dub availability — in the regular card footer:
-        // <div class="meta-tags--o8OYw" data-t="meta-tags"><span>Dub | Sub</span></div>
+        // Sub/Dub availability
         boolean hasSubDub = !first.findElements(By.cssSelector(
                 "[data-t='meta-tags'], [class*='meta-tags']")).isEmpty();
 
-        // Air date — inside the hover component DOM (exists in DOM even without visual hover):
-        // <span class="text--…" data-t="meta-info">07/05/2023</span>
+        // Air date
         boolean hasAirDate = !first.findElements(By.cssSelector(
                 "[data-t='meta-info'], [class*='playable-card-hover__release']")).isEmpty();
 
@@ -118,9 +119,8 @@ public class ShowTest extends BaseTest {
     @Test(description = "TC-VP-02: Verify drop down menu for seasons",
           dependsOnMethods = "episodeDetails")
     public void seasonsMenu() {
-        // The season selector is a custom dropdown — NOT a native <select>.
-        // Trigger: <div role="button" aria-label="Seasons" class="dropdown-trigger--P--FX …">
-        //          <div class="season-info"><span>Skypiea (144-206)</span></div>
+
+        // The season selector is a custom dropdown
         WebElement seasonTrigger = wait.until(
                 ExpectedConditions.elementToBeClickable(SEASON_DROPDOWN));
 
@@ -130,24 +130,34 @@ public class ShowTest extends BaseTest {
 
         // Open the dropdown
         seasonTrigger.click();
-        try { Thread.sleep(600); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(600);
+        } catch (InterruptedException ignored) {}
 
-        // Collect revealed options (e.g. <li role="option"> or <div class="dropdown-item">)
+        // Collect revealed options
         List<WebElement> options = wait.until(
                 ExpectedConditions.presenceOfAllElementsLocatedBy(SEASON_OPTIONS));
 
         Assert.assertTrue(options.size() > 1,
                 "Season dropdown should expose more than one season, found: " + options.size());
 
-        // Select a season that differs from the currently displayed one
-        for (WebElement opt : options) {
-            if (!opt.getText().trim().equals(currentSeason)) {
-                opt.click();
-                break;
-            }
+        // Specifically select the Skypiea season
+        WebElement skypiea = options.stream()
+                .filter(opt -> opt.getText().toLowerCase().contains("skypiea"))
+                .findFirst()
+                .orElse(null);
+
+        if (skypiea != null) {
+            skypiea.click();
+            System.out.println("Selected Skypiea season.");
+        } else {
+            System.out.println("Skypiea season not found - skipping selection.");
         }
 
-        try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ignored) {}
 
         // Confirm episode cards reloaded after the season switch
         wait.until(ExpectedConditions.presenceOfElementLocated(EPISODE_CARDS));
@@ -158,44 +168,32 @@ public class ShowTest extends BaseTest {
     @Test(description = "TC-VP-04: Test playback on episode 146",
           dependsOnMethods = "seasonsMenu")
     public void testPlayback() {
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
 
-        // Try to select the Skypiea (144–206) season so ep 146's card is in the list
         try {
-            WebElement trigger = wait.until(ExpectedConditions.elementToBeClickable(SEASON_DROPDOWN));
-            trigger.click();
-            try { Thread.sleep(600); } catch (InterruptedException ignored) {}
-            for (WebElement opt : driver.findElements(SEASON_OPTIONS)) {
-                String text = opt.getText();
-                if (text.contains("144") || text.toLowerCase().contains("skypiea")) {
-                    opt.click();
-                    try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
-                    break;
-                }
-            }
-        } catch (Exception ignored) {}
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
-        // Episode 146 card link — known href from HTML comment:
-        // <a href="/watch/GEVUZMQ3X/quit-dreaming-mock-town-the-town-of-ridicule">
+        // should already be on the Skypiea (144–206) season so now just select ep 146's card is in the list
+        // Episode 146 card link
         WebElement ep146 = wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.cssSelector("a[href*='GEVUZMQ3X']")));
 
         scrollToElement(ep146);
-        try { Thread.sleep(500); } catch (InterruptedException ignored) {}
-        // JS click bypasses any overlay that may intercept
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException ignored) {}
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", ep146);
 
-        // Extended wait — streaming player (Bitmovin) takes up to 30 s to initialise
-        // <div id="player-container" aria-label="Video Player">
-        // <video id="bitmovinplayer-video-null" src="blob:…">
-        // <div data-testid="player-controls-root">
+        // Extended wait — streaming player
         WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(30));
         longWait.until(ExpectedConditions.presenceOfElementLocated(VIDEO_PLAYER));
 
         // Seek to 9 minutes (540 s) and play
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("var v = document.querySelector('video'); if(v){ v.currentTime = 540; v.play(); }");
-        try { Thread.sleep(10000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException ignored) {}
 
         double currentTime = ((Number) js.executeScript(
                 "var v = document.querySelector('video'); return v ? v.currentTime : 0;")).doubleValue();
@@ -209,6 +207,9 @@ public class ShowTest extends BaseTest {
 
     @Test(description = "TC-VP-05: Test continue watching – assure playback works from home feed")
     public void continueWatching() {
+        // Click logo to go back to home page
+        clickElement(By.cssSelector("a.erc-logo, a[href='/discover']"));
+        wait.until(ExpectedConditions.urlContains("/discover"));
         try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
 
         // Scroll to trigger lazy loading of the history / continue-watching section
@@ -217,7 +218,9 @@ public class ShowTest extends BaseTest {
             try { Thread.sleep(800); } catch (InterruptedException ignored) {}
         }
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
-        try { Thread.sleep(500); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException ignored) {}
 
         // History section container: <div class="erc-history-collection" data-t="history">
         // Cards inside: <div class="collection-item"> > <div data-t="episode-card ">
@@ -230,17 +233,15 @@ public class ShowTest extends BaseTest {
 
         WebElement firstCard = cwLinks.getFirst();
         scrollToElement(firstCard);
-        try { Thread.sleep(500); } catch (InterruptedException ignored) {}
-        // JS click avoids any overlay/banner blocking the element
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException ignored) {}
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstCard);
 
         // Wait for navigation away from the home page
         wait.until(d -> !d.getCurrentUrl().equals(BASE_URL) && !d.getCurrentUrl().equals(BASE_URL + "/"));
 
-        // Wait for the Bitmovin video player to initialise
-        // <div id="player-container" aria-label="Video Player">
-        // <video id="bitmovinplayer-video-null" src="blob:…">
-        // <div data-testid="player-controls-root">
+
         WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(30));
         longWait.until(ExpectedConditions.presenceOfElementLocated(VIDEO_PLAYER));
         try { Thread.sleep(3000); } catch (InterruptedException ignored) {} // allow buffering
@@ -249,7 +250,9 @@ public class ShowTest extends BaseTest {
         double startTime = ((Number) js.executeScript(
                 "var v = document.querySelector('video'); return v ? v.currentTime : 0;")).doubleValue();
 
-        try { Thread.sleep(10000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException ignored) {}
 
         double endTime = ((Number) js.executeScript(
                 "var v = document.querySelector('video'); return v ? v.currentTime : 0;")).doubleValue();

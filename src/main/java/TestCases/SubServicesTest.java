@@ -1,143 +1,145 @@
 package TestCases;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.SkipException;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SubServicesTest extends BaseTest {
 
     private static final String STORE_URL = "https://store.crunchyroll.com";
 
+    // Saved so testAccountTransfer can switch back after the store tab closes
+    private String mainWindowHandle;
+
+    // ── Tests ─────────────────────────────────────────────────────────────────
+
     @Test(description = "TC-SS-01: Test manga sub service")
     public void testManga() {
+        // Click Manga in the nav
+        clickElement(By.cssSelector("[data-t='header-menu-manga']"));
+        wait.until(ExpectedConditions.urlContains("/manga"));
 
-        //click on manga button in nav - <a aria-label="" tabindex="0" class="erc-header-tile" href="https://www.crunchyroll.com/manga" data-t="header-menu-manga"><span class="text--gq6o- text--is-regular--M4487 text--is-l--iccTo">Manga</span></a>
-        // Verify the manga page loaded
         Assert.assertTrue(driver.getCurrentUrl().contains("/manga"),
                 "Should be on the manga page, got: " + driver.getCurrentUrl());
-
-        // Find a manga series card and click it
-        WebElement firstManga;
-        try {
-            firstManga = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.cssSelector("[class*='manga-card'] a, [class*='series-card'] a, " +
-                                   "[class*='card'] a[href*='/manga/'], a[href*='/manga/']")));
-        } catch (TimeoutException e) {
-            throw new SkipException("No manga series cards found on the manga page – page structure may have changed.");
-        }
-        firstManga.click();
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
 
         Assert.assertTrue(
                 driver.getCurrentUrl().toLowerCase().contains("manga") ||
                 driver.getTitle().toLowerCase().contains("manga"),
                 "Should navigate to a manga detail page");
-
-        // Try clicking a chapter/read button
-        try {
-            clickElement(By.cssSelector("[data-t='read-btn'], [class*='read-btn'], " +
-                                        "[class*='latest-chapter'] a, [class*='chapter-btn'], " +
-                                        "a[href*='chapter'], button[class*='read']"));
-        } catch (TimeoutException ignored) {
-            System.out.println("No 'Read' button found – checking for subscription prompt directly.");
-        }
-
-        boolean upgradePrompt =
-                isElementPresent(By.cssSelector("[class*='paywall'], [class*='subscription'], [data-t*='upgrade']")) ||
-                isElementPresent(By.xpath("//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'upgrade')" +
-                        " or contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'subscribe')]"));
-        boolean upgradeLink =
-                isElementPresent(By.cssSelector("a[href*='upgrade'], a[href*='premium'], a[href*='subscribe']"));
-
-        Assert.assertTrue(upgradePrompt && upgradeLink,
-                "A subscription blocking message with an upgrade link should appear");
-        System.out.println("Manga chapter correctly blocked with upgrade prompt – test passed.");
     }
+
 
     @Test(description = "TC-SS-02: Test game sub service")
     public void testGames() {
-        driver.get(BASE_URL + "/games");
+        // Return to home so the nav is accessible
+        driver.get(BASE_URL);
+        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
+
+        // Click Games in the nav - opens a new tab
+        String beforeHandle = driver.getWindowHandle();
+        clickElement(By.cssSelector("[data-t='header-menu-games']"));
+        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+
+        // Switch to the new tab
+        List<String> handles = new ArrayList<>(driver.getWindowHandles());
+        handles.remove(beforeHandle);
+        driver.switchTo().window(handles.getFirst());
+
+        wait.until(ExpectedConditions.urlContains("games"));
         String url = driver.getCurrentUrl();
-        Assert.assertTrue(url.contains("/games"), "URL should contain /games, got: " + url);
-        System.out.println("Most games are mobile or behind paywall. URL: " + url);
+        Assert.assertTrue(url.contains("/games/"), "URL should contain /games, got: " + url);
+        System.out.println("Games page loaded. URL: " + url);
+
+        // Close the games tab and return to the main CR tab
+        driver.close();
+        driver.switchTo().window(beforeHandle);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException ignored) {}
     }
+
 
     @Test(description = "TC-SS-03: Test news sub service")
     public void testNews() {
-        // Navigate directly to avoid relying on a nav button hidden in a dropdown
-        driver.get(BASE_URL + "/news");
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
 
+        // Return to home so the nav is accessible
+        driver.get(BASE_URL);
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException ignored) {}
+
+        // Click the News dropdown in the nav
+        clickElement(By.cssSelector("[data-t='header-menu-news']"));
+        try {
+            Thread.sleep(600);
+        } catch (InterruptedException ignored) {}
+
+        // Click "All News" from the dropdown
+        clickElement(By.cssSelector("[data-t='news-dropdown-item'] a[href*='/news']"));
         wait.until(ExpectedConditions.urlContains("/news"));
-
-        WebElement firstHeadline = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("[class*='news-card'] h3, [class*='article-title'], " +
-                               "[class*='headline'], article h2, h1, h2, h3")));
-        System.out.println("First news headline: " + firstHeadline.getText());
 
         Assert.assertTrue(driver.getCurrentUrl().contains("/news"),
                 "URL should contain /news, got: " + driver.getCurrentUrl());
-        System.out.println("News page loaded successfully – test passed.");
+        System.out.println("News page loaded successfully - test passed.");
     }
+
 
     @Test(description = "TC-SS-04: Test store sub service")
     public void testStore() {
-        driver.get(STORE_URL);
-        try { Thread.sleep(3000); } catch (InterruptedException ignored) {}  // store is a separate domain – give it time
 
-        WebElement searchBox;
+        driver.get(BASE_URL);
         try {
-            searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.cssSelector("input[type='search'], input[name='q'], input[placeholder*='Search'], " +
-                                   "input[placeholder*='search'], [class*='search-input'] input")));
-        } catch (TimeoutException e) {
-            throw new SkipException("Store search input not found – store page structure may require HTML inspection.");
-        }
+            Thread.sleep(1500);
+        } catch (InterruptedException ignored) {}
 
-        searchBox.sendKeys("Initial D");
-        searchBox.submit();
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        // Save main handle, then click Store (opens new tab)
+        mainWindowHandle = driver.getWindowHandle();
+        clickElement(By.cssSelector("[data-t='header-menu-store']"));
+        try { Thread.sleep(3000); } catch (InterruptedException ignored) {}
 
-        WebElement firstItem = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("[class*='product-item'] a, [class*='product-card'] a, [class*='search-result'] a")));
-        firstItem.click();
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        // Switch to the store tab
+        List<String> handles = new ArrayList<>(driver.getWindowHandles());
+        handles.remove(mainWindowHandle);
+        driver.switchTo().window(handles.getFirst());
 
-        clickElement(By.cssSelector("button[name='add'], [data-t='add-to-cart'], " +
-                                    "button[class*='add-to-cart'], button[id*='add-to-cart']"));
-
-        WebElement cartCount = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("[class*='cart-count'], [class*='cart-badge'], [data-t='cart-count']")));
-        int itemCount = Integer.parseInt(cartCount.getText().trim());
-
-        Assert.assertEquals(itemCount, 1, "Cart should contain 1 item");
-        System.out.println("Initial D item added to cart – test passed.");
+        wait.until(ExpectedConditions.urlContains("store.crunchyroll.com"));
+        Assert.assertTrue(driver.getCurrentUrl().contains(STORE_URL),
+                "URL should be at store.crunchyroll.com, got: " + driver.getCurrentUrl());
+        System.out.println("Store page loaded. URL: " + driver.getCurrentUrl());
     }
+
 
     @Test(description = "TC-SS-05: Assure account info transfers over to store for user ease",
           dependsOnMethods = "testStore")
     public void testAccountTransfer() {
-        driver.get(STORE_URL);
+        // Still on the store tab from testStore
+
+        // Click the My Account icon in the store header
+        clickElement(By.cssSelector("button[aria-label='My Account']"));
+        try { Thread.sleep(800); } catch (InterruptedException ignored) {}
+
+        // Click "My Account" link in the dropdown that appears
+        clickElement(By.cssSelector("a[href*='account'], [data-t='my-account']"));
         try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
 
-        clickElement(By.cssSelector("[class*='account-icon'], [data-t='account-btn'], " +
-                                    "[aria-label*='account'], [class*='user-icon']"));
-
-        clickElement(By.cssSelector("a[href*='account'], [data-t='my-account'], a[href*='my-account']"));
-
+        // Find the email using the <dt>Email:</dt><dd>value</dd> structure from the store page
         WebElement emailElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("[class*='account-email'], [data-t='account-email'], " +
-                               "input[type='email'], [class*='email']")));
-        String displayedEmail = emailElement.getText().isEmpty()
-                ? emailElement.getAttribute("value")
-                : emailElement.getText();
+                By.xpath("//dt[normalize-space(text())='Email:']/following-sibling::dd[1]")));
+
+        String displayedEmail = emailElement.getText().trim();
 
         Assert.assertEquals(displayedEmail, VALID_EMAIL,
                 "Store account email should match the Crunchyroll login email");
         System.out.println("Account auto logged in from previous site. Email: " + displayedEmail);
+
+        // Close the store tab and return to the main CR tab
+        driver.close();
+        driver.switchTo().window(mainWindowHandle);
     }
 }

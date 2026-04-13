@@ -33,7 +33,9 @@ public class SearchTest extends BaseTest {
         input.clear();
         input.sendKeys(query);
         input.sendKeys(Keys.ENTER);
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 
     /** Returns true if any search result cards are visible on the page. */

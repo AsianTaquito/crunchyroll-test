@@ -1,0 +1,24 @@
+2026/04/13-19:49:01.522 10e8 Reusing MANIFEST C:\Users\sebst\OneDrive\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\IndexedDB\https_www.crunchyroll.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/13-19:49:01.523 10e8 Recovering log #94
+2026/04/13-19:49:01.524 10e8 Reusing old log C:\Users\sebst\OneDrive\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\IndexedDB\https_www.crunchyroll.com_0.indexeddb.leveldb/000094.log 
+2026/04/13-19:49:01.540 5798 Level-0 table #99: started
+2026/04/13-19:49:01.543 5798 Level-0 table #99: 5707 bytes OK
+2026/04/13-19:49:01.545 5798 Delete type=0 #94
+2026/04/13-19:49:01.547 10e8 Manual compaction at level-0 from '\x00$\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00%\x00\x00\x00' @ 0 : 0; will stop at '\x00$\x00\x00\x05' @ 3969 : 1
+2026/04/13-19:49:01.547 10e8 Compacting 1@0 + 1@1 files
+2026/04/13-19:49:01.551 10e8 Generated table #100@0: 414 keys, 8160 bytes
+2026/04/13-19:49:01.552 10e8 Compacted 1@0 + 1@1 files => 8160 bytes
+2026/04/13-19:49:01.552 10e8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/04/13-19:49:01.553 10e8 Delete type=2 #99
+2026/04/13-19:49:01.554 10e8 Manual compaction at level-0 from '\x00$\x00\x00\x05' @ 3969 : 1 .. '\x00%\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/04/13-19:49:34.636 5798 Level-0 table #102: started
+2026/04/13-19:49:34.654 5798 Level-0 table #102: 1168 bytes OK
+2026/04/13-19:49:34.656 5798 Delete type=2 #96
+2026/04/13-19:49:34.656 5798 Delete type=0 #98
+2026/04/13-19:49:34.659 10e8 Manual compaction at level-0 from '\x00%\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00&\x00\x00\x00' @ 0 : 0; will stop at '\x00%\x00\x00\x05' @ 4000 : 1
+2026/04/13-19:49:34.659 10e8 Compacting 1@0 + 1@1 files
+2026/04/13-19:49:34.662 10e8 Generated table #103@0: 414 keys, 8166 bytes
+2026/04/13-19:49:34.662 10e8 Compacted 1@0 + 1@1 files => 8166 bytes
+2026/04/13-19:49:34.663 10e8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/04/13-19:49:34.663 10e8 Delete type=2 #102
+2026/04/13-19:49:34.665 10e8 Manual compaction at level-0 from '\x00%\x00\x00\x05' @ 4000 : 1 .. '\x00&\x00\x00\x00' @ 0 : 0; will stop at (end)

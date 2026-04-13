@@ -32,15 +32,14 @@ public class BaseTest {
 
     protected static final String BASE_URL       = "https://www.crunchyroll.com";
 
-    // ── Shared credentials ────────────────────────────────────────────────────
+    // Shared credentials
     // Replace with real values before running the suite
-    protected static final String VALID_EMAIL    = "";
-    protected static final String VALID_PASSWORD = "";
+    protected static final String VALID_EMAIL    = "mouye.martin@gmail.com";
+    protected static final String VALID_PASSWORD = "Alfonse-6952!";
 
     // Saved between runs so the CAPTCHA only ever has to be solved once
     private static final String COOKIE_FILE = "crunchyroll_session.cookies";
 
-    // ── Suite lifecycle ───────────────────────────────────────────────────────
 
     @BeforeSuite
     public synchronized void suiteSetUp() {
@@ -119,7 +118,7 @@ public class BaseTest {
         }
     }
 
-    // ── Chrome lock-file cleanup ──────────────────────────────────────────────
+    // Chrome lock-file cleanup
 
     /**
      * Deletes stale Chrome lock files from the given user-data-dir.
@@ -207,42 +206,9 @@ public class BaseTest {
 
     // ── Shared helpers ────────────────────────────────────────────────────────
 
-    /**
-     * Logs the current user out and waits until the login page is reached.
-     * Works whether the logout link is directly in the DOM or inside a user-menu dropdown.
-     * After this call the browser is on the /login page.
-     */
-    protected void logOut() {
-        // Some builds expose a direct logout link in the DOM (even if visually hidden in a menu)
-        if (isElementPresent(By.cssSelector("a[href*='logout']"))) {
-            driver.findElement(By.cssSelector("a[href*='logout']")).click();
-        } else {
-            // Otherwise click the user-menu/avatar to reveal the logout option
-            try {
-                clickElement(By.cssSelector(
-                        "[data-t='user-avatar'], [data-t='profile-icon'], " +
-                        "[class*='nav-avatar'], [data-t='account-menu-btn'], " +
-                        "[aria-label*='account'], [aria-label*='Account']"));
-                try { Thread.sleep(600); } catch (InterruptedException ignored) {}
-            } catch (Exception ignored) {}
-            // Now click the logout button/link inside the revealed menu
-            clickElement(By.cssSelector(
-                    "[data-t='logout-button'], a[href*='logout'], .logout-link, " +
-                    "[class*='logout'], [data-t*='sign-out']"));
-        }
-        wait.until(ExpectedConditions.urlContains("/login"));
-        // Navigate back to home so the next step always starts from a known URL
-        driver.get(BASE_URL);
-        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
-        dismissBanners();
-        System.out.println("Logged out successfully.");
-    }
-
-    /**
-     * Dismisses the phishing-awareness consent banner ("Continue" button) if present.
-     * Called after every navigation that could surface the banner.
-     */
+    //Dismisses the phishing-awareness consent banner ("Continue" button) if present.
     protected void dismissBanners() {
+
         try {
             WebElement btn = driver.findElement(
                     By.cssSelector("[data-t='grant-anonymous-consent-btn']"));
@@ -282,17 +248,17 @@ public class BaseTest {
         }
     }
 
-    /** Waits for an element to be clickable, then clicks it. */
+    /* Waits for an element to be clickable, then clicks it. */
     protected void clickElement(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
-    /** Scrolls an element into view via JavaScript. */
+    /* Scrolls an element into view via JavaScript. */
     protected void scrollToElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    /** Scrolls to the very bottom of the page. */
+    /* Scrolls to the very bottom of the page. */
     protected void scrollToBottom() {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="26" passed="19" failed="5" skipped="2">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-13T19:49:33 EDT" name="Command line suite" finished-at="2026-04-13T19:51:10 EDT" duration-ms="97238">
+    <groups>
+    </groups>
+    <test started-at="2026-04-13T19:49:33 EDT" name="Command line test" finished-at="2026-04-13T19:51:10 EDT" duration-ms="97238">
+      <class name="TestCases.SearchTest">
+        <test-method signature="testSearchPage()[pri:0, instance:TestCases.SearchTest@22b53226]" started-at="2026-04-13T19:50:19 EDT" name="testSearchPage" description="TC-SR-01: Assure search page loads" finished-at="2026-04-13T19:50:20 EDT" duration-ms="1420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchPage -->
+        <test-method signature="testEmptySearch()[pri:0, instance:TestCases.SearchTest@22b53226]" started-at="2026-04-13T19:50:20 EDT" name="testEmptySearch" description="TC-SR-02: Empty search cannot crash site or produce error page" finished-at="2026-04-13T19:50:22 EDT" depends-on-methods="TestCases.SearchTest.testSearchPage" duration-ms="1682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptySearch -->
+        <test-method signature="testSearch()[pri:0, instance:TestCases.SearchTest@22b53226]" started-at="2026-04-13T19:50:22 EDT" name="testSearch" description="TC-SR-03: Test Search Functionality" finished-at="2026-04-13T19:50:24 EDT" depends-on-methods="TestCases.SearchTest.testEmptySearch" duration-ms="2352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method signature="keywordSearch()[pri:0, instance:TestCases.SearchTest@22b53226]" started-at="2026-04-13T19:50:24 EDT" name="keywordSearch" description="TC-SR-04: Test Search by keyword" finished-at="2026-04-13T19:50:26 EDT" depends-on-methods="TestCases.SearchTest.testSearch" duration-ms="2466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- keywordSearch -->
+        <test-method signature="abbrevSearch()[pri:0, instance:TestCases.SearchTest@22b53226]" started-at="2026-04-13T19:50:26 EDT" name="abbrevSearch" description="TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)" finished-at="2026-04-13T19:50:29 EDT" depends-on-methods="TestCases.SearchTest.keywordSearch" duration-ms="2338" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Abbreviation 'jjk' did not match 'Jujutsu Kaisen' – Crunchyroll does not support abbreviation search expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Abbreviation 'jjk' did not match 'Jujutsu Kaisen' – Crunchyroll does not support abbreviation search expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at TestCases.SearchTest.abbrevSearch(SearchTest.java:145)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abbrevSearch -->
+      </class> <!-- TestCases.SearchTest -->
+      <class name="TestCases.LoginTest">
+        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:TestCases.LoginTest@18230356]" started-at="2026-04-13T19:49:33 EDT" name="suiteSetUp" finished-at="2026-04-13T19:49:33 EDT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetUp -->
+        <test-method signature="testButtons()[pri:0, instance:TestCases.LoginTest@18230356]" started-at="2026-04-13T19:49:33 EDT" name="testButtons" description="TC-LGN-01: Login or signup buttons should be present" finished-at="2026-04-13T19:49:36 EDT" duration-ms="2731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testButtons -->
+        <test-method signature="testInvalidLogin()[pri:0, instance:TestCases.LoginTest@18230356]" started-at="2026-04-13T19:49:36 EDT" name="testInvalidLogin" description="TC-LGN-04: Assure system rejects wrong credentials" finished-at="2026-04-13T19:49:46 EDT" duration-ms="10511" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74a0e8c1d77231494f041974b617caaa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74a0e8c1d77231494f041974b617caaa
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.LoginTest.testInvalidLogin(LoginTest.java:67)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method signature="testValidLogin()[pri:0, instance:TestCases.LoginTest@18230356]" started-at="2026-04-13T19:49:46 EDT" name="testValidLogin" description="TC-LGN-05: Assure user can login with valid credentials" finished-at="2026-04-13T19:49:54 EDT" duration-ms="7271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method signature="testInputFields()[pri:0, instance:TestCases.LoginTest@18230356]" started-at="2026-04-13T19:49:54 EDT" name="testInputFields" description="TC-LGN-02: Assure email/username &amp; password input fields are present" finished-at="2026-04-13T19:49:54 EDT" depends-on-methods="TestCases.LoginTest.testButtons" duration-ms="17" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"a.cr-login-button"}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74a0e8c1d77231494f041974b617caaa, findElement {value=a.cr-login-button, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74a0e8c1d77231494f041974b617caaa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a.cr-login-button"}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74a0e8c1d77231494f041974b617caaa, findElement {value=a.cr-login-button, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74a0e8c1d77231494f041974b617caaa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at TestCases.LoginTest.testInputFields(LoginTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInputFields -->
+        <test-method signature="testForgotPassword()[pri:0, instance:TestCases.LoginTest@18230356]" started-at="2026-04-13T19:49:54 EDT" name="testForgotPassword" description="TC-LGN-03: Assure forgot password link works" finished-at="2026-04-13T19:49:54 EDT" depends-on-methods="TestCases.LoginTest.testInputFields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.LoginTest.testForgotPassword() on instance TestCases.LoginTest@18230356 depends on not successfully finished methods 
+[TestCases.LoginTest.testInputFields() on instance TestCases.LoginTest@18230356]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.LoginTest.testForgotPassword() on instance TestCases.LoginTest@18230356 depends on not successfully finished methods 
+[TestCases.LoginTest.testInputFields() on instance TestCases.LoginTest@18230356]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPassword -->
+        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:TestCases.LoginTest@18230356]" started-at="2026-04-13T19:51:10 EDT" name="suiteTearDown" finished-at="2026-04-13T19:51:11 EDT" duration-ms="506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteTearDown -->
+      </class> <!-- TestCases.LoginTest -->
+      <class name="TestCases.SubServicesTest">
+        <test-method is-config="true" signature="goHome()[pri:0, instance:TestCases.SubServicesTest@726e5805]" started-at="2026-04-13T19:50:40 EDT" name="goHome" finished-at="2026-04-13T19:50:49 EDT" duration-ms="9631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goHome -->
+        <test-method signature="testGames()[pri:0, instance:TestCases.SubServicesTest@726e5805]" started-at="2026-04-13T19:50:49 EDT" name="testGames" description="TC-SS-02: Test game sub service" finished-at="2026-04-13T19:50:56 EDT" duration-ms="6311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGames -->
+        <test-method signature="testManga()[pri:0, instance:TestCases.SubServicesTest@726e5805]" started-at="2026-04-13T19:50:56 EDT" name="testManga" description="TC-SS-01: Test manga sub service" finished-at="2026-04-13T19:51:01 EDT" duration-ms="4833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testManga -->
+        <test-method signature="testNews()[pri:0, instance:TestCases.SubServicesTest@726e5805]" started-at="2026-04-13T19:51:01 EDT" name="testNews" description="TC-SS-03: Test news sub service" finished-at="2026-04-13T19:51:05 EDT" duration-ms="4162" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <div role="button" aria-label="" tabindex="0" class="erc-header-tile news-menu-tile" aria-expanded="false" aria-haspopup="menu" aria-controls="news-menu" data-t="header-menu-news">...</div> is not clickable at point (858, 30). Other element would receive the click: <div class="erc-multiple-profiles-layout state-contained erc-profiles-select">...</div>
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.4B27796B41DA5794A797BDABFCC71AFD.e.6453}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -> css selector: [data-t='header-menu-news']]
+Session ID: 74a0e8c1d77231494f041974b617caaa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div role="button" aria-label="" tabindex="0" class="erc-header-tile news-menu-tile" aria-expanded="false" aria-haspopup="menu" aria-controls="news-menu" data-t="header-menu-news">...</div> is not clickable at point (858, 30). Other element would receive the click: <div class="erc-multiple-profiles-layout state-contained erc-profiles-select">...</div>
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.4B27796B41DA5794A797BDABFCC71AFD.e.6453}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -> css selector: [data-t='header-menu-news']]
+Session ID: 74a0e8c1d77231494f041974b617caaa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at TestCases.BaseTest.clickElement(BaseTest.java:253)
+at TestCases.SubServicesTest.testNews(SubServicesTest.java:89)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNews -->
+        <test-method signature="testStore()[pri:0, instance:TestCases.SubServicesTest@726e5805]" started-at="2026-04-13T19:51:05 EDT" name="testStore" description="TC-SS-04: Test store sub service" finished-at="2026-04-13T19:51:10 EDT" duration-ms="5571" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a aria-label="Store - open in a new tab" tabindex="0" class="erc-header-tile erc-header-store-link" href="https://store.crunchyroll.com/?utm_source=web" target="_blank" data-t="header-menu-store">...</a> is not clickable at point (772, 30). Other element would receive the click: <div class="erc-multiple-profiles-layout state-contained erc-profiles-select">...</div>
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.34220813229EFF83DC37D9E5A5FD743D.e.6496}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -> css selector: [data-t='header-menu-store']]
+Session ID: 74a0e8c1d77231494f041974b617caaa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a aria-label="Store - open in a new tab" tabindex="0" class="erc-header-tile erc-header-store-link" href="https://store.crunchyroll.com/?utm_source=web" target="_blank" data-t="header-menu-store">...</a> is not clickable at point (772, 30). Other element would receive the click: <div class="erc-multiple-profiles-layout state-contained erc-profiles-select">...</div>
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.34220813229EFF83DC37D9E5A5FD743D.e.6496}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -> css selector: [data-t='header-menu-store']]
+Session ID: 74a0e8c1d77231494f041974b617caaa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at TestCases.BaseTest.clickElement(BaseTest.java:253)
+at TestCases.SubServicesTest.testStore(SubServicesTest.java:114)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStore -->
+        <test-method signature="testAccountTransfer()[pri:0, instance:TestCases.SubServicesTest@726e5805]" started-at="2026-04-13T19:51:10 EDT" name="testAccountTransfer" description="TC-SS-05: Assure account info transfers over to store for user ease" finished-at="2026-04-13T19:51:10 EDT" depends-on-methods="TestCases.SubServicesTest.testStore" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@726e5805 depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@726e5805]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@726e5805 depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@726e5805]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccountTransfer -->
+      </class> <!-- TestCases.SubServicesTest -->
+      <class name="TestCases.HomePageTest">
+        <test-method signature="titleANDlogo()[pri:0, instance:TestCases.HomePageTest@531c311e]" started-at="2026-04-13T19:50:08 EDT" name="titleANDlogo" description="TC-HP-01: Assure homepage displays title &amp; logo" finished-at="2026-04-13T19:50:08 EDT" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleANDlogo -->
+        <test-method signature="testCarousel()[pri:0, instance:TestCases.HomePageTest@531c311e]" started-at="2026-04-13T19:50:08 EDT" name="testCarousel" description="TC-HP-02: Test home page carousel" finished-at="2026-04-13T19:50:10 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="2338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCarousel -->
+        <test-method signature="testContinueWatching()[pri:0, instance:TestCases.HomePageTest@531c311e]" started-at="2026-04-13T19:50:10 EDT" name="testContinueWatching" description="TC-HP-03: Assure Continue Watching section is displayed" finished-at="2026-04-13T19:50:14 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="3989" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContinueWatching -->
+        <test-method signature="testHPcontent()[pri:0, instance:TestCases.HomePageTest@531c311e]" started-at="2026-04-13T19:50:14 EDT" name="testHPcontent" description="TC-HP-05: Assure home page has adequate content" finished-at="2026-04-13T19:50:19 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="4376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHPcontent -->
+      </class> <!-- TestCases.HomePageTest -->
+      <class name="TestCases.NavigationTest">
+        <test-method signature="testLogoNav()[pri:0, instance:TestCases.NavigationTest@1fcb4808]" started-at="2026-04-13T19:50:29 EDT" name="testLogoNav" description="TC-NAV-01: Assure Crunchyroll logo returns user to homepage" finished-at="2026-04-13T19:50:30 EDT" duration-ms="1584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogoNav -->
+        <test-method signature="navLinks()[pri:0, instance:TestCases.NavigationTest@1fcb4808]" started-at="2026-04-13T19:50:30 EDT" name="navLinks" description="TC-NAV-02: Assure there is an easy navigation bar with multiple links" finished-at="2026-04-13T19:50:36 EDT" depends-on-methods="TestCases.NavigationTest.testLogoNav" duration-ms="5382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navLinks -->
+        <test-method signature="watchlistNav()[pri:0, instance:TestCases.NavigationTest@1fcb4808]" started-at="2026-04-13T19:50:36 EDT" name="watchlistNav" description="TC-NAV-03: Assure easy navigation to watchlists" finished-at="2026-04-13T19:50:39 EDT" depends-on-methods="TestCases.NavigationTest.navLinks" duration-ms="2910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- watchlistNav -->
+        <test-method signature="navByCategory()[pri:0, instance:TestCases.NavigationTest@1fcb4808]" started-at="2026-04-13T19:50:39 EDT" name="navByCategory" description="TC-NAV-04: Assure there is a category/genre filter/easy navigation" finished-at="2026-04-13T19:50:40 EDT" depends-on-methods="TestCases.NavigationTest.watchlistNav" duration-ms="1157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navByCategory -->
+        <test-method signature="searchNav()[pri:0, instance:TestCases.NavigationTest@1fcb4808]" started-at="2026-04-13T19:50:40 EDT" name="searchNav" description="TC-NAV-05: Assure nav has a search icon/bar" finished-at="2026-04-13T19:50:40 EDT" depends-on-methods="TestCases.NavigationTest.navByCategory" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchNav -->
+      </class> <!-- TestCases.NavigationTest -->
+      <class name="TestCases.ProfileManagementTest">
+        <test-method signature="testLogout()[pri:0, instance:TestCases.ProfileManagementTest@60d1a32f]" started-at="2026-04-13T19:49:54 EDT" name="testLogout" description="TC-PM-01: Assure user can log out and log back in" finished-at="2026-04-13T19:50:01 EDT" duration-ms="7512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogout -->
+        <test-method signature="chooseProfile()[pri:0, instance:TestCases.ProfileManagementTest@60d1a32f]" started-at="2026-04-13T19:50:01 EDT" name="chooseProfile" description="TC-PM-05: Assure user can choose their own profile" finished-at="2026-04-13T19:50:08 EDT" depends-on-methods="TestCases.ProfileManagementTest.testLogout" duration-ms="6533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseProfile -->
+      </class> <!-- TestCases.ProfileManagementTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

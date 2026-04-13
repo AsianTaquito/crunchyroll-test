@@ -27,7 +27,6 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(testLoginButton && testSignUpButton,
                 "Login & sign up buttons should both be present");
 
-        driver.findElement(By.cssSelector("a.cr-login-button")).click();
         System.out.println("Log in & sign up buttons both present. Proceeding to login page.\n");
     }
 
@@ -35,19 +34,22 @@ public class LoginTest extends BaseTest {
     @Test(description = "TC-LGN-02: Assure email/username & password input fields are present",
           dependsOnMethods = "testButtons")
     public void testInputFields() {
+        driver.findElement(By.cssSelector("a.cr-login-button")).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("input[name='email']")));
 
         boolean emailPresent = isElementPresent(By.cssSelector("input[name='email']"));
-
-
         boolean passwordPresent = isElementPresent(By.cssSelector("input[name='password']"));
 
         Assert.assertTrue(emailPresent && passwordPresent,
                 "Both email & password input fields should be present");
+        System.out.println("Email & password input fields are present");
     }
 
 
     @Test(description = "TC-LGN-03: Assure forgot password link works",
-          dependsOnMethods = "testButtons")
+          dependsOnMethods = "testInputFields")
     public void testForgotPassword() {
 
         boolean forgotPasswordLinkPresent = isElementPresent(By.cssSelector("a[data-t='forgot-password-link']"));

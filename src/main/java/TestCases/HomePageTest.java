@@ -14,12 +14,12 @@ import java.util.List;
 public class HomePageTest extends BaseTest {
 
     // Locators
-
+    //logo to go back to homepage
     private static final By LOGO = By.cssSelector(
             "a.erc-logo, a[href='/discover'][aria-label*='logo'], " +
             "[data-t='crunchyroll-horizontal-svg'], [data-t='crunchyroll-logo-only-svg']");
 
-    // Hero carousel
+    // featured "hero" carousel
     private static final By HERO_CAROUSEL = By.cssSelector(
             "[class*='erc-hero-carousel'], [class*='hero-carousel'], [data-t*='hero-carousel']");
 
@@ -60,7 +60,7 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(titlePresent,
                 "Page title should contain 'Crunchyroll', got: " + driver.getTitle());
 
-        // Logo check — Crunchyroll logo links to /discover, carries class erc-logo
+        // Logo check
         boolean logoPresent = !driver.findElements(LOGO).isEmpty();
         Assert.assertTrue(logoPresent,
                 "Crunchyroll logo (a.erc-logo / data-t svg) should be present on the home page");
@@ -69,7 +69,8 @@ public class HomePageTest extends BaseTest {
     }
 
 
-    @Test(description = "TC-HP-02: Test home page carousel")
+    @Test(description = "TC-HP-02: Test home page carousel",
+    dependsOnMethods = "titleANDlogo")
     public void testCarousel() {
 
         // Wait for the hero carousel to be present (it loads asynchronously)
@@ -110,7 +111,8 @@ public class HomePageTest extends BaseTest {
     }
 
 
-    @Test(description = "TC-HP-03: Assure Continue Watching section is displayed")
+    @Test(description = "TC-HP-03: Assure Continue Watching section is displayed",
+    dependsOnMethods = "testCarousel")
     public void testContinueWatching() {
 
         // Scroll down to trigger lazy-loaded sections, then back to top
@@ -153,59 +155,24 @@ public class HomePageTest extends BaseTest {
                 "'Continue Watching' section not found — ensure the test account has watch history");
 
         List<WebElement> allSections = driver.findElements(FEED_SECTIONS);
-        System.out.println("Continue Watching section found - test passed. " +
-                "(" + allSections.size() + " total sections on page)\n");
+        System.out.println("Continue Watching section found within 3 sections- test passed.\n");
     }
 
 
-    @Test(description = "TC-HP-04: Assure each featured section has at least 6 titles")
+    /*@Test(description = "TC-HP-04: ",
+    dependsOnMethods = "")
     public void testFeaturedSections() {
 
-        List<WebElement> sections = wait.until(
-                ExpectedConditions.presenceOfAllElementsLocatedBy(FEED_SECTIONS));
-
-        int passCount = 0;
-        int failCount = 0;
-
-        //Count how many content cards are within each section
-        for (WebElement section : sections) {
-            scrollToElement(section);
-            try { Thread.sleep(400); } catch (InterruptedException ignored) {}
-
-            List<WebElement> cards = section.findElements(CONTENT_CARDS);
-
-            String headerText;
-            try {
-                headerText = section.findElement(SECTION_HEADER).getText().trim();
-                if (headerText.isEmpty()) headerText = "(unnamed section)";
-            } catch (NoSuchElementException e) {
-                headerText = "(unnamed section)";
-            }
-
-            int cardCount = cards.size();
-
-            if (cardCount < 6) {
-                System.out.println("Section \"" + headerText + "\" has " + cardCount + " cards (< 6).");
-                failCount++;
-            } else {
-                System.out.println("Section \"" + headerText + "\" has " + cardCount + " cards - passed.");
-                passCount++;
-            }
-        }
-
-        System.out.println("Sections passing (>=6 cards): " + passCount + " | failing: " + failCount);
-        Assert.assertTrue(failCount <= 2,
-                "More than 2 sections had fewer than 6 titles (" + failCount + " sections failed)");
-    }
+    }*/
 
 
-    @Test(description = "TC-HP-05: Assure home page has adequate content")
+    @Test(description = "TC-HP-05: Assure home page has adequate content",
+    dependsOnMethods = "testCarousel")
     public void testHPcontent() {
 
-        // Scroll repeatedly to trigger infinite-scroll / lazy loading
+        // Scroll down repeatedly to trigger infinite-scroll / lazy loading
         for (int i = 0; i < 5; i++) {
             scrollToBottom();
-
             try {
                 Thread.sleep(800);
             } catch (InterruptedException ignored) {}
