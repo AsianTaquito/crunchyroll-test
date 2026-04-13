@@ -14,9 +14,8 @@ public class SubServicesTest extends BaseTest {
 
     @Test(description = "TC-SS-01: Test manga sub service")
     public void testManga() {
-        driver.get(BASE_URL + "/manga");
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
 
+        //click on manga button in nav - <a aria-label="" tabindex="0" class="erc-header-tile" href="https://www.crunchyroll.com/manga" data-t="header-menu-manga"><span class="text--gq6o- text--is-regular--M4487 text--is-l--iccTo">Manga</span></a>
         // Verify the manga page loaded
         Assert.assertTrue(driver.getCurrentUrl().contains("/manga"),
                 "Should be on the manga page, got: " + driver.getCurrentUrl());
