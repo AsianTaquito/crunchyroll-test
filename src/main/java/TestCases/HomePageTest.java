@@ -159,20 +159,50 @@ public class HomePageTest extends BaseTest {
     }
 
 
-    /*@Test(description = "TC-HP-04: ",
-    dependsOnMethods = "")
-    public void testFeaturedSections() {
+    @Test(description = "TC-HP-04: Assure home page has footer with extra links",
+    dependsOnMethods = "titleANDlogo")
+    public void testFooterLinks() {
 
-    }*/
+        // Scroll to bottom to trigger footer load
+        scrollToBottom();
+        try {
+            Thread.sleep(1000); } catch (InterruptedException ignored) {}
+
+        // Wait for the footer to be present
+        WebElement footer = wait.until(
+                ExpectedConditions.presenceOfElementLocated(By.cssSelector("[data-t='footer']")));
+
+        // Scroll footer into view
+        scrollToElement(footer);
+        try { Thread.sleep(500); } catch (InterruptedException ignored) {}
+
+        // Collect all anchor links inside the footer
+        List<WebElement> footerLinks = footer.findElements(By.tagName("a"));
+
+        // Print each link to the terminal
+        System.out.println("Footer links found (" + footerLinks.size() + " total):");
+        for (WebElement link : footerLinks) {
+            String text = link.getText().trim();
+            String href = link.getAttribute("href");
+            if (!text.isEmpty()) {
+                System.out.println("  - " + text + " -> " + href);
+            }
+        }
+
+        Assert.assertTrue(footerLinks.size() > 5,
+                "Footer should have more than 5 links, found: " + footerLinks.size());
+
+        System.out.println("Footer link check passed with " + footerLinks.size() + " links.\n");
+    }
 
 
     @Test(description = "TC-HP-05: Assure home page has adequate content",
     dependsOnMethods = "testCarousel")
     public void testHPcontent() {
 
-        // Scroll down repeatedly to trigger infinite-scroll / lazy loading
+        // last test left us at the bottom so now scroll to top
         for (int i = 0; i < 5; i++) {
-            scrollToBottom();
+            ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
             try {
                 Thread.sleep(800);
             } catch (InterruptedException ignored) {}

@@ -55,6 +55,10 @@ public class NavigationTest extends BaseTest {
                 "Clicking the logo should navigate back to the homepage (/discover)");
 
         System.out.println("Logo navigation worked. URL: " + driver.getCurrentUrl() + "\n");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -74,6 +78,10 @@ public class NavigationTest extends BaseTest {
                 System.out.println("  - \"" + text + "\" -> " + href);
             }
         }
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -106,6 +114,10 @@ public class NavigationTest extends BaseTest {
                 "Clicking History tab should navigate to /history");
 
         System.out.println("\nWatchlist, Crunchylist, and History nav links all work.\n");
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -131,6 +143,10 @@ public class NavigationTest extends BaseTest {
             String text = genre.getText();
             if (text != null && !text.isBlank()) System.out.println("  - " + text);
         }
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -146,5 +162,9 @@ public class NavigationTest extends BaseTest {
         Assert.assertTrue(searchPresent,
                 "A search icon or search bar should be present in the nav bar");
         System.out.println("\nSearch icon/bar found in nav - test passed.\n");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 }

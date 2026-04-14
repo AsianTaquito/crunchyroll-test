@@ -186,7 +186,9 @@ public class SubServicesTest extends BaseTest {
 
         // Click "My Account" link in the dropdown that appears
         clickElement(By.cssSelector("a[href*='account'], [data-t='my-account']"));
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         // Find the email
         WebElement emailElement = wait.until(ExpectedConditions.visibilityOfElementLocated(

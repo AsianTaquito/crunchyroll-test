@@ -74,7 +74,7 @@ public class BaseTest {
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Navigate to the domain first — required before cookies can be added
+        // not questioning any of this cause it skips the captcha as needed.
         driver.get(BASE_URL);
         try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
 
@@ -238,7 +238,7 @@ public class BaseTest {
         } catch (NoSuchElementException ignored) { }
     }
 
-    /** Returns true if at least one element matching the locator exists in the DOM. */
+    // Returns true if at least one element matching the locator exists
     protected boolean isElementPresent(By locator) {
         try {
             driver.findElement(locator);
@@ -248,26 +248,22 @@ public class BaseTest {
         }
     }
 
-    /* Waits for an element to be clickable, then clicks it. */
+    // Waits for an element to be clickable, then clicks it.
     protected void clickElement(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
-    /* Scrolls an element into view via JavaScript. */
+    // Scrolls an element into view via JavaScript.
     protected void scrollToElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    /* Scrolls to the very bottom of the page. */
+    // Scrolls to the very bottom of the page.
     protected void scrollToBottom() {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
 
-    /**
-     * Logs in and saves session cookies.
-     * Called by LoginTest.testValidLogin (establishes the suite session)
-     * and ProfileManagementTest.testLogout (re-establishes after logout).
-     */
+    //logs in to valid account
     protected void loginWithValidCredentials() {
         driver.get(BASE_URL + "/login");
 
@@ -281,7 +277,7 @@ public class BaseTest {
 
         driver.findElement(By.cssSelector("button[type='submit']")).click();
         wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("/login")));
-        dismissBanners();   // banner can reappear after login
+        dismissBanners();
 
         // Persist cookies so the next run can skip CAPTCHA
         saveSessionCookies();

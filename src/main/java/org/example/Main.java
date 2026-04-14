@@ -14,13 +14,13 @@ public class Main {
             TestNG testng = new TestNG();
             testng.setTestClasses(new Class[]{
                 LoginTest.class,
-                    //ProfileManagementTest.class,
-                /*HomePageTest.class,
+                    ProfileManagementTest.class,
+                HomePageTest.class,
                 SearchTest.class,
                 NavigationTest.class,
                 SubServicesTest.class,
                 SettingsTest.class,
-                ShowTest.class*/
+                ShowTest.class
             });
             testng.run();
         } finally {

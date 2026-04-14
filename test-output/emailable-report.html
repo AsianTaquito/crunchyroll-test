@@ -9,26 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Command line suite</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">17,908</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12,092</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCases.LoginTest</td><td><a href="#m0">testValidLogin</a></td><td rowspan="1">1776146275590</td><td rowspan="1">11314</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">TestCases.LoginTest</td><td><a href="#m1">testButtons</a></td><td rowspan="1">1776146269010</td><td rowspan="1">2306</td></tr><tr class="passedeven"><td><a href="#m2">testForgotPassword</a></td><td rowspan="1">1776146273388</td><td rowspan="1">7</td></tr><tr class="passedeven"><td><a href="#m3">testInputFields</a></td><td rowspan="1">1776146271319</td><td rowspan="1">2069</td></tr><tr class="passedeven"><td><a href="#m4">testInvalidLogin</a></td><td rowspan="1">1776146273396</td><td rowspan="1">2193</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">TestCases.LoginTest</td><td><a href="#m0">testButtons</a></td><td rowspan="1">1776181242514</td><td rowspan="1">2314</td></tr><tr class="passedeven"><td><a href="#m1">testForgotPassword</a></td><td rowspan="1">1776181246897</td><td rowspan="1">7</td></tr><tr class="passedeven"><td><a href="#m2">testInputFields</a></td><td rowspan="1">1776181244830</td><td rowspan="1">2067</td></tr><tr class="passedeven"><td><a href="#m3">testInvalidLogin</a></td><td rowspan="1">1776181246905</td><td rowspan="1">2217</td></tr><tr class="passedeven"><td><a href="#m4">testValidLogin</a></td><td rowspan="1">1776181249123</td><td rowspan="1">5468</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">TestCases.LoginTest#testValidLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition to not be valid: url to contain &quot;/login&quot;. Current url: &quot;https://sso.crunchyroll.com/login?return_url=%2Fauthorize%3Fclient_id%3Dnoaihdevm_6iyg0a8l0q%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252F&quot; (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63885}, goog:processID: 19052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63885/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c028f25e732b77f7f01e619a944836bf
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at TestCases.BaseTest.loginWithValidCredentials(BaseTest.java:283)
-	at TestCases.LoginTest.testValidLogin(LoginTest.java:101)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.example.Main.main(Main.java:25)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestCases.LoginTest#testButtons</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestCases.LoginTest#testForgotPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">TestCases.LoginTest#testInputFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">TestCases.LoginTest#testInvalidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">TestCases.LoginTest#testButtons</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCases.LoginTest#testForgotPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestCases.LoginTest#testInputFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestCases.LoginTest#testInvalidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestCases.LoginTest#testValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

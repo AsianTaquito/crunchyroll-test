@@ -30,9 +30,9 @@ public class    ProfileManagementTest extends BaseTest {
 
     }
 
-/*
+
     @Test(description = "TC-PM-02: Assure user can add new user profile to account",
-          dependsOnMethods = "testLogout")
+    dependsOnMethods = "testLogout")
     public void addNewUser() {
 
         try {
@@ -40,79 +40,23 @@ public class    ProfileManagementTest extends BaseTest {
         } catch (InterruptedException ignored) {}
         dismissBanners();
 
-        //click add new profile
+        // Navigate to profile management page
+        clickElement(By.cssSelector("[data-t='edit-profile-button']"));
+        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
+
+        // Click add new profile button
         clickElement(By.cssSelector("a[data-t='add-profile-button']"));
         try {
             Thread.sleep(1500);
         } catch (InterruptedException ignored) {}
 
-        // configure/change wallpaper
-        if (isElementPresent(By.cssSelector(".edit-overlay"))) {
-            try {
-                clickElement(By.cssSelector(".edit-overlay"));
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ignored) {}
-
-                //choose random wallpaper
-                if (isElementPresent(By.cssSelector("[data-card-index='1'] .wallpaper-thumbnail"))) {
-                    driver.findElement(By.cssSelector("[data-card-index='1'] .wallpaper-thumbnail")).click();
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException ignored) {}
-                }
-
-                // save
-                if (isElementPresent(By.cssSelector("[data-t='save-wallpaper-btn']"))) {
-                    clickElement(By.cssSelector("[data-t='save-wallpaper-btn']"));
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException ignored) {}
-                }
-            } catch (TimeoutException e) {
-                System.out.println("Wallpaper editor not available – skipping.");
-            }
-        }
-
-        // select profile pic/avatar
-        if (isElementPresent(By.cssSelector(".avatar-edit-overlay"))) {
-            try {
-                clickElement(By.cssSelector(".avatar-edit-overlay"));
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ignored) {}
-
-                // select icon
-                if (isElementPresent(By.cssSelector("[data-card-index='1'] .avatar-option"))) {
-                    driver.findElement(By.cssSelector("[data-card-index='1'] .avatar-option")).click();
-                }
-
-                // save
-                if (isElementPresent(By.cssSelector("[data-t='save-avatar-btn']"))) {
-                    clickElement(By.cssSelector("[data-t='save-avatar-btn']"));
-                } else {
-                    driver.findElement(By.cssSelector("body")).sendKeys(Keys.ESCAPE);
-                }
-                try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
-            } catch (TimeoutException e) {
-                System.out.println("Avatar editor not available – skipping.");
-            }
-        }
-
-        // Profile name
+        // Enter profile name
         WebElement profileNameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("input[name='profile-name']")));
         profileNameInput.clear();
         profileNameInput.sendKeys("TestUser");
 
-        // Username
-        if (isElementPresent(By.cssSelector("input[name='username']"))) {
-            WebElement usernameInput = driver.findElement(By.cssSelector("input[name='username']"));
-            usernameInput.clear();
-            usernameInput.sendKeys("testuser52");
-        }
-
-        // save
+        // Save — returns to profile selection page
         clickElement(By.cssSelector("[data-t='save-profile-btn']"));
         try {
             Thread.sleep(6000);
@@ -133,7 +77,15 @@ public class    ProfileManagementTest extends BaseTest {
           dependsOnMethods = "addNewUser")
     public void editUserProfile() {
 
-        // Click on the TestUser profile to open its edit form
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
+
+        // Navigate to profile management page
+        clickElement(By.cssSelector("[data-t='edit-profile-button']"));
+        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
+
+        // Click the TestUser profile to open its edit page
         clickElement(By.xpath(
                 "//button[@data-t='profile-button']" +
                 "[.//p[@data-t='profile-name' and normalize-space()='TestUser']]"));
@@ -141,22 +93,33 @@ public class    ProfileManagementTest extends BaseTest {
             Thread.sleep(1500);
         } catch (InterruptedException ignored) {}
 
-        // Toggle a setting (content-maturity filter)
+        // Click the avatar area to open the picker
+        clickElement(By.cssSelector(".avatar-edit-overlay"));
         try {
-            WebElement toggle = wait.until(ExpectedConditions.presenceOfElementLocated(
-                    By.cssSelector("[class*='toggle__switch'], [role='switch'], input[type='checkbox']")));
-            toggle.click();
-            System.out.println("User setting toggled.");
-        } catch (TimeoutException e) {
-            System.out.println("Toggle not found – skipping toggle step.");
+            Thread.sleep(1000);
+        } catch (InterruptedException ignored) {}
+
+        // Select the black & white Crunchyroll logo avatar (index 3)
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.cssSelector("[data-card-index='3'] .avatar-option"))).click();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException ignored) {}
+
+        // Save the avatar selection
+        if (isElementPresent(By.cssSelector("[data-t='save-avatar-btn']"))) {
+            clickElement(By.cssSelector("[data-t='save-avatar-btn']"));
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ignored) {}
         }
 
-        // Save
+        // Save profile — returns to profile selection page
         clickElement(By.cssSelector("[data-t='save-profile-btn']"));
         try {
-            Thread.sleep(1500);
+            Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
-        System.out.println("Profile edited successfully.\n");
+        System.out.println("Profile pic updated and saved – back at profile selection page.\n");
     }
 
 
@@ -167,7 +130,11 @@ public class    ProfileManagementTest extends BaseTest {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
-        // Click on the TestUser profile to edit
+        // Navigate to profile management page
+        clickElement(By.cssSelector("[data-t='edit-profile-button']"));
+        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
+
+        // Click the TestUser profile to open its edit page
         clickElement(By.xpath(
                 "//button[@data-t='profile-button']" +
                 "[.//p[@data-t='profile-name' and normalize-space()='TestUser']]"));
@@ -175,10 +142,10 @@ public class    ProfileManagementTest extends BaseTest {
             Thread.sleep(1000);
         } catch (InterruptedException ignored) {}
 
-        //delete
+        // Delete the profile
         clickElement(By.cssSelector("[data-t='delete-profile-btn']"));
 
-        // confirm Delete
+        // Confirm deletion
         clickElement(By.cssSelector("[data-t='confirm-btn']"));
         try {
             Thread.sleep(1500);
@@ -186,9 +153,9 @@ public class    ProfileManagementTest extends BaseTest {
         System.out.println("Test profile deleted – test passed.\n");
     }
 
-*/
+
     @Test(description = "TC-PM-05: Assure user can choose their own profile",
-          dependsOnMethods = "testLogout")
+          dependsOnMethods = "deleteUserProfile")
     public void chooseProfile() {
         try {
             Thread.sleep(2000);

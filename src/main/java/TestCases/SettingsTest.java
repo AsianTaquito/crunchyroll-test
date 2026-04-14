@@ -74,6 +74,10 @@ public class SettingsTest extends BaseTest {
                 "Settings page should be accessible");
 
         System.out.println("Settings page loaded. URL: " + driver.getCurrentUrl() + "\n");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 
     @Test(description = "TC-ST-02: User can change subtitle language preference",
@@ -98,7 +102,7 @@ public class SettingsTest extends BaseTest {
         Assert.assertNotNull(englishOption, "English subtitle option not found in dropdown");
         englishOption.click();
         try {
-            Thread.sleep(600);
+            Thread.sleep(3000);
         } catch (InterruptedException ignored) {}
 
         System.out.println("Subtitle language set to English.\n");
@@ -142,6 +146,10 @@ public class SettingsTest extends BaseTest {
         }
 
         System.out.println("Notification toggle was " + toggleState + " - toggled and restored.\n");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 
     @Test(description = "TC-ST-04: User should be able to change email info if needed",
@@ -189,6 +197,10 @@ public class SettingsTest extends BaseTest {
                 "Customer Support tab should open help.crunchyroll.com, got: " + driver.getCurrentUrl());
 
         System.out.println("Customer Support page opened: " + driver.getCurrentUrl() + "\n");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         // Close the support tab and return to the main tab
         driver.close();
