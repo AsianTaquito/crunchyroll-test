@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>19/5/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 13 19:49:33 EDT 2026</td>
+<td>Started on:</td><td>Tue Apr 14 01:57:48 EDT 2026</td>
 </tr>
-<tr><td>Total time:</td><td>97 seconds (97238 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17908 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,255 +76,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.SubServicesTest.testNews()'><b>testNews</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-03: Test news sub service</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div role=&quot;button&quot; aria-label=&quot;&quot; tabindex=&quot;0&quot; class=&quot;erc-header-tile news-menu-tile&quot; aria-expanded=&quot;false&quot; aria-haspopup=&quot;menu&quot; aria-controls=&quot;news-menu&quot; data-t=&quot;header-menu-news&quot;&gt;...&lt;/div&gt; is not clickable at point (858, 30). Other element would receive the click: &lt;div class=&quot;erc-multiple-profiles-layout state-contained erc-profiles-select&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=146.0.7680.178)
+<td title='TestCases.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-05: Assure user can login with valid credentials</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition to not be valid: url to contain &quot;/login&quot;. Current url: &quot;https://sso.crunchyroll.com/login?return_url=%2Fauthorize%3Fclient_id%3Dnoaihdevm_6iyg0a8l0q%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252F&quot; (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.4B27796B41DA5794A797BDABFCC71AFD.e.6453}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -&gt; css selector: [data-t=&apos;header-menu-news&apos;]]
-Session ID: 74a0e8c1d77231494f041974b617caaa
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at TestCases.BaseTest.clickElement(BaseTest.java:253)
-	at TestCases.SubServicesTest.testNews(SubServicesTest.java:89)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.example.Main.main(Main.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1004219512", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1004219512'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div role=&quot;button&quot; aria-label=&quot;&quot; tabindex=&quot;0&quot; class=&quot;erc-header-tile news-menu-tile&quot; aria-expanded=&quot;false&quot; aria-haspopup=&quot;menu&quot; aria-controls=&quot;news-menu&quot; data-t=&quot;header-menu-news&quot;&gt;...&lt;/div&gt; is not clickable at point (858, 30). Other element would receive the click: &lt;div class=&quot;erc-multiple-profiles-layout state-contained erc-profiles-select&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=146.0.7680.178)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.4B27796B41DA5794A797BDABFCC71AFD.e.6453}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -&gt; css selector: [data-t=&apos;header-menu-news&apos;]]
-Session ID: 74a0e8c1d77231494f041974b617caaa
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at TestCases.BaseTest.clickElement(BaseTest.java:253)
-	at TestCases.SubServicesTest.testNews(SubServicesTest.java:89)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.example.Main.main(Main.java:25)
-</pre></div></td>
-<td>4</td>
-<td>TestCases.SubServicesTest@726e5805</td></tr>
-<tr>
-<td title='TestCases.SubServicesTest.testStore()'><b>testStore</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-04: Test store sub service</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a aria-label=&quot;Store - open in a new tab&quot; tabindex=&quot;0&quot; class=&quot;erc-header-tile erc-header-store-link&quot; href=&quot;https://store.crunchyroll.com/?utm_source=web&quot; target=&quot;_blank&quot; data-t=&quot;header-menu-store&quot;&gt;...&lt;/a&gt; is not clickable at point (772, 30). Other element would receive the click: &lt;div class=&quot;erc-multiple-profiles-layout state-contained erc-profiles-select&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=146.0.7680.178)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.34220813229EFF83DC37D9E5A5FD743D.e.6496}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -&gt; css selector: [data-t=&apos;header-menu-store&apos;]]
-Session ID: 74a0e8c1d77231494f041974b617caaa
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at TestCases.BaseTest.clickElement(BaseTest.java:253)
-	at TestCases.SubServicesTest.testStore(SubServicesTest.java:114)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.example.Main.main(Main.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1664757401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1664757401'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a aria-label=&quot;Store - open in a new tab&quot; tabindex=&quot;0&quot; class=&quot;erc-header-tile erc-header-store-link&quot; href=&quot;https://store.crunchyroll.com/?utm_source=web&quot; target=&quot;_blank&quot; data-t=&quot;header-menu-store&quot;&gt;...&lt;/a&gt; is not clickable at point (772, 30). Other element would receive the click: &lt;div class=&quot;erc-multiple-profiles-layout state-contained erc-profiles-select&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=146.0.7680.178)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [74a0e8c1d77231494f041974b617caaa, clickElement {id=f.4246A89579449F75A400A6861E5420B5.d.34220813229EFF83DC37D9E5A5FD743D.e.6496}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (74a0e8c1d77231494f041974b617caaa)] -&gt; css selector: [data-t=&apos;header-menu-store&apos;]]
-Session ID: 74a0e8c1d77231494f041974b617caaa
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at TestCases.BaseTest.clickElement(BaseTest.java:253)
-	at TestCases.SubServicesTest.testStore(SubServicesTest.java:114)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.example.Main.main(Main.java:25)
-</pre></div></td>
-<td>5</td>
-<td>TestCases.SubServicesTest@726e5805</td></tr>
-<tr>
-<td title='TestCases.LoginTest.testInputFields()'><b>testInputFields</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-02: Assure email/username & password input fields are present</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a.cr-login-button&quot;}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [74a0e8c1d77231494f041974b617caaa, findElement {value=a.cr-login-button, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 74a0e8c1d77231494f041974b617caaa
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at TestCases.LoginTest.testInputFields(LoginTest.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.example.Main.main(Main.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1118414398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1118414398'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a.cr-login-button&quot;}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [74a0e8c1d77231494f041974b617caaa, findElement {value=a.cr-login-button, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 74a0e8c1d77231494f041974b617caaa
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at TestCases.LoginTest.testInputFields(LoginTest.java:37)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.example.Main.main(Main.java:25)
-</pre></div></td>
-<td>0</td>
-<td>TestCases.LoginTest@18230356</td></tr>
-<tr>
-<td title='TestCases.LoginTest.testInvalidLogin()'><b>testInvalidLogin</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-04: Assure system rejects wrong credentials</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name=&apos;email&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 74a0e8c1d77231494f041974b617caaa
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63885}, goog:processID: 19052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63885/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c028f25e732b77f7f01e619a944836bf
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at TestCases.LoginTest.testInvalidLogin(LoginTest.java:67)
+	at TestCases.BaseTest.loginWithValidCredentials(BaseTest.java:283)
+	at TestCases.LoginTest.testValidLogin(LoginTest.java:101)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.example.Main.main(Main.java:25)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1617156106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1617156106'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name=&apos;email&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace121678773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace121678773'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition to not be valid: url to contain &quot;/login&quot;. Current url: &quot;https://sso.crunchyroll.com/login?return_url=%2Fauthorize%3Fclient_id%3Dnoaihdevm_6iyg0a8l0q%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252F&quot; (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\sebst\OneDrive\Doc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50838}, goog:processID: 4944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50838/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 74a0e8c1d77231494f041974b617caaa
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63885}, goog:processID: 19052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63885/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c028f25e732b77f7f01e619a944836bf
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at TestCases.LoginTest.testInvalidLogin(LoginTest.java:67)
+	at TestCases.BaseTest.loginWithValidCredentials(BaseTest.java:283)
+	at TestCases.LoginTest.testValidLogin(LoginTest.java:101)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -350,47 +125,8 @@ Session ID: 74a0e8c1d77231494f041974b617caaa
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at org.example.Main.main(Main.java:25)
 </pre></div></td>
-<td>10</td>
-<td>TestCases.LoginTest@18230356</td></tr>
-<tr>
-<td title='TestCases.SearchTest.abbrevSearch()'><b>abbrevSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)</td>
-<td><div><pre>java.lang.AssertionError: Abbreviation &apos;jjk&apos; did not match &apos;Jujutsu Kaisen&apos; – Crunchyroll does not support abbreviation search expected [true] but found [false]
-	at TestCases.SearchTest.abbrevSearch(SearchTest.java:145)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.example.Main.main(Main.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace777190206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace777190206'><pre>java.lang.AssertionError: Abbreviation &apos;jjk&apos; did not match &apos;Jujutsu Kaisen&apos; – Crunchyroll does not support abbreviation search expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at TestCases.SearchTest.abbrevSearch(SearchTest.java:145)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.example.Main.main(Main.java:25)
-</pre></div></td>
-<td>2</td>
-<td>TestCases.SearchTest@22b53226</td></tr>
+<td>11</td>
+<td>TestCases.LoginTest@2a3c96e3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -401,167 +137,25 @@ Session ID: 74a0e8c1d77231494f041974b617caaa
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.ProfileManagementTest.testLogout()'><b>testLogout</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-01: Assure user can log out and log back in</td>
-<td></td>
-<td>7</td>
-<td>TestCases.ProfileManagementTest@60d1a32f</td></tr>
-<tr>
-<td title='TestCases.SearchTest.testSearch()'><b>testSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-03: Test Search Functionality</td>
+<td title='TestCases.LoginTest.testInputFields()'><b>testInputFields</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-02: Assure email/username & password input fields are present</td>
 <td></td>
 <td>2</td>
-<td>TestCases.SearchTest@22b53226</td></tr>
+<td>TestCases.LoginTest@2a3c96e3</td></tr>
 <tr>
-<td title='TestCases.NavigationTest.searchNav()'><b>searchNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-05: Assure nav has a search icon/bar</td>
+<td title='TestCases.LoginTest.testForgotPassword()'><b>testForgotPassword</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-03: Assure forgot password link is present</td>
 <td></td>
 <td>0</td>
-<td>TestCases.NavigationTest@1fcb4808</td></tr>
-<tr>
-<td title='TestCases.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-05: Assure user can login with valid credentials</td>
-<td></td>
-<td>7</td>
-<td>TestCases.LoginTest@18230356</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.navByCategory()'><b>navByCategory</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-04: Assure there is a category/genre filter/easy navigation</td>
-<td></td>
-<td>1</td>
-<td>TestCases.NavigationTest@1fcb4808</td></tr>
-<tr>
-<td title='TestCases.SearchTest.testEmptySearch()'><b>testEmptySearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-02: Empty search cannot crash site or produce error page</td>
-<td></td>
-<td>1</td>
-<td>TestCases.SearchTest@22b53226</td></tr>
+<td>TestCases.LoginTest@2a3c96e3</td></tr>
 <tr>
 <td title='TestCases.LoginTest.testButtons()'><b>testButtons</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-01: Login or signup buttons should be present</td>
 <td></td>
 <td>2</td>
-<td>TestCases.LoginTest@18230356</td></tr>
+<td>TestCases.LoginTest@2a3c96e3</td></tr>
 <tr>
-<td title='TestCases.HomePageTest.testCarousel()'><b>testCarousel</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-02: Test home page carousel</td>
+<td title='TestCases.LoginTest.testInvalidLogin()'><b>testInvalidLogin</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-04: Assure system rejects wrong credentials</td>
 <td></td>
 <td>2</td>
-<td>TestCases.HomePageTest@531c311e</td></tr>
-<tr>
-<td title='TestCases.SearchTest.keywordSearch()'><b>keywordSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-04: Test Search by keyword</td>
-<td></td>
-<td>2</td>
-<td>TestCases.SearchTest@22b53226</td></tr>
-<tr>
-<td title='TestCases.SearchTest.testSearchPage()'><b>testSearchPage</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-01: Assure search page loads</td>
-<td></td>
-<td>1</td>
-<td>TestCases.SearchTest@22b53226</td></tr>
-<tr>
-<td title='TestCases.HomePageTest.testContinueWatching()'><b>testContinueWatching</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-03: Assure Continue Watching section is displayed</td>
-<td></td>
-<td>3</td>
-<td>TestCases.HomePageTest@531c311e</td></tr>
-<tr>
-<td title='TestCases.ProfileManagementTest.chooseProfile()'><b>chooseProfile</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-05: Assure user can choose their own profile</td>
-<td></td>
-<td>6</td>
-<td>TestCases.ProfileManagementTest@60d1a32f</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.watchlistNav()'><b>watchlistNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-03: Assure easy navigation to watchlists</td>
-<td></td>
-<td>2</td>
-<td>TestCases.NavigationTest@1fcb4808</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.testLogoNav()'><b>testLogoNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-01: Assure Crunchyroll logo returns user to homepage</td>
-<td></td>
-<td>1</td>
-<td>TestCases.NavigationTest@1fcb4808</td></tr>
-<tr>
-<td title='TestCases.HomePageTest.testHPcontent()'><b>testHPcontent</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-05: Assure home page has adequate content</td>
-<td></td>
-<td>4</td>
-<td>TestCases.HomePageTest@531c311e</td></tr>
-<tr>
-<td title='TestCases.HomePageTest.titleANDlogo()'><b>titleANDlogo</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-01: Assure homepage displays title & logo</td>
-<td></td>
-<td>0</td>
-<td>TestCases.HomePageTest@531c311e</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.navLinks()'><b>navLinks</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-02: Assure there is an easy navigation bar with multiple links</td>
-<td></td>
-<td>5</td>
-<td>TestCases.NavigationTest@1fcb4808</td></tr>
-<tr>
-<td title='TestCases.SubServicesTest.testGames()'><b>testGames</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-02: Test game sub service</td>
-<td></td>
-<td>6</td>
-<td>TestCases.SubServicesTest@726e5805</td></tr>
-<tr>
-<td title='TestCases.SubServicesTest.testManga()'><b>testManga</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-01: Test manga sub service</td>
-<td></td>
-<td>4</td>
-<td>TestCases.SubServicesTest@726e5805</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='TestCases.SubServicesTest.testAccountTransfer()'><b>testAccountTransfer</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-05: Assure account info transfers over to store for user ease</td>
-<td><div><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@726e5805 depends on not successfully finished methods 
-[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@726e5805]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.example.Main.main(Main.java:25)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace914171926", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace914171926'><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@726e5805 depends on not successfully finished methods 
-[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@726e5805]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.example.Main.main(Main.java:25)
-</pre></div></td>
-<td>0</td>
-<td>TestCases.SubServicesTest@726e5805</td></tr>
-<tr>
-<td title='TestCases.LoginTest.testForgotPassword()'><b>testForgotPassword</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-03: Assure forgot password link works</td>
-<td><div><pre>java.lang.Throwable: Method TestCases.LoginTest.testForgotPassword() on instance TestCases.LoginTest@18230356 depends on not successfully finished methods 
-[TestCases.LoginTest.testInputFields() on instance TestCases.LoginTest@18230356]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.example.Main.main(Main.java:25)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace936906727", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace936906727'><pre>java.lang.Throwable: Method TestCases.LoginTest.testForgotPassword() on instance TestCases.LoginTest@18230356 depends on not successfully finished methods 
-[TestCases.LoginTest.testInputFields() on instance TestCases.LoginTest@18230356]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.example.Main.main(Main.java:25)
-</pre></div></td>
-<td>0</td>
-<td>TestCases.LoginTest@18230356</td></tr>
+<td>TestCases.LoginTest@2a3c96e3</td></tr>
 </table><p>
 </body>
 </html>

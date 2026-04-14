@@ -54,7 +54,7 @@ public class NavigationTest extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains("/discover"),
                 "Clicking the logo should navigate back to the homepage (/discover)");
 
-        System.out.println("Logo navigation worked. URL: " + driver.getCurrentUrl());
+        System.out.println("Logo navigation worked. URL: " + driver.getCurrentUrl() + "\n");
     }
 
 
@@ -105,7 +105,7 @@ public class NavigationTest extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains("history"),
                 "Clicking History tab should navigate to /history");
 
-        System.out.println("Watchlist, Crunchylist, and History nav links all work.");
+        System.out.println("\nWatchlist, Crunchylist, and History nav links all work.\n");
     }
 
 
@@ -145,6 +145,6 @@ public class NavigationTest extends BaseTest {
 
         Assert.assertTrue(searchPresent,
                 "A search icon or search bar should be present in the nav bar");
-        System.out.println("Search icon/bar found in nav - test passed.");
+        System.out.println("\nSearch icon/bar found in nav - test passed.\n");
     }
 }

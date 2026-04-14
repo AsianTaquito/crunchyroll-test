@@ -11,6 +11,9 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//add indents and pauses for presentation purposes
+
 public class SettingsTest extends BaseTest {
 
     // Locators
@@ -70,7 +73,7 @@ public class SettingsTest extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains("/account/preferences"),
                 "Settings page should be accessible");
 
-        System.out.println("Settings page loaded. URL: " + driver.getCurrentUrl());
+        System.out.println("Settings page loaded. URL: " + driver.getCurrentUrl() + "\n");
     }
 
     @Test(description = "TC-ST-02: User can change subtitle language preference",
@@ -98,7 +101,7 @@ public class SettingsTest extends BaseTest {
             Thread.sleep(600);
         } catch (InterruptedException ignored) {}
 
-        System.out.println("Subtitle language set to English.");
+        System.out.println("Subtitle language set to English.\n");
     }
 
     @Test(description = "TC-ST-03: User can toggle notification settings",
@@ -138,7 +141,7 @@ public class SettingsTest extends BaseTest {
             toggleState = "OFF";
         }
 
-        System.out.println("Notification toggle was " + toggleState + " - toggled and restored.");
+        System.out.println("Notification toggle was " + toggleState + " - toggled and restored.\n");
     }
 
     @Test(description = "TC-ST-04: User should be able to change email info if needed",
@@ -158,7 +161,7 @@ public class SettingsTest extends BaseTest {
             Thread.sleep(1000); }
         catch (InterruptedException ignored) {}
 
-        System.out.println("Change email link sent – check email for the confirmation link.");
+        System.out.println("Change email link sent – check email for the confirmation link.\n");
     }
 
     @Test(description = "TC-ST-05: User can access customer support link",
@@ -185,7 +188,7 @@ public class SettingsTest extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains("help.crunchyroll.com"),
                 "Customer Support tab should open help.crunchyroll.com, got: " + driver.getCurrentUrl());
 
-        System.out.println("Customer Support page opened: " + driver.getCurrentUrl());
+        System.out.println("Customer Support page opened: " + driver.getCurrentUrl() + "\n");
 
         // Close the support tab and return to the main tab
         driver.close();

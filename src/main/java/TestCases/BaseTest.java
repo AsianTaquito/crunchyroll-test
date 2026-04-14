@@ -270,12 +270,15 @@ public class BaseTest {
      */
     protected void loginWithValidCredentials() {
         driver.get(BASE_URL + "/login");
+
         WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("input[type='email'], input[name='username'], input[name='email']")));
         email.clear();
         email.sendKeys(VALID_EMAIL);
+
         driver.findElement(By.cssSelector("input[type='password'], input[name='password']"))
               .sendKeys(VALID_PASSWORD);
+
         driver.findElement(By.cssSelector("button[type='submit']")).click();
         wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("/login")));
         dismissBanners();   // banner can reappear after login

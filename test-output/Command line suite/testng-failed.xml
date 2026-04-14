@@ -3,30 +3,10 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="TestCases.SubServicesTest">
-        <methods>
-          <include name="testStore"/>
-          <include name="testAccountTransfer"/>
-          <include name="testNews"/>
-          <include name="goHome"/>
-          <include name="suiteTearDown"/>
-          <include name="suiteSetUp"/>
-        </methods>
-      </class> <!-- TestCases.SubServicesTest -->
-      <class name="TestCases.SearchTest">
-        <methods>
-          <include name="abbrevSearch"/>
-          <include name="keywordSearch"/>
-          <include name="testSearch"/>
-          <include name="suiteTearDown"/>
-          <include name="testEmptySearch"/>
-          <include name="testSearchPage"/>
-          <include name="suiteSetUp"/>
-        </methods>
-      </class> <!-- TestCases.SearchTest -->
       <class name="TestCases.LoginTest">
         <methods>
           <include name="testButtons"/>
+          <include name="testValidLogin"/>
           <include name="testForgotPassword"/>
           <include name="testInvalidLogin"/>
           <include name="testInputFields"/>

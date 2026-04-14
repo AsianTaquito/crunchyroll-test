@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class ProfileManagementTest extends BaseTest {
+public class    ProfileManagementTest extends BaseTest {
 
 
     @Test(description = "TC-PM-01: Assure user can log out and log back in")
@@ -27,6 +27,7 @@ public class ProfileManagementTest extends BaseTest {
 
         loginWithValidCredentials();
         System.out.println("Successfully logged back in.\n");
+
     }
 
 /*
@@ -198,6 +199,7 @@ public class ProfileManagementTest extends BaseTest {
                 By.xpath("//button[@data-t='profile-button']" +
                          "[.//p[@data-t='profile-name' and normalize-space()='Sebi']]")));
         sebiProfile.click();
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}

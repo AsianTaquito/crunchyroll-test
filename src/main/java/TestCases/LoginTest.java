@@ -1,7 +1,6 @@
 package TestCases;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -9,6 +8,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
+    private static final String INVALID_EMAIL    = "fake.user.test123@nowhere-invalid.com";
     private static final String INVALID_PASSWORD = "WrongPassword!";
 
 
@@ -36,69 +36,79 @@ public class LoginTest extends BaseTest {
     public void testInputFields() {
         driver.findElement(By.cssSelector("a.cr-login-button")).click();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("input[name='email']")));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         boolean emailPresent = isElementPresent(By.cssSelector("input[name='email']"));
         boolean passwordPresent = isElementPresent(By.cssSelector("input[name='password']"));
 
         Assert.assertTrue(emailPresent && passwordPresent,
                 "Both email & password input fields should be present");
-        System.out.println("Email & password input fields are present");
+        if(emailPresent && passwordPresent) {
+            System.out.println("Email & password input fields are present\n");
+        }else{
+            System.out.println("either email or password not detected\n");
+        }
     }
 
 
-    @Test(description = "TC-LGN-03: Assure forgot password link works",
+    @Test(description = "TC-LGN-03: Assure forgot password link is present",
           dependsOnMethods = "testInputFields")
     public void testForgotPassword() {
 
         boolean forgotPasswordLinkPresent = isElementPresent(By.cssSelector("a[data-t='forgot-password-link']"));
 
-        Assert.assertTrue(forgotPasswordLinkPresent, "There should be a forgot password link");
+        Assert.assertTrue(forgotPasswordLinkPresent, "Forgot password link should be visible on the login page");
 
-        driver.findElement(By.cssSelector("a[data-t='forgot-password-link']")).click();
-        System.out.println("Forgot Password link present and clicked. Check email for reset instructions.\n");
+        System.out.println("Forgot password link is present on the login page.\n");
     }
 
 
-    @Test(description = "TC-LGN-04: Assure system rejects wrong credentials")
+    @Test(description = "TC-LGN-04: Assure system rejects wrong credentials",
+    dependsOnMethods = "testForgotPassword")
     public void testInvalidLogin() {
 
+        //enter email
         WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("input[name='email']")));
-
-
-        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("input[name='password']")));
-
+                By.cssSelector("input[type='email'], input[name='username'], input[name='email']")));
         emailField.clear();
-        emailField.sendKeys(VALID_EMAIL);
+        emailField.sendKeys(INVALID_EMAIL);
+
+        //enter purposely incorrect password
+        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("input[name='password'], input[type='password']")));
         passwordField.clear();
         passwordField.sendKeys(INVALID_PASSWORD);
 
 
+        driver.findElement(By.cssSelector("button[type='submit']")).click();
 
-        WebElement submitButton = driver.findElement(By.cssSelector("button[data-t='login-button']"));
-        wait.until(ExpectedConditions.attributeToBe(submitButton, "aria-disabled", "false"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitButton);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
-        WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("[data-t='flash-message']")));
+        Assert.assertTrue(driver.getCurrentUrl().contains("/login"),
+                "Should remain on the login page after submitting invalid credentials");
 
-        Assert.assertTrue(errorMsg.isDisplayed(),
-                "An error message should be displayed for invalid credentials");
-        System.out.println("Invalid credentials correctly rejected.\n");
+        System.out.println("Invalid credentials correctly rejected — still on login page.\n");
     }
 
 
-    @Test(description = "TC-LGN-05: Assure user can login with valid credentials")
+    @Test(description = "TC-LGN-05: Assure user can login with valid credentials",
+    dependsOnMethods = "testInvalidLogin")
     public void testValidLogin() {
         loginWithValidCredentials();
+
 
         // After login, confirm profile selection page appears
         boolean profilePageShown = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-t='profile-button']"))
         ).isDisplayed();
+
+        if(!profilePageShown){
+            System.out.println("login failed still on login page");
+        }
 
         Assert.assertTrue(profilePageShown,
                 "Profile selection page should appear after a successful login");

@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+
 public class SearchTest extends BaseTest {
 
 
@@ -38,7 +39,7 @@ public class SearchTest extends BaseTest {
         } catch (InterruptedException ignored) {}
     }
 
-    /** Returns true if any search result cards are visible on the page. */
+    //Returns true if any search result cards are visible on the page.
     private boolean resultsPresent() {
         try {
             List<WebElement> cards = driver.findElements(By.cssSelector(
@@ -50,10 +51,7 @@ public class SearchTest extends BaseTest {
         }
     }
 
-    /**
-     * Returns true if at least one visible result title contains the given text
-     * (case-insensitive).
-     */
+    //Returns true if at least one visible result title contains the given text
     private boolean resultsTitleContains(String text) {
         try {
             List<WebElement> titles = driver.findElements(RESULT_TITLES);
@@ -65,13 +63,15 @@ public class SearchTest extends BaseTest {
         return false;
     }
 
-    // ── Test cases ────────────────────────────────────────────────────────────
-
+    // Test cases
     @Test(description = "TC-SR-01: Assure search page loads")
     public void testSearchPage() {
+
         // Click the header search icon to navigate to the search page
         clickElement(SEARCH_ICON);
-        try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ignored) {}
 
         String title = driver.getTitle();
         String url   = driver.getCurrentUrl();
@@ -79,12 +79,16 @@ public class SearchTest extends BaseTest {
         Assert.assertTrue(title.toLowerCase().contains("search") || url.contains("/search"),
                 "Expected search page to load. Title: " + title + " | URL: " + url);
         System.out.println("Search page loaded. Title: " + title + " | URL: " + url + "\n");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException ignored) {}
     }
 
 
     @Test(description = "TC-SR-02: Empty search cannot crash site or produce error page",
           dependsOnMethods = "testSearchPage")
     public void testEmptySearch() {
+
         // Already on /search — submit an empty query
         try {
             WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(SEARCH_INPUT));
@@ -92,7 +96,9 @@ public class SearchTest extends BaseTest {
             input.sendKeys(Keys.ENTER);
         } catch (Exception ignored) {}
 
-        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException ignored) {}
 
         String bodyContent = driver.findElement(By.tagName("body")).getText();
         String title       = driver.getTitle();
@@ -100,30 +106,44 @@ public class SearchTest extends BaseTest {
         Assert.assertFalse(bodyContent.trim().isEmpty() && title.trim().isEmpty(),
                 "Page should not be completely empty on an empty search — possible crash/error page");
         System.out.println("Empty search did not crash the site. Title: " + title + "\n");
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException ignored) {}
     }
 
 
     @Test(description = "TC-SR-03: Test Search Functionality",
           dependsOnMethods = "testEmptySearch")
     public void testSearch() {
+
         performSearch("One Piece");
 
         Assert.assertTrue(resultsPresent(), "Expected search results to be present for 'One Piece'");
         Assert.assertTrue(resultsTitleContains("One Piece"),
                 "Expected at least one result title to contain 'One Piece'");
         System.out.println("Search for 'One Piece' returned matching results – test passed.\n");
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException ignored) {}
     }
 
 
     @Test(description = "TC-SR-04: Test Search by keyword",
           dependsOnMethods = "testSearch")
     public void keywordSearch() {
+
         performSearch("ball");
 
         Assert.assertTrue(resultsPresent(), "Expected search results to be present for keyword 'ball'");
         Assert.assertTrue(resultsTitleContains("ball"),
                 "Expected at least one result title to contain 'ball' (e.g. Dragon Ball)");
         System.out.println("Keyword search for 'ball' returned matching results – test passed.\n");
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -131,6 +151,7 @@ public class SearchTest extends BaseTest {
                         "Crunchyroll does not support abbreviation search)",
           dependsOnMethods = "keywordSearch")
     public void abbrevSearch() {
+
         performSearch("jjk");
 
         boolean jjkFound = resultsTitleContains("jujutsu");
@@ -145,5 +166,9 @@ public class SearchTest extends BaseTest {
         Assert.assertTrue(jjkFound,
                 "Abbreviation 'jjk' did not match 'Jujutsu Kaisen' – " +
                 "Crunchyroll does not support abbreviation search");
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException ignored) {}
     }
 }

@@ -51,15 +51,20 @@ public class ShowTest extends BaseTest {
 
     @Test(description = "TC-VP-01: Verify series info properly displays")
     public void seriesInfo() {
+
         // Click logo to navigate back to home page
         clickElement(By.cssSelector("a.erc-logo, a[href='/discover']"));
         wait.until(ExpectedConditions.urlContains("/discover"));
-        try { Thread.sleep(1500); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException ignored) {}
 
         // Click on One Piece from the home page feed
         clickElement(By.cssSelector("a[href='/series/GRMG8ZQZR/one-piece']"));
         wait.until(ExpectedConditions.urlContains("one-piece"));
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         // check info
         // series "Hero" logo/title
@@ -76,6 +81,10 @@ public class ShowTest extends BaseTest {
         Assert.assertTrue(metaPresent,  "Series metadata (audio/subtitles/genres) should be displayed");
 
         System.out.println("Series info verified. Page title: " + driver.getTitle() + "\n");
+
+        try {
+            Thread.sleep(9000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -113,6 +122,10 @@ public class ShowTest extends BaseTest {
         Assert.assertTrue(hasAirDate, "Episode card hover DOM should include a release/air date");
 
         System.out.println("Episode details verified. Total episode cards visible: " + episodes.size() + "\n");
+
+        try {
+            Thread.sleep(9000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -162,6 +175,10 @@ public class ShowTest extends BaseTest {
         // Confirm episode cards reloaded after the season switch
         wait.until(ExpectedConditions.presenceOfElementLocated(EPISODE_CARDS));
         System.out.println("Season dropdown functional. Seasons available: " + options.size() + "\n");
+
+        try {
+            Thread.sleep(9000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -192,7 +209,7 @@ public class ShowTest extends BaseTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("var v = document.querySelector('video'); if(v){ v.currentTime = 540; v.play(); }");
         try {
-            Thread.sleep(10000);
+            Thread.sleep(11000);
         } catch (InterruptedException ignored) {}
 
         double currentTime = ((Number) js.executeScript(
@@ -202,15 +219,19 @@ public class ShowTest extends BaseTest {
                 "Video should have advanced past the 9-minute mark, got: " + currentTime + "s");
         System.out.println("Playback verified at " + (int)(currentTime / 60) + "m " +
                 (int)(currentTime % 60) + "s – test passed.\n");
+
     }
 
 
     @Test(description = "TC-VP-05: Test continue watching – assure playback works from home feed")
     public void continueWatching() {
+
         // Click logo to go back to home page
         clickElement(By.cssSelector("a.erc-logo, a[href='/discover']"));
         wait.until(ExpectedConditions.urlContains("/discover"));
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         // Scroll to trigger lazy loading of the history / continue-watching section
         for (int i = 0; i < 3; i++) {
@@ -222,9 +243,6 @@ public class ShowTest extends BaseTest {
             Thread.sleep(500);
         } catch (InterruptedException ignored) {}
 
-        // History section container: <div class="erc-history-collection" data-t="history">
-        // Cards inside: <div class="collection-item"> > <div data-t="episode-card ">
-        // Thumbnail link: <a class="playable-card__thumbnail-wrapper--BkWZo" href="/watch/…">
         List<WebElement> cwLinks = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
                 By.cssSelector("[data-t='history'] a[class*='playable-card__thumbnail-wrapper']")));
 
@@ -244,14 +262,16 @@ public class ShowTest extends BaseTest {
 
         WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(30));
         longWait.until(ExpectedConditions.presenceOfElementLocated(VIDEO_PLAYER));
-        try { Thread.sleep(3000); } catch (InterruptedException ignored) {} // allow buffering
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException ignored) {} // allow buffering
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         double startTime = ((Number) js.executeScript(
                 "var v = document.querySelector('video'); return v ? v.currentTime : 0;")).doubleValue();
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(9000);
         } catch (InterruptedException ignored) {}
 
         double endTime = ((Number) js.executeScript(
@@ -261,5 +281,9 @@ public class ShowTest extends BaseTest {
                 "Video should have advanced during playback (start: " + startTime + "s, end: " + endTime + "s)");
         System.out.println("Continue Watching playback verified – advanced from " +
                 (int) startTime + "s to " + (int) endTime + "s – test passed.\n");
+
+        try {
+            Thread.sleep(9000);
+        } catch (InterruptedException ignored) {}
     }
 }
