@@ -13,7 +13,7 @@ public class Main {
         try {
             TestNG testng = new TestNG();
             testng.setTestClasses(new Class[]{
-                LoginTest.class,
+               LoginTest.class,
                     ProfileManagementTest.class,
                 HomePageTest.class,
                 SearchTest.class,

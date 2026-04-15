@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MPD xmlns:cenc="urn:mpeg:cenc:2013" xmlns:mspr="urn:microsoft:playready" xmlns="urn:mpeg:dash:schema:mpd:2011" profiles="urn:mpeg:dash:profile:isoff-live:2011" minBufferTime="PT4.00S" mediaPresentationDuration="PT28M5.018S" type="static">
+  <Period>
+    <AdaptationSet mimeType="video/mp4" segmentAlignment="true" startWithSAP="1" maxWidth="1920" maxHeight="1080">
+      <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="8b576724-a503-35ec-8246-dc4be0324804"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAgnBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAAGIIARIQi1dnJKUDNeyCRtxL4DJIBCJMZXlKaGMzTmxkRWxrSWpvaVpUQXdNelkzTlRjeFlUQXdNelkzTmpBM1pXNTFjeUlzSW5aaGNtbGhiblJKWkNJNkltRjJhMlY1SW4wPQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0">
+        <mspr:pro>BgIAAAEAAQD8ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4ASgBHAGQAWABpAHcATwBsADcARABXAEMAUgB0AHgATAA0AEQASgBJAEIAQQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBnADIANQBHAC8AUwBpADEANAB4AEEAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</mspr:pro>
+        <cenc:pssh>AAACJnBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAgYGAgAAAQABAPwBPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBKAEcAZABYAGkAdwBPAGwANwBEAFcAQwBSAHQAeABMADQARABKAEkAQgBBAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AGcAMgA1AEcALwBTAGkAMQA0AHgAQQA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AC8ARABBAFQAQQA+ADwALwBXAFIATQBIAEUAQQBEAEUAUgA+AA==</cenc:pssh>
+      </ContentProtection>
+      <SegmentTemplate timescale="11988" initialization="$RepresentationID$/init-file.mp4?t=exp=1776296707~acl=/static/e00367571a00367607enus/0/en-US/dash/*~hmac=94c51c38e7fe6db7dc3e67fb7467f7e9df8d39f1d38a364698f15a59e03e98fe" media="$RepresentationID$/seg-$Number%05d$.m4s?t=exp=1776296707~acl=/static/e00367571a00367607enus/0/en-US/dash/*~hmac=94c51c38e7fe6db7dc3e67fb7467f7e9df8d39f1d38a364698f15a59e03e98fe" startNumber="1">
+        <SegmentTimeline>
+          <S d="48000" r="419"/>
+          <S d="40000"/>
+        </SegmentTimeline>
+      </SegmentTemplate>
+      <Representation id="video/avc1/1080p-1773437015" codecs="avc1.640028" width="1920" height="1080" scanType="progressive" frameRate="2997/125" bandwidth="13953158">
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+      <Representation id="video/avc1/720p-1773435853" codecs="avc1.640028" width="1280" height="720" scanType="progressive" frameRate="2997/125" bandwidth="6392111">
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+      <Representation id="video/avc1/480p-1773436687" codecs="avc1.4D401F" width="848" height="480" scanType="progressive" frameRate="2997/125" bandwidth="3010330">
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+      <Representation id="video/avc1/360p-1773435885" codecs="avc1.4D401E" width="640" height="360" scanType="progressive" frameRate="2997/125" bandwidth="1510314">
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+      <Representation id="video/avc1/240p-1773435601" codecs="avc1.42C015" width="428" height="240" scanType="progressive" frameRate="2997/125" bandwidth="749549">
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet mimeType="audio/mp4" startWithSAP="1" segmentAlignment="true" lang="en-US">
+      <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="8b576724-a503-35ec-8246-dc4be0324804"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAgnBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAAGIIARIQi1dnJKUDNeyCRtxL4DJIBCJMZXlKaGMzTmxkRWxrSWpvaVpUQXdNelkzTlRjeFlUQXdNelkzTmpBM1pXNTFjeUlzSW5aaGNtbGhiblJKWkNJNkltRjJhMlY1SW4wPQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0">
+        <mspr:pro>BgIAAAEAAQD8ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4ASgBHAGQAWABpAHcATwBsADcARABXAEMAUgB0AHgATAA0AEQASgBJAEIAQQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBnADIANQBHAC8AUwBpADEANAB4AEEAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</mspr:pro>
+        <cenc:pssh>AAACJnBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAgYGAgAAAQABAPwBPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBKAEcAZABYAGkAdwBPAGwANwBEAFcAQwBSAHQAeABMADQARABKAEkAQgBBAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AGcAMgA1AEcALwBTAGkAMQA0AHgAQQA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AC8ARABBAFQAQQA+ADwALwBXAFIATQBIAEUAQQBEAEUAUgA+AA==</cenc:pssh>
+      </ContentProtection>
+      <SegmentTemplate timescale="44100" initialization="$RepresentationID$/init-file.mp4?t=exp=1776296707~acl=/static/e00367571a00367607enus/0/en-US/dash/*~hmac=94c51c38e7fe6db7dc3e67fb7467f7e9df8d39f1d38a364698f15a59e03e98fe" media="$RepresentationID$/seg-$Number%05d$.m4s?t=exp=1776296707~acl=/static/e00367571a00367607enus/0/en-US/dash/*~hmac=94c51c38e7fe6db7dc3e67fb7467f7e9df8d39f1d38a364698f15a59e03e98fe" startNumber="1">
+        <SegmentTimeline>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128" r="1"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="177152"/>
+          <S d="176128"/>
+          <S d="147456"/>
+          <S d="1726"/>
+        </SegmentTimeline>
+      </SegmentTemplate>
+      <Representation id="audio/en-US/mp4a.40.2/128k-1773437015" codecs="mp4a.40.2" bandwidth="135967" audioSamplingRate="44100">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:mpegB:cicp:ChannelConfiguration" value="2"/>
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+      <Representation id="audio/en-US/mp4a.40.2/96k-1773436687" codecs="mp4a.40.2" bandwidth="104831" audioSamplingRate="44100">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:mpegB:cicp:ChannelConfiguration" value="2"/>
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+      <Representation id="audio/en-US/mp4a.40.2/64k-1773435601" codecs="mp4a.40.2" bandwidth="67966" audioSamplingRate="22050">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:mpegB:cicp:ChannelConfiguration" value="1"/>
+        <BaseURL>https://vod-fy-mod.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet mimeType="text/vtt" contentType="text" lang="en-US" label="English">
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="caption"/>
+      <Representation id="subtitles/en-US/caption" bandwidth="227">
+        <BaseURL>https://vod-fy.crunchyrollcdn.com/static/e00367571a00367607enus/0/en-US/dash/subtitles/en-US/closed-caption-34371-en-US-1770789976.vtt?t=exp=1776296707~acl=/static/e00367571a00367607enus/0/en-US/dash/subtitles/en-US/closed-caption-34371-en-US-1770789976.vtt~hmac=7179f199ecae109da9946f384c0cd7ece1a0ee1f1cc660573f6863b5373b1469</BaseURL>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>

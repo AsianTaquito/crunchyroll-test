@@ -25,8 +25,8 @@ public class SubServicesTest extends BaseTest {
     // Saved so testAccountTransfer can switch back after the store tab closes
     private String mainWindowHandle;
 
-    // ── Tests ─────────────────────────────────────────────────────────────────
-
+    // Tests
+    //this didnt work - check where script ends in navTest
     @Test(description = "TC-SS-01: Test manga sub service")
     public void testManga() {
 

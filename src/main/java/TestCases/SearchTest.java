@@ -29,13 +29,13 @@ public class SearchTest extends BaseTest {
 
 
     private void performSearch(String query) {
-        clickElement(SEARCH_ICON);
+        //clickElement(SEARCH_ICON);
         WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(SEARCH_INPUT));
         input.clear();
         input.sendKeys(query);
         input.sendKeys(Keys.ENTER);
         try {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
         } catch (InterruptedException ignored) {}
     }
 
@@ -70,7 +70,7 @@ public class SearchTest extends BaseTest {
         // Click the header search icon to navigate to the search page
         clickElement(SEARCH_ICON);
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
         String title = driver.getTitle();
@@ -97,7 +97,7 @@ public class SearchTest extends BaseTest {
         } catch (Exception ignored) {}
 
         try {
-            Thread.sleep(1500);
+            Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
         String bodyContent = driver.findElement(By.tagName("body")).getText();
@@ -116,6 +116,9 @@ public class SearchTest extends BaseTest {
     @Test(description = "TC-SR-03: Test Search Functionality",
           dependsOnMethods = "testEmptySearch")
     public void testSearch() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException ignored) {}
 
         performSearch("One Piece");
 
@@ -134,6 +137,10 @@ public class SearchTest extends BaseTest {
           dependsOnMethods = "testSearch")
     public void keywordSearch() {
 
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException ignored) {}
+
         performSearch("ball");
 
         Assert.assertTrue(resultsPresent(), "Expected search results to be present for keyword 'ball'");
@@ -151,6 +158,9 @@ public class SearchTest extends BaseTest {
                         "Crunchyroll does not support abbreviation search)",
           dependsOnMethods = "keywordSearch")
     public void abbrevSearch() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException ignored) {}
 
         performSearch("jjk");
 

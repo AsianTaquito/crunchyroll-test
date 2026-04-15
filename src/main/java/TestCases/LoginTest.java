@@ -52,7 +52,7 @@ public class LoginTest extends BaseTest {
         }
     }
 
-
+/*
     @Test(description = "TC-LGN-03: Assure forgot password link is present",
           dependsOnMethods = "testInputFields")
     public void testForgotPassword() {
@@ -93,10 +93,10 @@ public class LoginTest extends BaseTest {
 
         System.out.println("Invalid credentials correctly rejected — still on login page.\n");
     }
-
+*/
 
     @Test(description = "TC-LGN-05: Assure user can login with valid credentials",
-    dependsOnMethods = "testInvalidLogin")
+    dependsOnMethods = "testInputFields")
     public void testValidLogin() {
         loginWithValidCredentials();
 

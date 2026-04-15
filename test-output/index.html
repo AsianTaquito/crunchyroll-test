@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Command_line_suite" class="navigator-link">
-              <span class="suite-name border-passed">Command line suite</span>
+              <span class="suite-name border-failed">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,75 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">37 methods, 4 failed,  6 skipped,  27 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Command_line_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SearchTest" class="method navigator-link" hash-for-method="abbrevSearch">abbrevSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ProfileManagementTest" class="method navigator-link" hash-for-method="deleteUserProfile">deleteUserProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ShowTest" class="method navigator-link" hash-for-method="seriesInfo">seriesInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SubServicesTest" class="method navigator-link" hash-for-method="testNews">testNews</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Command_line_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods skipped suite-Command_line_suite"> (hide)</a> <!-- hide-methods skipped suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods skipped suite-Command_line_suite"> (show)</a> <!-- show-methods skipped suite-Command_line_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Command_line_suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ProfileManagementTest" class="method navigator-link" hash-for-method="chooseProfile">chooseProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ShowTest" class="method navigator-link" hash-for-method="episodeDetails">episodeDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ShowTest" class="method navigator-link" hash-for-method="seasonsMenu">seasonsMenu</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SubServicesTest" class="method navigator-link" hash-for-method="testAccountTransfer">testAccountTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ShowTest" class="method navigator-link" hash-for-method="testPlayback">testPlayback</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SubServicesTest" class="method navigator-link" hash-for-method="testStore">testStore</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Command_line_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +171,82 @@
                     <div class="method-list-content passed suite-Command_line_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ProfileManagementTest" class="method navigator-link" hash-for-method="addNewUser">addNewUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ShowTest" class="method navigator-link" hash-for-method="continueWatching">continueWatching</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.ProfileManagementTest" class="method navigator-link" hash-for-method="editUserProfile">editUserProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SearchTest" class="method navigator-link" hash-for-method="keywordSearch">keywordSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.NavigationTest" class="method navigator-link" hash-for-method="navByCategory">navByCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.NavigationTest" class="method navigator-link" hash-for-method="navLinks">navLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.NavigationTest" class="method navigator-link" hash-for-method="searchNav">searchNav</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Command_line_suite" title="TestCases.LoginTest" class="method navigator-link" hash-for-method="testButtons">testButtons</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.LoginTest" class="method navigator-link" hash-for-method="testForgotPassword">testForgotPassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.HomePageTest" class="method navigator-link" hash-for-method="testCarousel">testCarousel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SettingsTest" class="method navigator-link" hash-for-method="testChangeAccountInfo">testChangeAccountInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.HomePageTest" class="method navigator-link" hash-for-method="testContinueWatching">testContinueWatching</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SettingsTest" class="method navigator-link" hash-for-method="testCustomerSupport">testCustomerSupport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SearchTest" class="method navigator-link" hash-for-method="testEmptySearch">testEmptySearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.HomePageTest" class="method navigator-link" hash-for-method="testFooterLinks">testFooterLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SubServicesTest" class="method navigator-link" hash-for-method="testGames">testGames</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.HomePageTest" class="method navigator-link" hash-for-method="testHPcontent">testHPcontent</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -118,12 +256,52 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.LoginTest" class="method navigator-link" hash-for-method="testInvalidLogin">testInvalidLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.NavigationTest" class="method navigator-link" hash-for-method="testLogoNav">testLogoNav</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SubServicesTest" class="method navigator-link" hash-for-method="testManga">testManga</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SettingsTest" class="method navigator-link" hash-for-method="testNotifSettings">testNotifSettings</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SearchTest" class="method navigator-link" hash-for-method="testSearch">testSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SearchTest" class="method navigator-link" hash-for-method="testSearchPage">testSearchPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SettingsTest" class="method navigator-link" hash-for-method="testSettingsPageLoads">testSettingsPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.SettingsTest" class="method navigator-link" hash-for-method="testSubtitleLanguage">testSubtitleLanguage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Command_line_suite" title="TestCases.LoginTest" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.HomePageTest" class="method navigator-link" hash-for-method="titleANDlogo">titleANDlogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestCases.NavigationTest" class="method navigator-link" hash-for-method="watchlistNav">watchlistNav</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Command_line_suite -->
@@ -138,6 +316,491 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.ShowTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="seriesInfo">
+                  </a> <!-- seriesInfo -->
+                  <span class="method-name">seriesInfo</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a aria-label=&quot;&quot; tabindex=&quot;-1&quot; href=&quot;/series/GRMG8ZQZR/one-piece&quot; class=&quot;browse-card__poster-wrapper--pU-AW&quot; aria-hidden=&quot;true&quot;&gt;...&lt;/a&gt; is not clickable at point (205, 880). Other element would receive the click: &lt;div id=&quot;onetrust-policy-text&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=147.0.7727.56)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [801d3f51da5e77dc79fb19a8786dd20f, clickElement {id=f.33EBBADE8377E70C0D7FBDADAE4D0DC6.d.5B1A9B7119662AB335D68167D360DD00.e.32730}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (801d3f51da5e77dc79fb19a8786dd20f)] -&gt; css selector: a[href=&apos;/series/GRMG8ZQZR/one-piece&apos;]]
+Session ID: 801d3f51da5e77dc79fb19a8786dd20f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at TestCases.BaseTest.clickElement(BaseTest.java:253)
+	at TestCases.ShowTest.seriesInfo(ShowTest.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-VP-01: Verify series info properly displays)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.ProfileManagementTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserProfile">
+                  </a> <!-- deleteUserProfile -->
+                  <span class="method-name">deleteUserProfile</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [data-t=&apos;delete-profile-btn&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 801d3f51da5e77dc79fb19a8786dd20f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.clickElement(BaseTest.java:253)
+	at TestCases.ProfileManagementTest.deleteUserProfile(ProfileManagementTest.java:145)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-PM-04: Assure user can delete user profile)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="abbrevSearch">
+                  </a> <!-- abbrevSearch -->
+                  <span class="method-name">abbrevSearch</span>
+                  <div class="stack-trace">java.lang.AssertionError: Abbreviation &apos;jjk&apos; did not match &apos;Jujutsu Kaisen&apos; – Crunchyroll does not support abbreviation search expected [true] but found [false]
+	at TestCases.SearchTest.abbrevSearch(SearchTest.java:176)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search))                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.SubServicesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNews">
+                  </a> <!-- testNews -->
+                  <span class="method-name">testNews</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-t=&apos;profile-button&apos;][.//p[@data-t=&apos;profile-name&apos; and normalize-space()=&apos;Sebi&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 801d3f51da5e77dc79fb19a8786dd20f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.SubServicesTest.testNews(SubServicesTest.java:107)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-SS-03: Test news sub service)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">TestCases.ShowTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="episodeDetails">
+                  </a> <!-- episodeDetails -->
+                  <span class="method-name">episodeDetails</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
+[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@7b324585]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-VP-02: Verify episode details display correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="seasonsMenu">
+                  </a> <!-- seasonsMenu -->
+                  <span class="method-name">seasonsMenu</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
+[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@7b324585]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-VP-03: Verify drop down menu for seasons)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPlayback">
+                  </a> <!-- testPlayback -->
+                  <span class="method-name">testPlayback</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
+[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@7b324585]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-VP-04: Test playback on episode 146)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">TestCases.ProfileManagementTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="chooseProfile">
+                  </a> <!-- chooseProfile -->
+                  <span class="method-name">chooseProfile</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestCases.ProfileManagementTest.chooseProfile() on instance TestCases.ProfileManagementTest@ed3068a depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@ed3068a]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-PM-05: Assure user can choose their own profile)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">TestCases.SubServicesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAccountTransfer">
+                  </a> <!-- testAccountTransfer -->
+                  <span class="method-name">testAccountTransfer</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@1c7fd41f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-SS-05: Assure account info transfers over to store for user ease)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStore">
+                  </a> <!-- testStore -->
+                  <span class="method-name">testStore</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@1c7fd41f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-SS-04: Test store sub service)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCarousel">
+                  </a> <!-- testCarousel -->
+                  <span class="method-name">testCarousel</span>
+                  <em>
+(TC-HP-02: Test home page carousel)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testContinueWatching">
+                  </a> <!-- testContinueWatching -->
+                  <span class="method-name">testContinueWatching</span>
+                  <em>
+(TC-HP-03: Assure Continue Watching section is displayed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFooterLinks">
+                  </a> <!-- testFooterLinks -->
+                  <span class="method-name">testFooterLinks</span>
+                  <em>
+(TC-HP-04: Assure home page has footer with extra links)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHPcontent">
+                  </a> <!-- testHPcontent -->
+                  <span class="method-name">testHPcontent</span>
+                  <em>
+(TC-HP-05: Assure home page has adequate content)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="titleANDlogo">
+                  </a> <!-- titleANDlogo -->
+                  <span class="method-name">titleANDlogo</span>
+                  <em>
+(TC-HP-01: Assure homepage displays title & logo)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.SettingsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testChangeAccountInfo">
+                  </a> <!-- testChangeAccountInfo -->
+                  <span class="method-name">testChangeAccountInfo</span>
+                  <em>
+(TC-ST-04: User should be able to change email info if needed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCustomerSupport">
+                  </a> <!-- testCustomerSupport -->
+                  <span class="method-name">testCustomerSupport</span>
+                  <em>
+(TC-ST-05: User can access customer support link)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNotifSettings">
+                  </a> <!-- testNotifSettings -->
+                  <span class="method-name">testNotifSettings</span>
+                  <em>
+(TC-ST-03: User can toggle notification settings)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSettingsPageLoads">
+                  </a> <!-- testSettingsPageLoads -->
+                  <span class="method-name">testSettingsPageLoads</span>
+                  <em>
+(TC-ST-01: Settings page loads correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSubtitleLanguage">
+                  </a> <!-- testSubtitleLanguage -->
+                  <span class="method-name">testSubtitleLanguage</span>
+                  <em>
+(TC-ST-02: User can change subtitle language preference)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.NavigationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="navByCategory">
+                  </a> <!-- navByCategory -->
+                  <span class="method-name">navByCategory</span>
+                  <em>
+(TC-NAV-04: Assure there is a category/genre filter/easy navigation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navLinks">
+                  </a> <!-- navLinks -->
+                  <span class="method-name">navLinks</span>
+                  <em>
+(TC-NAV-02: Assure there is an easy navigation bar with multiple links)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchNav">
+                  </a> <!-- searchNav -->
+                  <span class="method-name">searchNav</span>
+                  <em>
+(TC-NAV-05: Assure nav has a search icon/bar)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogoNav">
+                  </a> <!-- testLogoNav -->
+                  <span class="method-name">testLogoNav</span>
+                  <em>
+(TC-NAV-01: Assure Crunchyroll logo returns user to homepage)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="watchlistNav">
+                  </a> <!-- watchlistNav -->
+                  <span class="method-name">watchlistNav</span>
+                  <em>
+(TC-NAV-03: Assure easy navigation to watchlists)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.ShowTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="continueWatching">
+                  </a> <!-- continueWatching -->
+                  <span class="method-name">continueWatching</span>
+                  <em>
+(TC-VP-05: Test continue watching – assure playback works from home feed)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.ProfileManagementTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addNewUser">
+                  </a> <!-- addNewUser -->
+                  <span class="method-name">addNewUser</span>
+                  <em>
+(TC-PM-02: Assure user can add new user profile to account)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="editUserProfile">
+                  </a> <!-- editUserProfile -->
+                  <span class="method-name">editUserProfile</span>
+                  <em>
+(TC-PM-03: Assure user can edit existing user profile)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="keywordSearch">
+                  </a> <!-- keywordSearch -->
+                  <span class="method-name">keywordSearch</span>
+                  <em>
+(TC-SR-04: Test Search by keyword)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptySearch">
+                  </a> <!-- testEmptySearch -->
+                  <span class="method-name">testEmptySearch</span>
+                  <em>
+(TC-SR-02: Empty search cannot crash site or produce error page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearch">
+                  </a> <!-- testSearch -->
+                  <span class="method-name">testSearch</span>
+                  <em>
+(TC-SR-03: Test Search Functionality)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchPage">
+                  </a> <!-- testSearchPage -->
+                  <span class="method-name">testSearchPage</span>
+                  <em>
+(TC-SR-01: Assure search page loads)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -155,15 +818,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testForgotPassword">
-                  </a> <!-- testForgotPassword -->
-                  <span class="method-name">testForgotPassword</span>
-                  <em>
-(TC-LGN-03: Assure forgot password link is present)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testInputFields">
                   </a> <!-- testInputFields -->
                   <span class="method-name">testInputFields</span>
@@ -173,20 +827,37 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testInvalidLogin">
-                  </a> <!-- testInvalidLogin -->
-                  <span class="method-name">testInvalidLogin</span>
-                  <em>
-(TC-LGN-04: Assure system rejects wrong credentials)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testValidLogin">
                   </a> <!-- testValidLogin -->
                   <span class="method-name">testValidLogin</span>
                   <em>
 (TC-LGN-05: Assure user can login with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.SubServicesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGames">
+                  </a> <!-- testGames -->
+                  <span class="method-name">testGames</span>
+                  <em>
+(TC-SS-02: Test game sub service)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testManga">
+                  </a> <!-- testManga -->
+                  <span class="method-name">testManga</span>
+                  <em>
+(TC-SS-01: Test manga sub service)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,6 +874,13 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Command line test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.LoginTest&quot;/&gt;
+      &lt;class name=&quot;TestCases.ProfileManagementTest&quot;/&gt;
+      &lt;class name=&quot;TestCases.HomePageTest&quot;/&gt;
+      &lt;class name=&quot;TestCases.SearchTest&quot;/&gt;
+      &lt;class name=&quot;TestCases.NavigationTest&quot;/&gt;
+      &lt;class name=&quot;TestCases.SubServicesTest&quot;/&gt;
+      &lt;class name=&quot;TestCases.SettingsTest&quot;/&gt;
+      &lt;class name=&quot;TestCases.ShowTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
 &lt;/suite&gt; &lt;!-- Command line suite --&gt;
@@ -216,7 +894,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (1 class)</span>
+                <span class="test-name">Command line test (8 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -242,32 +920,160 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(37);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testValidLogin')
-data.setCell(0, 2, 'TestCases.LoginTest')
-data.setCell(0, 3, 5468);
+data.setCell(0, 1, 'continueWatching')
+data.setCell(0, 2, 'TestCases.ShowTest')
+data.setCell(0, 3, 26862);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testButtons')
-data.setCell(1, 2, 'TestCases.LoginTest')
-data.setCell(1, 3, 2314);
+data.setCell(1, 1, 'addNewUser')
+data.setCell(1, 2, 'TestCases.ProfileManagementTest')
+data.setCell(1, 3, 20590);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testInvalidLogin')
-data.setCell(2, 2, 'TestCases.LoginTest')
-data.setCell(2, 3, 2217);
+data.setCell(2, 1, 'testGames')
+data.setCell(2, 2, 'TestCases.SubServicesTest')
+data.setCell(2, 3, 18816);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testInputFields')
-data.setCell(3, 2, 'TestCases.LoginTest')
-data.setCell(3, 3, 2067);
+data.setCell(3, 1, 'deleteUserProfile')
+data.setCell(3, 2, 'TestCases.ProfileManagementTest')
+data.setCell(3, 3, 15321);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testForgotPassword')
-data.setCell(4, 2, 'TestCases.LoginTest')
-data.setCell(4, 3, 7);
+data.setCell(4, 1, 'keywordSearch')
+data.setCell(4, 2, 'TestCases.SearchTest')
+data.setCell(4, 3, 13114);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testSearch')
+data.setCell(5, 2, 'TestCases.SearchTest')
+data.setCell(5, 3, 13114);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testNews')
+data.setCell(6, 2, 'TestCases.SubServicesTest')
+data.setCell(6, 3, 11952);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testManga')
+data.setCell(7, 2, 'TestCases.SubServicesTest')
+data.setCell(7, 3, 11800);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'editUserProfile')
+data.setCell(8, 2, 'TestCases.ProfileManagementTest')
+data.setCell(8, 3, 10758);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'abbrevSearch')
+data.setCell(9, 2, 'TestCases.SearchTest')
+data.setCell(9, 3, 8192);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'navLinks')
+data.setCell(10, 2, 'TestCases.NavigationTest')
+data.setCell(10, 3, 7670);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'watchlistNav')
+data.setCell(11, 2, 'TestCases.NavigationTest')
+data.setCell(11, 3, 6523);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testSearchPage')
+data.setCell(12, 2, 'TestCases.SearchTest')
+data.setCell(12, 3, 5361);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testEmptySearch')
+data.setCell(13, 2, 'TestCases.SearchTest')
+data.setCell(13, 3, 5088);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testLogoNav')
+data.setCell(14, 2, 'TestCases.NavigationTest')
+data.setCell(14, 3, 4987);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'navByCategory')
+data.setCell(15, 2, 'TestCases.NavigationTest')
+data.setCell(15, 3, 4914);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testValidLogin')
+data.setCell(16, 2, 'TestCases.LoginTest')
+data.setCell(16, 3, 4466);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testHPcontent')
+data.setCell(17, 2, 'TestCases.HomePageTest')
+data.setCell(17, 3, 4225);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testCustomerSupport')
+data.setCell(18, 2, 'TestCases.SettingsTest')
+data.setCell(18, 3, 4139);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'searchNav')
+data.setCell(19, 2, 'TestCases.NavigationTest')
+data.setCell(19, 3, 4007);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testNotifSettings')
+data.setCell(20, 2, 'TestCases.SettingsTest')
+data.setCell(20, 3, 3916);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'seriesInfo')
+data.setCell(21, 2, 'TestCases.ShowTest')
+data.setCell(21, 3, 3910);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testSubtitleLanguage')
+data.setCell(22, 2, 'TestCases.SettingsTest')
+data.setCell(22, 3, 3697);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testContinueWatching')
+data.setCell(23, 2, 'TestCases.HomePageTest')
+data.setCell(23, 3, 3580);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testSettingsPageLoads')
+data.setCell(24, 2, 'TestCases.SettingsTest')
+data.setCell(24, 3, 3368);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testFooterLinks')
+data.setCell(25, 2, 'TestCases.HomePageTest')
+data.setCell(25, 3, 2391);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testButtons')
+data.setCell(26, 2, 'TestCases.LoginTest')
+data.setCell(26, 3, 2299);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testCarousel')
+data.setCell(27, 2, 'TestCases.HomePageTest')
+data.setCell(27, 3, 2258);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testInputFields')
+data.setCell(28, 2, 'TestCases.LoginTest')
+data.setCell(28, 3, 2061);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testChangeAccountInfo')
+data.setCell(29, 2, 'TestCases.SettingsTest')
+data.setCell(29, 3, 1120);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'titleANDlogo')
+data.setCell(30, 2, 'TestCases.HomePageTest')
+data.setCell(30, 3, 88);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'seasonsMenu')
+data.setCell(31, 2, 'TestCases.ShowTest')
+data.setCell(31, 3, 0);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testPlayback')
+data.setCell(32, 2, 'TestCases.ShowTest')
+data.setCell(32, 3, 0);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testAccountTransfer')
+data.setCell(33, 2, 'TestCases.SubServicesTest')
+data.setCell(33, 3, 0);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'episodeDetails')
+data.setCell(34, 2, 'TestCases.ShowTest')
+data.setCell(34, 3, 0);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testStore')
+data.setCell(35, 2, 'TestCases.SubServicesTest')
+data.setCell(35, 3, 0);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'chooseProfile')
+data.setCell(36, 2, 'TestCases.ProfileManagementTest')
+data.setCell(36, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -282,9 +1088,72 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.HomePageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.SettingsTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.NavigationTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.ShowTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.ProfileManagementTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.SearchTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.SubServicesTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Command_line_suite" class="panel">
@@ -300,27 +1169,163 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">testButtons</span>
-                <span class="method-start">21 ms</span>
+                <span class="method-start">23 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testInputFields</span>
-                <span class="method-start">2337 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testForgotPassword</span>
-                <span class="method-start">4404 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testInvalidLogin</span>
-                <span class="method-start">4412 ms</span>
+                <span class="method-start">2324 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testValidLogin</span>
-                <span class="method-start">6630 ms</span>
+                <span class="method-start">4386 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.ProfileManagementTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addNewUser</span>
+                <span class="method-start">8853 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">editUserProfile</span>
+                <span class="method-start">29444 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">deleteUserProfile</span>
+                <span class="method-start">40203 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">titleANDlogo</span>
+                <span class="method-start">55526 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCarousel</span>
+                <span class="method-start">55615 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFooterLinks</span>
+                <span class="method-start">57873 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testContinueWatching</span>
+                <span class="method-start">60264 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testHPcontent</span>
+                <span class="method-start">63844 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.SearchTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSearchPage</span>
+                <span class="method-start">68070 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEmptySearch</span>
+                <span class="method-start">73431 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSearch</span>
+                <span class="method-start">78519 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">keywordSearch</span>
+                <span class="method-start">91633 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">abbrevSearch</span>
+                <span class="method-start">104747 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.NavigationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testLogoNav</span>
+                <span class="method-start">112940 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">navLinks</span>
+                <span class="method-start">117927 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">watchlistNav</span>
+                <span class="method-start">125597 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">navByCategory</span>
+                <span class="method-start">132120 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchNav</span>
+                <span class="method-start">137035 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.SubServicesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testManga</span>
+                <span class="method-start">141042 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGames</span>
+                <span class="method-start">152843 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testNews</span>
+                <span class="method-start">171660 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.SettingsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSettingsPageLoads</span>
+                <span class="method-start">183613 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSubtitleLanguage</span>
+                <span class="method-start">186981 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNotifSettings</span>
+                <span class="method-start">190678 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testChangeAccountInfo</span>
+                <span class="method-start">194594 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCustomerSupport</span>
+                <span class="method-start">195714 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.ShowTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">continueWatching</span>
+                <span class="method-start">199854 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">seriesInfo</span>
+                <span class="method-start">226716 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTearDown</span>
-                <span class="method-start">12110 ms</span>
+                <span class="method-start">230651 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

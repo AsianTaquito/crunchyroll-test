@@ -88,7 +88,7 @@ public class ShowTest extends BaseTest {
     }
 
 
-    @Test(description = "TC-VP-03: Verify episode details display correctly",
+    @Test(description = "TC-VP-02: Verify episode details display correctly",
           dependsOnMethods = "seriesInfo")
     public void episodeDetails() {
 
@@ -129,7 +129,7 @@ public class ShowTest extends BaseTest {
     }
 
 
-    @Test(description = "TC-VP-02: Verify drop down menu for seasons",
+    @Test(description = "TC-VP-03: Verify drop down menu for seasons",
           dependsOnMethods = "episodeDetails")
     public void seasonsMenu() {
 

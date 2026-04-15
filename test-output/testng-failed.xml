@@ -3,17 +3,48 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="TestCases.LoginTest">
+      <class name="TestCases.ShowTest">
         <methods>
-          <include name="testButtons"/>
-          <include name="testValidLogin"/>
-          <include name="testForgotPassword"/>
-          <include name="testInvalidLogin"/>
-          <include name="testInputFields"/>
+          <include name="episodeDetails"/>
+          <include name="testPlayback"/>
+          <include name="seriesInfo"/>
+          <include name="suiteTearDown"/>
+          <include name="suiteSetUp"/>
+          <include name="seasonsMenu"/>
+        </methods>
+      </class> <!-- TestCases.ShowTest -->
+      <class name="TestCases.ProfileManagementTest">
+        <methods>
+          <include name="editUserProfile"/>
+          <include name="addNewUser"/>
+          <include name="chooseProfile"/>
+          <include name="suiteTearDown"/>
+          <include name="deleteUserProfile"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.ProfileManagementTest -->
+      <class name="TestCases.SearchTest">
+        <methods>
+          <include name="abbrevSearch"/>
+          <include name="keywordSearch"/>
+          <include name="testSearch"/>
+          <include name="suiteTearDown"/>
+          <include name="testEmptySearch"/>
+          <include name="testSearchPage"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.SearchTest -->
+      <class name="TestCases.SubServicesTest">
+        <methods>
+          <include name="testStore"/>
+          <include name="testAccountTransfer"/>
+          <include name="testGames"/>
+          <include name="testNews"/>
+          <include name="testManga"/>
           <include name="suiteTearDown"/>
           <include name="suiteSetUp"/>
         </methods>
-      </class> <!-- TestCases.LoginTest -->
+      </class> <!-- TestCases.SubServicesTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

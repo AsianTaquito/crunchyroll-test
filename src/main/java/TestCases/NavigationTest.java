@@ -57,7 +57,7 @@ public class NavigationTest extends BaseTest {
         System.out.println("Logo navigation worked. URL: " + driver.getCurrentUrl() + "\n");
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException ignored) {}
     }
 
@@ -80,7 +80,7 @@ public class NavigationTest extends BaseTest {
         }
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException ignored) {}
     }
 
@@ -116,7 +116,7 @@ public class NavigationTest extends BaseTest {
         System.out.println("\nWatchlist, Crunchylist, and History nav links all work.\n");
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(4000);
         } catch (InterruptedException ignored) {}
     }
 
@@ -145,7 +145,7 @@ public class NavigationTest extends BaseTest {
         }
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException ignored) {}
     }
 
@@ -164,7 +164,7 @@ public class NavigationTest extends BaseTest {
         System.out.println("\nSearch icon/bar found in nav - test passed.\n");
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException ignored) {}
     }
 }
