@@ -11,13 +11,13 @@ import org.testng.annotations.Test;
 
 public class    ProfileManagementTest extends BaseTest {
 
-/*
+
     @Test(description = "TC-PM-01: Assure user can log out and log back in")
     public void testLogout(){
 
         driver.findElement(By.cssSelector("a.logout-link")).click();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException ignored) {}
 
         String url = driver.getCurrentUrl();
@@ -28,10 +28,11 @@ public class    ProfileManagementTest extends BaseTest {
         loginWithValidCredentials();
         System.out.println("Successfully logged back in.\n");
 
-    }*/
+    }
 
 
-    @Test(description = "TC-PM-02: Assure user can add new user profile to account")
+    @Test(description = "TC-PM-02: Assure user can add new user profile to account",
+        dependsOnMethods = "testLogout")
     public void addNewUser() {
 
         try {
@@ -58,7 +59,7 @@ public class    ProfileManagementTest extends BaseTest {
         // Save — returns to profile selection page
         clickElement(By.cssSelector("[data-t='save-profile-btn']"));
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException ignored) {}
         System.out.println("New profile created successfully.\n");
 

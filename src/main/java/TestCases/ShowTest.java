@@ -33,15 +33,15 @@ public class ShowTest extends BaseTest {
             "[data-t^='episode-card'], [class*='playable-card--']");
 
     // Season dropdown trigger
-    private static final By SEASON_DROPDOWN = By.cssSelector(
-            "[aria-label='Seasons'][role='button'], " +
-            "[class*='erc-seasons-select'] [role='button'], " +
-            ".seasons-select [role='button']");
-
+    private static final By SEASON_DROPDOWN = By.xpath(
+            "//span[contains(@class,'select-trigger__title-truncated-text')]/ancestor::div[contains(@class,'select-trigger') and @role='button'][1]");
     // Season option items revealed after opening the dropdown
     private static final By SEASON_OPTIONS = By.cssSelector(
-            "[role='option'], [class*='season-list-item'], [class*='dropdown-item']");
+            "div[role='option'][class*='extended-option'], div[role='option']");
 
+    // Specific season option for Skypiea from the provided dropdown HTML.
+    private static final By SKYPIEA_OPTION = By.xpath(
+            "//div[@role='option' and contains(@class,'extended-option')][.//span[contains(@class,'extended-option__text') and contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'skypiea')]]");
     // Video player
     private static final By VIDEO_PLAYER = By.cssSelector(
             "video, [id='player-container'], [data-testid='player-controls-root'], " +
@@ -52,15 +52,24 @@ public class ShowTest extends BaseTest {
     @Test(description = "TC-VP-01: Verify series info properly displays")
     public void seriesInfo() {
 
-        // Click logo to navigate back to home page
-        clickElement(By.cssSelector("a.erc-logo, a[href='/discover']"));
-        wait.until(ExpectedConditions.urlContains("/discover"));
+        // Click the Crunchyroll header logo to refresh on /discover.
+        By homeLogo = By.cssSelector("div.header-logo a.erc-logo[aria-label='Crunchyroll logo'][href='/discover']");
+        WebElement logoLink = wait.until(ExpectedConditions.elementToBeClickable(homeLogo));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", logoLink);
+
         try {
-            Thread.sleep(1500);
+            Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
+        // Dismiss cookie popup if present so card clicks are not intercepted.
+        dismissCookieConsent();
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#onetrust-banner-sdk, #onetrust-policy-text")));
+
         // Click on One Piece from the home page feed
-        clickElement(By.cssSelector("a[href='/series/GRMG8ZQZR/one-piece']"));
+        By onePieceCard = By.cssSelector("a[href='/series/GRMG8ZQZR/one-piece']");
+        WebElement onePieceLink = wait.until(ExpectedConditions.presenceOfElementLocated(onePieceCard));
+        scrollToElement(onePieceLink);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", onePieceLink);
         wait.until(ExpectedConditions.urlContains("one-piece"));
         try {
             Thread.sleep(2000);
@@ -133,7 +142,7 @@ public class ShowTest extends BaseTest {
           dependsOnMethods = "episodeDetails")
     public void seasonsMenu() {
 
-        // The season selector is a custom dropdown
+        // The season selector is a custom dropdown- <span class="text--gq6o- text--is-bold--yth2a text--is-m--pqiL- select-trigger__title-truncated--D00zB"><span class="select-trigger__title-truncated-text--5KH40">Elbaph (1156-current)</span></span>
         WebElement seasonTrigger = wait.until(
                 ExpectedConditions.elementToBeClickable(SEASON_DROPDOWN));
 
@@ -142,7 +151,8 @@ public class ShowTest extends BaseTest {
         System.out.println("Current season shown in trigger: " + currentSeason);
 
         // Open the dropdown
-        seasonTrigger.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", seasonTrigger);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", seasonTrigger);
         try {
             Thread.sleep(600);
         } catch (InterruptedException ignored) {}
@@ -154,14 +164,10 @@ public class ShowTest extends BaseTest {
         Assert.assertTrue(options.size() > 1,
                 "Season dropdown should expose more than one season, found: " + options.size());
 
-        // Specifically select the Skypiea season
-        WebElement skypiea = options.stream()
-                .filter(opt -> opt.getText().toLowerCase().contains("skypiea"))
-                .findFirst()
-                .orElse(null);
-
-        if (skypiea != null) {
-            skypiea.click();
+        // Specifically select the Skypiea season from option rows.
+        if (isElementPresent(SKYPIEA_OPTION)) {
+            WebElement skypiea = wait.until(ExpectedConditions.elementToBeClickable(SKYPIEA_OPTION));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", skypiea);
             System.out.println("Selected Skypiea season.");
         } else {
             System.out.println("Skypiea season not found - skipping selection.");
@@ -223,8 +229,13 @@ public class ShowTest extends BaseTest {
     }
 
 
-    @Test(description = "TC-VP-05: Test continue watching – assure playback works from home feed")
+    @Test(description = "TC-VP-05: Test continue watching – assure playback works from home feed",
+        dependsOnMethods = "testPlayback")
     public void continueWatching() {
+
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException ignored) {}
 
         // Click logo to go back to home page
         clickElement(By.cssSelector("a.erc-logo, a[href='/discover']"));
@@ -233,31 +244,46 @@ public class ShowTest extends BaseTest {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
-        // Scroll to trigger lazy loading of the history / continue-watching section
+        // Scroll to continue watching section
         for (int i = 0; i < 3; i++) {
             scrollToBottom();
             try { Thread.sleep(800); } catch (InterruptedException ignored) {}
         }
-        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+
+        By historySection = By.cssSelector("[data-t='history']");
+        WebElement continueWatchingSection = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(historySection));
+        scrollToElement(continueWatchingSection);
         try {
             Thread.sleep(500);
         } catch (InterruptedException ignored) {}
 
+        // Then click the first episode or title within that section
         List<WebElement> cwLinks = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
-                By.cssSelector("[data-t='history'] a[class*='playable-card__thumbnail-wrapper']")));
+                By.cssSelector("[data-t='history'] a[href*='/watch/']")));
 
         Assert.assertFalse(cwLinks.isEmpty(),
                 "Continue Watching section should have at least one episode card");
 
-        WebElement firstCard = cwLinks.getFirst();
+        WebElement firstCard = cwLinks.stream()
+                .filter(el -> {
+                    try {
+                        return el.isDisplayed();
+                    } catch (Exception ignored) {
+                        return false;
+                    }
+                })
+                .findFirst()
+                .orElse(cwLinks.getFirst());
+
         scrollToElement(firstCard);
         try {
             Thread.sleep(500);
         } catch (InterruptedException ignored) {}
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstCard);
 
-        // Wait for navigation away from the home page
-        wait.until(d -> !d.getCurrentUrl().equals(BASE_URL) && !d.getCurrentUrl().equals(BASE_URL + "/"));
+        // Wait for navigation to the selected watch page.
+        wait.until(ExpectedConditions.urlContains("/watch/"));
 
 
         WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(30));

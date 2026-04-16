@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="37" passed="27" failed="4" skipped="6">
+<testng-results ignored="0" total="37" passed="23" failed="5" skipped="9">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-15T13:41:09 EDT" name="Command line suite" finished-at="2026-04-15T13:45:00 EDT" duration-ms="230620">
+  <suite started-at="2026-04-16T00:00:56 EDT" name="Command line suite" finished-at="2026-04-16T00:03:57 EDT" duration-ms="181018">
     <groups>
     </groups>
-    <test started-at="2026-04-15T13:41:09 EDT" name="Command line test" finished-at="2026-04-15T13:45:00 EDT" duration-ms="230620">
+    <test started-at="2026-04-16T00:00:56 EDT" name="Command line test" finished-at="2026-04-16T00:03:57 EDT" duration-ms="181018">
       <class name="TestCases.SearchTest">
-        <test-method signature="testSearchPage()[pri:0, instance:TestCases.SearchTest@3fffff43]" started-at="2026-04-15T13:42:17 EDT" name="testSearchPage" description="TC-SR-01: Assure search page loads" finished-at="2026-04-15T13:42:23 EDT" duration-ms="5361" status="PASS">
+        <test-method signature="testSearchPage()[pri:0, instance:TestCases.SearchTest@6175619b]" started-at="2026-04-16T00:01:57 EDT" name="testSearchPage" description="TC-SR-01: Assure search page loads" finished-at="2026-04-16T00:02:03 EDT" duration-ms="5473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchPage -->
-        <test-method signature="testEmptySearch()[pri:0, instance:TestCases.SearchTest@3fffff43]" started-at="2026-04-15T13:42:23 EDT" name="testEmptySearch" description="TC-SR-02: Empty search cannot crash site or produce error page" finished-at="2026-04-15T13:42:28 EDT" depends-on-methods="TestCases.SearchTest.testSearchPage" duration-ms="5088" status="PASS">
+        <test-method signature="testEmptySearch()[pri:0, instance:TestCases.SearchTest@6175619b]" started-at="2026-04-16T00:02:03 EDT" name="testEmptySearch" description="TC-SR-02: Empty search cannot crash site or produce error page" finished-at="2026-04-16T00:02:08 EDT" depends-on-methods="TestCases.SearchTest.testSearchPage" duration-ms="5085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptySearch -->
-        <test-method signature="testSearch()[pri:0, instance:TestCases.SearchTest@3fffff43]" started-at="2026-04-15T13:42:28 EDT" name="testSearch" description="TC-SR-03: Test Search Functionality" finished-at="2026-04-15T13:42:41 EDT" depends-on-methods="TestCases.SearchTest.testEmptySearch" duration-ms="13114" status="PASS">
+        <test-method signature="testSearch()[pri:0, instance:TestCases.SearchTest@6175619b]" started-at="2026-04-16T00:02:08 EDT" name="testSearch" description="TC-SR-03: Test Search Functionality" finished-at="2026-04-16T00:02:21 EDT" depends-on-methods="TestCases.SearchTest.testEmptySearch" duration-ms="13112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearch -->
-        <test-method signature="keywordSearch()[pri:0, instance:TestCases.SearchTest@3fffff43]" started-at="2026-04-15T13:42:41 EDT" name="keywordSearch" description="TC-SR-04: Test Search by keyword" finished-at="2026-04-15T13:42:54 EDT" depends-on-methods="TestCases.SearchTest.testSearch" duration-ms="13114" status="PASS">
+        <test-method signature="keywordSearch()[pri:0, instance:TestCases.SearchTest@6175619b]" started-at="2026-04-16T00:02:21 EDT" name="keywordSearch" description="TC-SR-04: Test Search by keyword" finished-at="2026-04-16T00:02:34 EDT" depends-on-methods="TestCases.SearchTest.testSearch" duration-ms="13105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keywordSearch -->
-        <test-method signature="abbrevSearch()[pri:0, instance:TestCases.SearchTest@3fffff43]" started-at="2026-04-15T13:42:54 EDT" name="abbrevSearch" description="TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)" finished-at="2026-04-15T13:43:02 EDT" depends-on-methods="TestCases.SearchTest.keywordSearch" duration-ms="8192" status="FAIL">
+        <test-method signature="abbrevSearch()[pri:0, instance:TestCases.SearchTest@6175619b]" started-at="2026-04-16T00:02:34 EDT" name="abbrevSearch" description="TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)" finished-at="2026-04-16T00:02:42 EDT" depends-on-methods="TestCases.SearchTest.keywordSearch" duration-ms="8198" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Abbreviation 'jjk' did not match 'Jujutsu Kaisen' – Crunchyroll does not support abbreviation search expected [true] but found [false]]]>
@@ -66,78 +66,49 @@ at org.example.Main.main(Main.java:25)
         </test-method> <!-- abbrevSearch -->
       </class> <!-- TestCases.SearchTest -->
       <class name="TestCases.LoginTest">
-        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:TestCases.LoginTest@726e5805]" started-at="2026-04-15T13:41:09 EDT" name="suiteSetUp" finished-at="2026-04-15T13:41:09 EDT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:TestCases.LoginTest@55795845]" started-at="2026-04-16T00:00:56 EDT" name="suiteSetUp" finished-at="2026-04-16T00:00:56 EDT" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method signature="testButtons()[pri:0, instance:TestCases.LoginTest@726e5805]" started-at="2026-04-15T13:41:09 EDT" name="testButtons" description="TC-LGN-01: Login or signup buttons should be present" finished-at="2026-04-15T13:41:12 EDT" duration-ms="2299" status="PASS">
+        <test-method signature="testButtons()[pri:0, instance:TestCases.LoginTest@55795845]" started-at="2026-04-16T00:00:56 EDT" name="testButtons" description="TC-LGN-01: Login or signup buttons should be present" finished-at="2026-04-16T00:00:58 EDT" duration-ms="2211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testButtons -->
-        <test-method signature="testInputFields()[pri:0, instance:TestCases.LoginTest@726e5805]" started-at="2026-04-15T13:41:12 EDT" name="testInputFields" description="TC-LGN-02: Assure email/username &amp; password input fields are present" finished-at="2026-04-15T13:41:14 EDT" depends-on-methods="TestCases.LoginTest.testButtons" duration-ms="2061" status="PASS">
+        <test-method signature="testInputFields()[pri:0, instance:TestCases.LoginTest@55795845]" started-at="2026-04-16T00:00:58 EDT" name="testInputFields" description="TC-LGN-02: Assure email/username &amp; password input fields are present" finished-at="2026-04-16T00:01:00 EDT" depends-on-methods="TestCases.LoginTest.testButtons" duration-ms="2066" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInputFields -->
-        <test-method signature="testValidLogin()[pri:0, instance:TestCases.LoginTest@726e5805]" started-at="2026-04-15T13:41:14 EDT" name="testValidLogin" description="TC-LGN-05: Assure user can login with valid credentials" finished-at="2026-04-15T13:41:18 EDT" depends-on-methods="TestCases.LoginTest.testInputFields" duration-ms="4466" status="PASS">
+        <test-method signature="testValidLogin()[pri:0, instance:TestCases.LoginTest@55795845]" started-at="2026-04-16T00:01:00 EDT" name="testValidLogin" description="TC-LGN-05: Assure user can login with valid credentials" finished-at="2026-04-16T00:01:06 EDT" depends-on-methods="TestCases.LoginTest.testInputFields" duration-ms="5633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:TestCases.LoginTest@726e5805]" started-at="2026-04-15T13:45:00 EDT" name="suiteTearDown" finished-at="2026-04-15T13:45:00 EDT" duration-ms="182" status="PASS">
+        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:TestCases.LoginTest@55795845]" started-at="2026-04-16T00:03:57 EDT" name="suiteTearDown" finished-at="2026-04-16T00:03:57 EDT" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTearDown -->
       </class> <!-- TestCases.LoginTest -->
       <class name="TestCases.SettingsTest">
-        <test-method signature="testSettingsPageLoads()[pri:0, instance:TestCases.SettingsTest@3b77a04f]" started-at="2026-04-15T13:44:13 EDT" name="testSettingsPageLoads" description="TC-ST-01: Settings page loads correctly" finished-at="2026-04-15T13:44:16 EDT" duration-ms="3368" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSettingsPageLoads -->
-        <test-method signature="testSubtitleLanguage()[pri:0, instance:TestCases.SettingsTest@3b77a04f]" started-at="2026-04-15T13:44:16 EDT" name="testSubtitleLanguage" description="TC-ST-02: User can change subtitle language preference" finished-at="2026-04-15T13:44:20 EDT" depends-on-methods="TestCases.SettingsTest.testSettingsPageLoads" duration-ms="3697" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSubtitleLanguage -->
-        <test-method signature="testNotifSettings()[pri:0, instance:TestCases.SettingsTest@3b77a04f]" started-at="2026-04-15T13:44:20 EDT" name="testNotifSettings" description="TC-ST-03: User can toggle notification settings" finished-at="2026-04-15T13:44:24 EDT" depends-on-methods="TestCases.SettingsTest.testSubtitleLanguage" duration-ms="3916" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNotifSettings -->
-        <test-method signature="testChangeAccountInfo()[pri:0, instance:TestCases.SettingsTest@3b77a04f]" started-at="2026-04-15T13:44:24 EDT" name="testChangeAccountInfo" description="TC-ST-04: User should be able to change email info if needed" finished-at="2026-04-15T13:44:25 EDT" depends-on-methods="TestCases.SettingsTest.testNotifSettings" duration-ms="1120" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testChangeAccountInfo -->
-        <test-method signature="testCustomerSupport()[pri:0, instance:TestCases.SettingsTest@3b77a04f]" started-at="2026-04-15T13:44:25 EDT" name="testCustomerSupport" description="TC-ST-05: User can access customer support link" finished-at="2026-04-15T13:44:29 EDT" depends-on-methods="TestCases.SettingsTest.testChangeAccountInfo" duration-ms="4139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCustomerSupport -->
-      </class> <!-- TestCases.SettingsTest -->
-      <class name="TestCases.SubServicesTest">
-        <test-method signature="testManga()[pri:0, instance:TestCases.SubServicesTest@1c7fd41f]" started-at="2026-04-15T13:43:30 EDT" name="testManga" description="TC-SS-01: Test manga sub service" finished-at="2026-04-15T13:43:42 EDT" duration-ms="11800" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testManga -->
-        <test-method signature="testGames()[pri:0, instance:TestCases.SubServicesTest@1c7fd41f]" started-at="2026-04-15T13:43:42 EDT" name="testGames" description="TC-SS-02: Test game sub service" finished-at="2026-04-15T13:44:01 EDT" depends-on-methods="TestCases.SubServicesTest.testManga" duration-ms="18816" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGames -->
-        <test-method signature="testNews()[pri:0, instance:TestCases.SubServicesTest@1c7fd41f]" started-at="2026-04-15T13:44:01 EDT" name="testNews" description="TC-SS-03: Test news sub service" finished-at="2026-04-15T13:44:13 EDT" depends-on-methods="TestCases.SubServicesTest.testGames" duration-ms="11952" status="FAIL">
+        <test-method signature="testSettingsPageLoads()[pri:0, instance:TestCases.SettingsTest@3f2ef586]" started-at="2026-04-16T00:03:33 EDT" name="testSettingsPageLoads" description="TC-ST-01: Settings page loads correctly" finished-at="2026-04-16T00:03:43 EDT" duration-ms="10112" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-t='profile-button'][.//p[@data-t='profile-name' and normalize-space()='Sebi']] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: [aria-label='User Menu'][data-t='header-tile'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 801d3f51da5e77dc79fb19a8786dd20f]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f1252d0d24f5ece12556db01529b1533]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-t='profile-button'][.//p[@data-t='profile-name' and normalize-space()='Sebi']] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [aria-label='User Menu'][data-t='header-tile'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 801d3f51da5e77dc79fb19a8786dd20f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f1252d0d24f5ece12556db01529b1533
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at TestCases.SubServicesTest.testNews(SubServicesTest.java:107)
+at TestCases.BaseTest.clickElement(BaseTest.java:253)
+at TestCases.SettingsTest.testSettingsPageLoads(SettingsTest.java:63)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -167,16 +138,16 @@ at org.example.Main.main(Main.java:25)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNews -->
-        <test-method signature="testStore()[pri:0, instance:TestCases.SubServicesTest@1c7fd41f]" started-at="2026-04-15T13:44:13 EDT" name="testStore" description="TC-SS-04: Test store sub service" finished-at="2026-04-15T13:44:13 EDT" depends-on-methods="TestCases.SubServicesTest.testNews" duration-ms="0" status="SKIP">
+        </test-method> <!-- testSettingsPageLoads -->
+        <test-method signature="testSubtitleLanguage()[pri:0, instance:TestCases.SettingsTest@3f2ef586]" started-at="2026-04-16T00:03:43 EDT" name="testSubtitleLanguage" description="TC-ST-02: User can change subtitle language preference" finished-at="2026-04-16T00:03:43 EDT" depends-on-methods="TestCases.SettingsTest.testSettingsPageLoads" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@1c7fd41f depends on not successfully finished methods 
-[TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@1c7fd41f]]]>
+              <![CDATA[Method TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSettingsPageLoads() on instance TestCases.SettingsTest@3f2ef586]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@1c7fd41f depends on not successfully finished methods 
-[TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@1c7fd41f]
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSettingsPageLoads() on instance TestCases.SettingsTest@3f2ef586]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -199,16 +170,189 @@ at org.example.Main.main(Main.java:25)
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testStore -->
-        <test-method signature="testAccountTransfer()[pri:0, instance:TestCases.SubServicesTest@1c7fd41f]" started-at="2026-04-15T13:44:13 EDT" name="testAccountTransfer" description="TC-SS-05: Assure account info transfers over to store for user ease" finished-at="2026-04-15T13:44:13 EDT" depends-on-methods="TestCases.SubServicesTest.testStore" duration-ms="0" status="SKIP">
+        </test-method> <!-- testSubtitleLanguage -->
+        <test-method signature="testChangeAccountInfo()[pri:0, instance:TestCases.SettingsTest@3f2ef586]" started-at="2026-04-16T00:03:43 EDT" name="testChangeAccountInfo" description="TC-ST-04: User should be able to change email info if needed" finished-at="2026-04-16T00:03:43 EDT" depends-on-methods="TestCases.SettingsTest.testNotifSettings" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@1c7fd41f depends on not successfully finished methods 
-[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@1c7fd41f]]]>
+              <![CDATA[Method TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@3f2ef586]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@1c7fd41f depends on not successfully finished methods 
-[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@1c7fd41f]
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@3f2ef586]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangeAccountInfo -->
+        <test-method signature="testNotifSettings()[pri:0, instance:TestCases.SettingsTest@3f2ef586]" started-at="2026-04-16T00:03:43 EDT" name="testNotifSettings" description="TC-ST-03: User can toggle notification settings" finished-at="2026-04-16T00:03:43 EDT" depends-on-methods="TestCases.SettingsTest.testSubtitleLanguage" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@3f2ef586]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@3f2ef586]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNotifSettings -->
+        <test-method signature="testCustomerSupport()[pri:0, instance:TestCases.SettingsTest@3f2ef586]" started-at="2026-04-16T00:03:43 EDT" name="testCustomerSupport" description="TC-ST-05: User can access customer support link" finished-at="2026-04-16T00:03:43 EDT" depends-on-methods="TestCases.SettingsTest.testChangeAccountInfo" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SettingsTest.testCustomerSupport() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@3f2ef586]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testCustomerSupport() on instance TestCases.SettingsTest@3f2ef586 depends on not successfully finished methods 
+[TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@3f2ef586]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCustomerSupport -->
+      </class> <!-- TestCases.SettingsTest -->
+      <class name="TestCases.SubServicesTest">
+        <test-method signature="testManga()[pri:0, instance:TestCases.SubServicesTest@756cf158]" started-at="2026-04-16T00:03:10 EDT" name="testManga" description="TC-SS-01: Test manga sub service" finished-at="2026-04-16T00:03:25 EDT" duration-ms="14077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testManga -->
+        <test-method signature="testGames()[pri:0, instance:TestCases.SubServicesTest@756cf158]" started-at="2026-04-16T00:03:25 EDT" name="testGames" description="TC-SS-02: Test game sub service" finished-at="2026-04-16T00:03:32 EDT" depends-on-methods="TestCases.SubServicesTest.testManga" duration-ms="7554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGames -->
+        <test-method signature="testStore()[pri:0, instance:TestCases.SubServicesTest@756cf158]" started-at="2026-04-16T00:03:32 EDT" name="testStore" description="TC-SS-03: Test store sub service" finished-at="2026-04-16T00:03:33 EDT" depends-on-methods="TestCases.SubServicesTest.testGames" duration-ms="1083" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span class="menu-title">...</span> is not clickable at point (75, 29). Other element would receive the click: <div tabindex="0" class="menu-tab css-1vosem4 ezacybv0"></div>
+  (Session info: chrome=147.0.7727.57)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f1252d0d24f5ece12556db01529b1533, clickElement {id=f.194818C11CC7A830593721D2905EF8E6.d.3797673A5263CFA1461DB85D847677C2.e.21588}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f1252d0d24f5ece12556db01529b1533)] -> css selector: span.menu-title]
+Session ID: f1252d0d24f5ece12556db01529b1533]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="menu-title">...</span> is not clickable at point (75, 29). Other element would receive the click: <div tabindex="0" class="menu-tab css-1vosem4 ezacybv0"></div>
+  (Session info: chrome=147.0.7727.57)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f1252d0d24f5ece12556db01529b1533, clickElement {id=f.194818C11CC7A830593721D2905EF8E6.d.3797673A5263CFA1461DB85D847677C2.e.21588}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f1252d0d24f5ece12556db01529b1533)] -> css selector: span.menu-title]
+Session ID: f1252d0d24f5ece12556db01529b1533
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at TestCases.BaseTest.clickElement(BaseTest.java:253)
+at TestCases.SubServicesTest.testStore(SubServicesTest.java:75)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStore -->
+        <test-method signature="testAccountTransfer()[pri:0, instance:TestCases.SubServicesTest@756cf158]" started-at="2026-04-16T00:03:33 EDT" name="testAccountTransfer" description="TC-SS-04: Assure account info transfers over to store for user ease" finished-at="2026-04-16T00:03:33 EDT" depends-on-methods="TestCases.SubServicesTest.testStore" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@756cf158 depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@756cf158]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@756cf158 depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@756cf158]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -232,81 +376,123 @@ at org.example.Main.main(Main.java:25)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAccountTransfer -->
+        <test-method signature="testNews()[pri:0, instance:TestCases.SubServicesTest@756cf158]" started-at="2026-04-16T00:03:33 EDT" name="testNews" description="TC-SS-05: Test news sub service" finished-at="2026-04-16T00:03:33 EDT" depends-on-methods="TestCases.SubServicesTest.testAccountTransfer" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@756cf158 depends on not successfully finished methods 
+[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@756cf158]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@756cf158 depends on not successfully finished methods 
+[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@756cf158]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNews -->
       </class> <!-- TestCases.SubServicesTest -->
       <class name="TestCases.HomePageTest">
-        <test-method signature="titleANDlogo()[pri:0, instance:TestCases.HomePageTest@7c2b6087]" started-at="2026-04-15T13:42:05 EDT" name="titleANDlogo" description="TC-HP-01: Assure homepage displays title &amp; logo" finished-at="2026-04-15T13:42:05 EDT" duration-ms="88" status="PASS">
+        <test-method signature="titleANDlogo()[pri:0, instance:TestCases.HomePageTest@165b8a71]" started-at="2026-04-16T00:01:44 EDT" name="titleANDlogo" description="TC-HP-01: Assure homepage displays title &amp; logo" finished-at="2026-04-16T00:01:44 EDT" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- titleANDlogo -->
-        <test-method signature="testCarousel()[pri:0, instance:TestCases.HomePageTest@7c2b6087]" started-at="2026-04-15T13:42:05 EDT" name="testCarousel" description="TC-HP-02: Test home page carousel" finished-at="2026-04-15T13:42:07 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="2258" status="PASS">
+        <test-method signature="testCarousel()[pri:0, instance:TestCases.HomePageTest@165b8a71]" started-at="2026-04-16T00:01:44 EDT" name="testCarousel" description="TC-HP-02: Test home page carousel" finished-at="2026-04-16T00:01:47 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="2235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCarousel -->
-        <test-method signature="testFooterLinks()[pri:0, instance:TestCases.HomePageTest@7c2b6087]" started-at="2026-04-15T13:42:07 EDT" name="testFooterLinks" description="TC-HP-04: Assure home page has footer with extra links" finished-at="2026-04-15T13:42:10 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="2391" status="PASS">
+        <test-method signature="testFooterLinks()[pri:0, instance:TestCases.HomePageTest@165b8a71]" started-at="2026-04-16T00:01:47 EDT" name="testFooterLinks" description="TC-HP-04: Assure home page has footer with extra links" finished-at="2026-04-16T00:01:49 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="2552" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFooterLinks -->
-        <test-method signature="testContinueWatching()[pri:0, instance:TestCases.HomePageTest@7c2b6087]" started-at="2026-04-15T13:42:10 EDT" name="testContinueWatching" description="TC-HP-03: Assure Continue Watching section is displayed" finished-at="2026-04-15T13:42:13 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="3580" status="PASS">
+        <test-method signature="testContinueWatching()[pri:0, instance:TestCases.HomePageTest@165b8a71]" started-at="2026-04-16T00:01:49 EDT" name="testContinueWatching" description="TC-HP-03: Assure Continue Watching section is displayed" finished-at="2026-04-16T00:01:53 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="3596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContinueWatching -->
-        <test-method signature="testHPcontent()[pri:0, instance:TestCases.HomePageTest@7c2b6087]" started-at="2026-04-15T13:42:13 EDT" name="testHPcontent" description="TC-HP-05: Assure home page has adequate content" finished-at="2026-04-15T13:42:17 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="4225" status="PASS">
+        <test-method signature="testHPcontent()[pri:0, instance:TestCases.HomePageTest@165b8a71]" started-at="2026-04-16T00:01:53 EDT" name="testHPcontent" description="TC-HP-05: Assure home page has adequate content" finished-at="2026-04-16T00:01:57 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="4293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHPcontent -->
       </class> <!-- TestCases.HomePageTest -->
       <class name="TestCases.NavigationTest">
-        <test-method signature="testLogoNav()[pri:0, instance:TestCases.NavigationTest@a8e6492]" started-at="2026-04-15T13:43:02 EDT" name="testLogoNav" description="TC-NAV-01: Assure Crunchyroll logo returns user to homepage" finished-at="2026-04-15T13:43:07 EDT" duration-ms="4987" status="PASS">
+        <test-method signature="testLogoNav()[pri:0, instance:TestCases.NavigationTest@2f058b8a]" started-at="2026-04-16T00:02:42 EDT" name="testLogoNav" description="TC-NAV-01: Assure Crunchyroll logo returns user to homepage" finished-at="2026-04-16T00:02:47 EDT" duration-ms="4910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogoNav -->
-        <test-method signature="navLinks()[pri:0, instance:TestCases.NavigationTest@a8e6492]" started-at="2026-04-15T13:43:07 EDT" name="navLinks" description="TC-NAV-02: Assure there is an easy navigation bar with multiple links" finished-at="2026-04-15T13:43:15 EDT" depends-on-methods="TestCases.NavigationTest.testLogoNav" duration-ms="7670" status="PASS">
+        <test-method signature="navLinks()[pri:0, instance:TestCases.NavigationTest@2f058b8a]" started-at="2026-04-16T00:02:47 EDT" name="navLinks" description="TC-NAV-02: Assure there is an easy navigation bar with multiple links" finished-at="2026-04-16T00:02:55 EDT" depends-on-methods="TestCases.NavigationTest.testLogoNav" duration-ms="7952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navLinks -->
-        <test-method signature="watchlistNav()[pri:0, instance:TestCases.NavigationTest@a8e6492]" started-at="2026-04-15T13:43:15 EDT" name="watchlistNav" description="TC-NAV-03: Assure easy navigation to watchlists" finished-at="2026-04-15T13:43:22 EDT" depends-on-methods="TestCases.NavigationTest.navLinks" duration-ms="6523" status="PASS">
+        <test-method signature="watchlistNav()[pri:0, instance:TestCases.NavigationTest@2f058b8a]" started-at="2026-04-16T00:02:55 EDT" name="watchlistNav" description="TC-NAV-03: Assure easy navigation to watchlists" finished-at="2026-04-16T00:03:01 EDT" depends-on-methods="TestCases.NavigationTest.navLinks" duration-ms="6490" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- watchlistNav -->
-        <test-method signature="navByCategory()[pri:0, instance:TestCases.NavigationTest@a8e6492]" started-at="2026-04-15T13:43:22 EDT" name="navByCategory" description="TC-NAV-04: Assure there is a category/genre filter/easy navigation" finished-at="2026-04-15T13:43:26 EDT" depends-on-methods="TestCases.NavigationTest.watchlistNav" duration-ms="4914" status="PASS">
+        <test-method signature="navByCategory()[pri:0, instance:TestCases.NavigationTest@2f058b8a]" started-at="2026-04-16T00:03:01 EDT" name="navByCategory" description="TC-NAV-04: Assure there is a category/genre filter/easy navigation" finished-at="2026-04-16T00:03:06 EDT" depends-on-methods="TestCases.NavigationTest.watchlistNav" duration-ms="4968" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navByCategory -->
-        <test-method signature="searchNav()[pri:0, instance:TestCases.NavigationTest@a8e6492]" started-at="2026-04-15T13:43:26 EDT" name="searchNav" description="TC-NAV-05: Assure nav has a search icon/bar" finished-at="2026-04-15T13:43:30 EDT" depends-on-methods="TestCases.NavigationTest.navByCategory" duration-ms="4007" status="PASS">
+        <test-method signature="searchNav()[pri:0, instance:TestCases.NavigationTest@2f058b8a]" started-at="2026-04-16T00:03:06 EDT" name="searchNav" description="TC-NAV-05: Assure nav has a search icon/bar" finished-at="2026-04-16T00:03:10 EDT" depends-on-methods="TestCases.NavigationTest.navByCategory" duration-ms="4008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchNav -->
       </class> <!-- TestCases.NavigationTest -->
       <class name="TestCases.ProfileManagementTest">
-        <test-method signature="addNewUser()[pri:0, instance:TestCases.ProfileManagementTest@ed3068a]" started-at="2026-04-15T13:41:18 EDT" name="addNewUser" description="TC-PM-02: Assure user can add new user profile to account" finished-at="2026-04-15T13:41:39 EDT" duration-ms="20590" status="PASS">
+        <test-method signature="addNewUser()[pri:0, instance:TestCases.ProfileManagementTest@7fd4acee]" started-at="2026-04-16T00:01:06 EDT" name="addNewUser" description="TC-PM-02: Assure user can add new user profile to account" finished-at="2026-04-16T00:01:26 EDT" duration-ms="20552" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewUser -->
-        <test-method signature="editUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@ed3068a]" started-at="2026-04-15T13:41:39 EDT" name="editUserProfile" description="TC-PM-03: Assure user can edit existing user profile" finished-at="2026-04-15T13:41:50 EDT" depends-on-methods="TestCases.ProfileManagementTest.addNewUser" duration-ms="10758" status="PASS">
+        <test-method signature="editUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@7fd4acee]" started-at="2026-04-16T00:01:26 EDT" name="editUserProfile" description="TC-PM-03: Assure user can edit existing user profile" finished-at="2026-04-16T00:01:37 EDT" depends-on-methods="TestCases.ProfileManagementTest.addNewUser" duration-ms="10906" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editUserProfile -->
-        <test-method signature="deleteUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@ed3068a]" started-at="2026-04-15T13:41:50 EDT" name="deleteUserProfile" description="TC-PM-04: Assure user can delete user profile" finished-at="2026-04-15T13:42:05 EDT" depends-on-methods="TestCases.ProfileManagementTest.editUserProfile" duration-ms="15321" status="FAIL">
+        <test-method signature="deleteUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@7fd4acee]" started-at="2026-04-16T00:01:37 EDT" name="deleteUserProfile" description="TC-PM-04: Assure user can delete user profile" finished-at="2026-04-16T00:01:40 EDT" depends-on-methods="TestCases.ProfileManagementTest.editUserProfile" duration-ms="2816" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserProfile -->
+        <test-method signature="chooseProfile()[pri:0, instance:TestCases.ProfileManagementTest@7fd4acee]" started-at="2026-04-16T00:01:40 EDT" name="chooseProfile" description="TC-PM-05: Assure user can choose their own profile" finished-at="2026-04-16T00:01:44 EDT" depends-on-methods="TestCases.ProfileManagementTest.deleteUserProfile" duration-ms="4314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseProfile -->
+      </class> <!-- TestCases.ProfileManagementTest -->
+      <class name="TestCases.ShowTest">
+        <test-method signature="continueWatching()[pri:0, instance:TestCases.ShowTest@751d3241]" started-at="2026-04-16T00:03:43 EDT" name="continueWatching" description="TC-VP-05: Test continue watching – assure playback works from home feed" finished-at="2026-04-16T00:03:53 EDT" duration-ms="10117" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: [data-t='delete-profile-btn'] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: a.erc-logo, a[href='/discover'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 801d3f51da5e77dc79fb19a8786dd20f]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f1252d0d24f5ece12556db01529b1533]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [data-t='delete-profile-btn'] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a.erc-logo, a[href='/discover'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 801d3f51da5e77dc79fb19a8786dd20f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f1252d0d24f5ece12556db01529b1533
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at TestCases.BaseTest.clickElement(BaseTest.java:253)
-at TestCases.ProfileManagementTest.deleteUserProfile(ProfileManagementTest.java:145)
+at TestCases.ShowTest.continueWatching(ShowTest.java:230)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -336,68 +522,30 @@ at org.example.Main.main(Main.java:25)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteUserProfile -->
-        <test-method signature="chooseProfile()[pri:0, instance:TestCases.ProfileManagementTest@ed3068a]" started-at="2026-04-15T13:42:05 EDT" name="chooseProfile" description="TC-PM-05: Assure user can choose their own profile" finished-at="2026-04-15T13:42:05 EDT" depends-on-methods="TestCases.ProfileManagementTest.deleteUserProfile" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TestCases.ProfileManagementTest.chooseProfile() on instance TestCases.ProfileManagementTest@ed3068a depends on not successfully finished methods 
-[TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@ed3068a]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestCases.ProfileManagementTest.chooseProfile() on instance TestCases.ProfileManagementTest@ed3068a depends on not successfully finished methods 
-[TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@ed3068a]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.example.Main.main(Main.java:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chooseProfile -->
-      </class> <!-- TestCases.ProfileManagementTest -->
-      <class name="TestCases.ShowTest">
-        <test-method signature="continueWatching()[pri:0, instance:TestCases.ShowTest@7b324585]" started-at="2026-04-15T13:44:29 EDT" name="continueWatching" description="TC-VP-05: Test continue watching – assure playback works from home feed" finished-at="2026-04-15T13:44:56 EDT" duration-ms="26862" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- continueWatching -->
-        <test-method signature="seriesInfo()[pri:0, instance:TestCases.ShowTest@7b324585]" started-at="2026-04-15T13:44:56 EDT" name="seriesInfo" description="TC-VP-01: Verify series info properly displays" finished-at="2026-04-15T13:45:00 EDT" duration-ms="3910" status="FAIL">
+        <test-method signature="seriesInfo()[pri:0, instance:TestCases.ShowTest@751d3241]" started-at="2026-04-16T00:03:53 EDT" name="seriesInfo" description="TC-VP-01: Verify series info properly displays" finished-at="2026-04-16T00:03:57 EDT" duration-ms="3473" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
               <![CDATA[element click intercepted: Element <a aria-label="" tabindex="-1" href="/series/GRMG8ZQZR/one-piece" class="browse-card__poster-wrapper--pU-AW" aria-hidden="true">...</a> is not clickable at point (205, 880). Other element would receive the click: <div id="onetrust-policy-text">...</div>
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.57)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [801d3f51da5e77dc79fb19a8786dd20f, clickElement {id=f.33EBBADE8377E70C0D7FBDADAE4D0DC6.d.5B1A9B7119662AB335D68167D360DD00.e.32730}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (801d3f51da5e77dc79fb19a8786dd20f)] -> css selector: a[href='/series/GRMG8ZQZR/one-piece']]
-Session ID: 801d3f51da5e77dc79fb19a8786dd20f]]>
+Command: [f1252d0d24f5ece12556db01529b1533, clickElement {id=f.194818C11CC7A830593721D2905EF8E6.d.6D705C70A0BA8B9A4F47542FA0BADABB.e.21909}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f1252d0d24f5ece12556db01529b1533)] -> css selector: a[href='/series/GRMG8ZQZR/one-piece']]
+Session ID: f1252d0d24f5ece12556db01529b1533]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a aria-label="" tabindex="-1" href="/series/GRMG8ZQZR/one-piece" class="browse-card__poster-wrapper--pU-AW" aria-hidden="true">...</a> is not clickable at point (205, 880). Other element would receive the click: <div id="onetrust-policy-text">...</div>
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.57)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [801d3f51da5e77dc79fb19a8786dd20f, clickElement {id=f.33EBBADE8377E70C0D7FBDADAE4D0DC6.d.5B1A9B7119662AB335D68167D360DD00.e.32730}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58339}, goog:processID: 1340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58339/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (801d3f51da5e77dc79fb19a8786dd20f)] -> css selector: a[href='/series/GRMG8ZQZR/one-piece']]
-Session ID: 801d3f51da5e77dc79fb19a8786dd20f
+Command: [f1252d0d24f5ece12556db01529b1533, clickElement {id=f.194818C11CC7A830593721D2905EF8E6.d.6D705C70A0BA8B9A4F47542FA0BADABB.e.21909}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51771}, goog:processID: 17940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51771/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f1252d0d24f5ece12556db01529b1533)] -> css selector: a[href='/series/GRMG8ZQZR/one-piece']]
+Session ID: f1252d0d24f5ece12556db01529b1533
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -442,79 +590,15 @@ at org.example.Main.main(Main.java:25)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seriesInfo -->
-        <test-method signature="seasonsMenu()[pri:0, instance:TestCases.ShowTest@7b324585]" started-at="2026-04-15T13:45:00 EDT" name="seasonsMenu" description="TC-VP-03: Verify drop down menu for seasons" finished-at="2026-04-15T13:45:00 EDT" depends-on-methods="TestCases.ShowTest.episodeDetails" duration-ms="0" status="SKIP">
+        <test-method signature="episodeDetails()[pri:0, instance:TestCases.ShowTest@751d3241]" started-at="2026-04-16T00:03:57 EDT" name="episodeDetails" description="TC-VP-02: Verify episode details display correctly" finished-at="2026-04-16T00:03:57 EDT" depends-on-methods="TestCases.ShowTest.seriesInfo" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
-[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@7b324585]]]>
+              <![CDATA[Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@751d3241 depends on not successfully finished methods 
+[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@751d3241]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
-[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@7b324585]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.example.Main.main(Main.java:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- seasonsMenu -->
-        <test-method signature="testPlayback()[pri:0, instance:TestCases.ShowTest@7b324585]" started-at="2026-04-15T13:45:00 EDT" name="testPlayback" description="TC-VP-04: Test playback on episode 146" finished-at="2026-04-15T13:45:00 EDT" depends-on-methods="TestCases.ShowTest.seasonsMenu" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
-[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@7b324585]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
-[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@7b324585]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.example.Main.main(Main.java:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPlayback -->
-        <test-method signature="episodeDetails()[pri:0, instance:TestCases.ShowTest@7b324585]" started-at="2026-04-15T13:45:00 EDT" name="episodeDetails" description="TC-VP-02: Verify episode details display correctly" finished-at="2026-04-15T13:45:00 EDT" depends-on-methods="TestCases.ShowTest.seriesInfo" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
-[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@7b324585]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@7b324585 depends on not successfully finished methods 
-[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@7b324585]
+              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@751d3241 depends on not successfully finished methods 
+[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@751d3241]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -538,6 +622,70 @@ at org.example.Main.main(Main.java:25)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- episodeDetails -->
+        <test-method signature="seasonsMenu()[pri:0, instance:TestCases.ShowTest@751d3241]" started-at="2026-04-16T00:03:57 EDT" name="seasonsMenu" description="TC-VP-03: Verify drop down menu for seasons" finished-at="2026-04-16T00:03:57 EDT" depends-on-methods="TestCases.ShowTest.episodeDetails" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@751d3241 depends on not successfully finished methods 
+[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@751d3241]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@751d3241 depends on not successfully finished methods 
+[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@751d3241]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seasonsMenu -->
+        <test-method signature="testPlayback()[pri:0, instance:TestCases.ShowTest@751d3241]" started-at="2026-04-16T00:03:57 EDT" name="testPlayback" description="TC-VP-04: Test playback on episode 146" finished-at="2026-04-16T00:03:57 EDT" depends-on-methods="TestCases.ShowTest.seasonsMenu" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@751d3241 depends on not successfully finished methods 
+[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@751d3241]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@751d3241 depends on not successfully finished methods 
+[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@751d3241]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlayback -->
       </class> <!-- TestCases.ShowTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->

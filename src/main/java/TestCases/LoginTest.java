@@ -52,7 +52,7 @@ public class LoginTest extends BaseTest {
         }
     }
 
-/*
+
     @Test(description = "TC-LGN-03: Assure forgot password link is present",
           dependsOnMethods = "testInputFields")
     public void testForgotPassword() {
@@ -62,6 +62,9 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(forgotPasswordLinkPresent, "Forgot password link should be visible on the login page");
 
         System.out.println("Forgot password link is present on the login page.\n");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
     }
 
 
@@ -85,7 +88,7 @@ public class LoginTest extends BaseTest {
         driver.findElement(By.cssSelector("button[type='submit']")).click();
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException ignored) {}
 
         Assert.assertTrue(driver.getCurrentUrl().contains("/login"),
@@ -93,10 +96,10 @@ public class LoginTest extends BaseTest {
 
         System.out.println("Invalid credentials correctly rejected — still on login page.\n");
     }
-*/
+
 
     @Test(description = "TC-LGN-05: Assure user can login with valid credentials",
-    dependsOnMethods = "testInputFields")
+    dependsOnMethods = "testInvalidLogin")
     public void testValidLogin() {
         loginWithValidCredentials();
 

@@ -166,7 +166,7 @@ public class SettingsTest extends BaseTest {
         // Click the "Send email change link" button
         clickElement(CHANGE_EMAIL_BTN);
         try {
-            Thread.sleep(1000); }
+            Thread.sleep(9000); }
         catch (InterruptedException ignored) {}
 
         System.out.println("Change email link sent – check email for the confirmation link.\n");
