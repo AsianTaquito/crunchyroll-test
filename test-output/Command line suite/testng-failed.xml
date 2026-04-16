@@ -3,6 +3,80 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
+      <class name="TestCases.SubServicesTest">
+        <methods>
+          <include name="testAccountTransfer"/>
+          <include name="testStore"/>
+          <include name="testGames"/>
+          <include name="testNews"/>
+          <include name="testManga"/>
+          <include name="suiteTearDown"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.SubServicesTest -->
+      <class name="TestCases.SettingsTest">
+        <methods>
+          <include name="testSettingsPageLoads"/>
+          <include name="testCustomerSupport"/>
+          <include name="testSubtitleLanguage"/>
+          <include name="suiteTearDown"/>
+          <include name="testChangeAccountInfo"/>
+          <include name="testNotifSettings"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.SettingsTest -->
+      <class name="TestCases.NavigationTest">
+        <methods>
+          <include name="searchNav"/>
+          <include name="watchlistNav"/>
+          <include name="navLinks"/>
+          <include name="suiteTearDown"/>
+          <include name="navByCategory"/>
+          <include name="testLogoNav"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.NavigationTest -->
+      <class name="TestCases.ProfileManagementTest">
+        <methods>
+          <include name="editUserProfile"/>
+          <include name="addNewUser"/>
+          <include name="suiteTearDown"/>
+          <include name="chooseProfile"/>
+          <include name="deleteUserProfile"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.ProfileManagementTest -->
+      <class name="TestCases.LoginTest">
+        <methods>
+          <include name="testButtons"/>
+          <include name="testValidLogin"/>
+          <include name="testInputFields"/>
+          <include name="suiteTearDown"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.LoginTest -->
+      <class name="TestCases.HomePageTest">
+        <methods>
+          <include name="testFooterLinks"/>
+          <include name="testCarousel"/>
+          <include name="titleANDlogo"/>
+          <include name="testHPcontent"/>
+          <include name="suiteTearDown"/>
+          <include name="suiteSetUp"/>
+          <include name="testContinueWatching"/>
+        </methods>
+      </class> <!-- TestCases.HomePageTest -->
+      <class name="TestCases.ShowTest">
+        <methods>
+          <include name="episodeDetails"/>
+          <include name="testPlayback"/>
+          <include name="continueWatching"/>
+          <include name="seriesInfo"/>
+          <include name="suiteTearDown"/>
+          <include name="seasonsMenu"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestCases.ShowTest -->
       <class name="TestCases.SearchTest">
         <methods>
           <include name="abbrevSearch"/>
