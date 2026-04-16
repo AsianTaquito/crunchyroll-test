@@ -59,6 +59,11 @@ public class SettingsTest extends BaseTest {
     @Test(description = "TC-ST-01: Settings page loads correctly")
     public void testSettingsPageLoads() {
 
+        driver.get(BASE_URL);
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
+
         // Open the user menu dropdown
         clickElement(USER_MENU_BTN);
         try {

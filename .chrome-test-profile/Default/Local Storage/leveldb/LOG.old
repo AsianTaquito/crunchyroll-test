@@ -1,3 +1,26 @@
-2026/04/16-01:16:34.114 251c Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/04/16-01:16:34.117 251c Recovering log #234
-2026/04/16-01:16:34.119 251c Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/000234.log 
+2026/04/16-11:55:33.984 2a00 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/16-11:55:33.987 2a00 Recovering log #234
+2026/04/16-11:55:33.987 2a00 Level-0 table #237: started
+2026/04/16-11:55:33.995 2a00 Level-0 table #237: 34035 bytes OK
+2026/04/16-11:55:33.998 2a00 Delete type=0 #234
+2026/04/16-11:56:34.016 4cbc Level-0 table #240: started
+2026/04/16-11:56:34.019 4cbc Level-0 table #240: 31123 bytes OK
+2026/04/16-11:56:34.020 4cbc Delete type=0 #238
+2026/04/16-11:56:34.021 4cbc Compacting 4@0 + 1@1 files
+2026/04/16-11:56:34.027 4cbc Generated table #241@0: 134 keys, 546199 bytes
+2026/04/16-11:56:34.027 4cbc Compacted 4@0 + 1@1 files => 546199 bytes
+2026/04/16-11:56:34.028 4cbc compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/16-11:56:34.028 4cbc Delete type=2 #230
+2026/04/16-11:56:34.028 4cbc Delete type=2 #232
+2026/04/16-11:56:34.029 4cbc Delete type=2 #235
+2026/04/16-11:56:34.029 4cbc Delete type=2 #237
+2026/04/16-11:56:34.029 4cbc Delete type=2 #240
+2026/04/16-11:58:34.724 4cbc Level-0 table #243: started
+2026/04/16-11:58:34.728 4cbc Level-0 table #243: 30239 bytes OK
+2026/04/16-11:58:34.730 4cbc Delete type=0 #239
+2026/04/16-11:58:51.456 4cbc Level-0 table #245: started
+2026/04/16-11:58:51.460 4cbc Level-0 table #245: 30207 bytes OK
+2026/04/16-11:58:51.462 4cbc Delete type=0 #242
+2026/04/16-11:59:34.725 4cbc Level-0 table #247: started
+2026/04/16-11:59:34.728 4cbc Level-0 table #247: 27130 bytes OK
+2026/04/16-11:59:34.730 4cbc Delete type=0 #244
