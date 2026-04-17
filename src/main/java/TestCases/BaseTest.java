@@ -43,18 +43,19 @@ public class BaseTest {
 
     @BeforeSuite
     public synchronized void suiteSetUp() {
-        if (driver != null) return;  // guard against multiple calls from inherited subclasses
+        if (driver != null) return;
 
         WebDriverManager.chromedriver().setup();
 
-        // Dedicated persistent profile for automation (regular tab, not incognito)
+
         // This keeps site/session state between runs and reduces CAPTCHA churn.
         Path profileDir = Paths.get(System.getProperty("user.dir"), ".chrome-test-profile");
-        try { Files.createDirectories(profileDir); } catch (IOException ignored) {}
+        try {
+            Files.createDirectories(profileDir);
+        } catch (IOException ignored) {}
 
         // Remove Chrome lock files left over from a previous crashed/killed session.
-        // Without this, ChromeDriver fails with "Chrome instance exited" when the
-        // user-data-dir is still marked as in-use.
+        // Without this, ChromeDriver fails
         cleanChromeLockFiles(profileDir);
 
         ChromeOptions options = new ChromeOptions();
@@ -74,16 +75,20 @@ public class BaseTest {
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // not questioning any of this cause it skips the captcha as needed.
+        /* Manually bypass capcha then kill program and saved cookies bypasses future captch instances*/
         driver.get(BASE_URL);
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         if (new File(COOKIE_FILE).exists()) {
             injectSavedCookies();
-            driver.get(BASE_URL);                         // explicit nav — discards any /premium redirect
-            try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+            driver.get(BASE_URL);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException ignored) {}
 
-            String landedUrl = driver.getCurrentUrl();
+           /* String landedUrl = driver.getCurrentUrl();
 
             if (landedUrl.contains("/premium/error") || landedUrl.contains("/error")) {
                 // Known redirect — click the "Return Home" button Crunchyroll provides
@@ -102,7 +107,7 @@ public class BaseTest {
                 try { Thread.sleep(15_000); } catch (InterruptedException ignored) {}
             } else {
                 System.out.println("Saved session restored – CAPTCHA bypassed.");
-            }
+            }*/
         } else {
             waitForCaptcha();
         }
@@ -119,7 +124,6 @@ public class BaseTest {
     }
 
     // Chrome lock-file cleanup
-
     /**
      * Deletes stale Chrome lock files from the given user-data-dir.
      * Chrome writes these files when a session starts and removes them on clean exit.
@@ -142,9 +146,7 @@ public class BaseTest {
         System.out.println("Chrome lock files cleaned from: " + userDataDir);
     }
 
-    // ── Cookie helpers ────────────────────────────────────────────────────────
-
-    /** Prints CAPTCHA instructions and waits 30 s for manual solving on first/fresh runs. */
+    // Cookie helpers
     private void waitForCaptcha() {
         System.out.println("══════════════════════════════════════════════════════");
         System.out.println(" No valid saved session – fresh start.");
@@ -152,10 +154,12 @@ public class BaseTest {
         System.out.println(" Cookies are saved automatically after the first login");
         System.out.println(" so every future run bypasses CAPTCHA completely.");
         System.out.println("══════════════════════════════════════════════════════");
-        try { Thread.sleep(30_000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(30_000);
+        } catch (InterruptedException ignored) {}
     }
 
-    /** Reads name/value/domain/path/secure from the cookie file and injects them. */
+    // Reads cookie file and injects them
     private void injectSavedCookies() {
         try (BufferedReader br = new BufferedReader(new FileReader(COOKIE_FILE))) {
             String line;
@@ -176,11 +180,7 @@ public class BaseTest {
         }
     }
 
-    /**
-     * Saves all current Crunchyroll cookies to disk.
-     * Called automatically after every successful login so future runs
-     * can skip CAPTCHA by injecting the saved session.
-     */
+    //save cookie for future sessions
     protected static void saveSessionCookies() {
         // Don't save if we're on an error or premium page — those cookies cause the redirect loop
         String currentUrl = driver.getCurrentUrl();
@@ -204,9 +204,9 @@ public class BaseTest {
         }
     }
 
-    // ── Shared helpers ────────────────────────────────────────────────────────
+    // Shared helpers
 
-    //Dismisses the phishing-awareness consent banner ("Continue" button) if present.
+    //Dismisses the phishing-awareness consent banner
     protected void dismissBanners() {
 
         try {
@@ -219,10 +219,7 @@ public class BaseTest {
         } catch (NoSuchElementException ignored) { }
     }
 
-    /**
-     * Dismisses the OneTrust cookie-consent popup if present.
-     * This banner can block clicks on page elements underneath it.
-     */
+    //doesnt work - come back later to fix
     protected void dismissCookieConsent() {
         try {
             WebElement btn = driver.findElement(By.cssSelector(
@@ -233,7 +230,9 @@ public class BaseTest {
             if (btn.isDisplayed()) {
                 btn.click();
                 System.out.println("Dismissed OneTrust cookie consent.");
-                try { Thread.sleep(500); } catch (InterruptedException ignored) {}
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ignored) {}
             }
         } catch (NoSuchElementException ignored) { }
     }
@@ -279,7 +278,25 @@ public class BaseTest {
         wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("/login")));
         dismissBanners();
 
+
         // Persist cookies so the next run can skip CAPTCHA
         saveSessionCookies();
     }
+
+    // Shared locators/ Selectors
+
+    // Select user profile
+    protected static final By MY_PROFILE = By.xpath(
+            "//button[@data-t='profile-button'][.//p[normalize-space()='Sebi']] | " +
+                    "//*[@data-profile-can-switch='true'][.//p[normalize-space()='Sebi']]");
+
+    // Search icon/link in the header
+    protected static final By SEARCH_ICON = By.cssSelector(
+            "a[aria-label='Search'][href*='/search'], [data-t='search-svg']" +
+                    "a.erc-search-header-button-old, a[href='/search'][aria-label='Search']");
+
+    //logo to go back to homepage
+    protected static final By LOGO = By.cssSelector(
+            "a.erc-logo, a[href='/discover'][aria-label*='logo'], " +
+                    "[data-t='crunchyroll-horizontal-svg'], [data-t='crunchyroll-logo-only-svg']");
 }

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ShowTest extends BaseTest {
 
-
+    //Locators/ Selectors
     // Series hero logo / title area
     private static final By SERIES_TITLE = By.cssSelector(
             "[data-t='series-hero-logo'], h1, [class*='hero-title'], [class*='series-hero__title']");
@@ -52,7 +52,7 @@ public class ShowTest extends BaseTest {
     @Test(description = "TC-VP-01: Verify series info properly displays")
     public void seriesInfo() {
 
-        // Click the Crunchyroll header logo to refresh on /discover.
+        // Click the Crunchyroll header logo to refresh page
         By homeLogo = By.cssSelector("div.header-logo a.erc-logo[aria-label='Crunchyroll logo'][href='/discover']");
         WebElement logoLink = wait.until(ExpectedConditions.elementToBeClickable(homeLogo));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", logoLink);
@@ -76,13 +76,13 @@ public class ShowTest extends BaseTest {
         } catch (InterruptedException ignored) {}
 
         // check info
-        // series "Hero" logo/title
+        // series logo/title
         boolean titlePresent = isElementPresent(SERIES_TITLE);
 
         // Description
         boolean descPresent = isElementPresent(SERIES_DESCRIPTION);
 
-        // Metadata rows
+        // Metadata
         boolean metaPresent = isElementPresent(SERIES_METADATA);
 
         Assert.assertTrue(titlePresent, "Series title/logo should be displayed");
@@ -142,7 +142,6 @@ public class ShowTest extends BaseTest {
           dependsOnMethods = "episodeDetails")
     public void seasonsMenu() {
 
-        // The season selector is a custom dropdown- <span class="text--gq6o- text--is-bold--yth2a text--is-m--pqiL- select-trigger__title-truncated--D00zB"><span class="select-trigger__title-truncated-text--5KH40">Elbaph (1156-current)</span></span>
         WebElement seasonTrigger = wait.until(
                 ExpectedConditions.elementToBeClickable(SEASON_DROPDOWN));
 
@@ -150,7 +149,7 @@ public class ShowTest extends BaseTest {
         String currentSeason = seasonTrigger.getText().trim();
         System.out.println("Current season shown in trigger: " + currentSeason);
 
-        // Open the dropdown
+        // Open dropdown
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", seasonTrigger);
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", seasonTrigger);
         try {
@@ -196,12 +195,12 @@ public class ShowTest extends BaseTest {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
-        // should already be on the Skypiea (144–206) season so now just select ep 146's card is in the list
-        // Episode 146 card link
+        // should already be on the Skypiea season- select episode 146
         WebElement ep146 = wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.cssSelector("a[href*='GEVUZMQ3X']")));
 
         scrollToElement(ep146);
+
         try {
             Thread.sleep(500);
         } catch (InterruptedException ignored) {}
@@ -211,15 +210,15 @@ public class ShowTest extends BaseTest {
         WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(30));
         longWait.until(ExpectedConditions.presenceOfElementLocated(VIDEO_PLAYER));
 
-        // Seek to 9 minutes (540 s) and play
+        // go to 9 minutes (540 s) and play
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("var v = document.querySelector('video'); if(v){ v.currentTime = 540; v.play(); }");
+        js.executeScript("var v = document.querySelector('video'); if(v){ v.currentTime = 540; v.play(); } else { return; }");
         try {
             Thread.sleep(11000);
         } catch (InterruptedException ignored) {}
 
         double currentTime = ((Number) js.executeScript(
-                "var v = document.querySelector('video'); return v ? v.currentTime : 0;")).doubleValue();
+                "var v = document.querySelector('video'); if(v){ return v.currentTime; } return 0;")).doubleValue();
 
         Assert.assertTrue(currentTime > 540,
                 "Video should have advanced past the 9-minute mark, got: " + currentTime + "s");
@@ -290,18 +289,18 @@ public class ShowTest extends BaseTest {
         longWait.until(ExpectedConditions.presenceOfElementLocated(VIDEO_PLAYER));
         try {
             Thread.sleep(3000);
-        } catch (InterruptedException ignored) {} // allow buffering
+        } catch (InterruptedException ignored) {}
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         double startTime = ((Number) js.executeScript(
-                "var v = document.querySelector('video'); return v ? v.currentTime : 0;")).doubleValue();
+                "var v = document.querySelector('video'); if(v){ return v.currentTime; } return 0;")).doubleValue();
 
         try {
             Thread.sleep(9000);
         } catch (InterruptedException ignored) {}
 
         double endTime = ((Number) js.executeScript(
-                "var v = document.querySelector('video'); return v ? v.currentTime : 0;")).doubleValue();
+                "var v = document.querySelector('video'); if(v){ return v.currentTime; } return 0;")).doubleValue();
 
         Assert.assertTrue(endTime > startTime,
                 "Video should have advanced during playback (start: " + startTime + "s, end: " + endTime + "s)");

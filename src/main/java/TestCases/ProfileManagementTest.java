@@ -41,7 +41,9 @@ public class    ProfileManagementTest extends BaseTest {
 
         // Navigate to profile management page
         clickElement(By.cssSelector("[data-t='edit-profile-button']"));
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         // Click add new profile button
         clickElement(By.cssSelector("a[data-t='add-profile-button']"));
@@ -77,12 +79,16 @@ public class    ProfileManagementTest extends BaseTest {
 
         // Navigate to a known home state first to avoid whatever was making it get stuck
         driver.get(BASE_URL + "/discover");
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
         dismissBanners();
 
         // Navigate to profile management page
         clickElement(By.cssSelector("[data-t='edit-profile-button']"));
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
 
         // Click the TestUser profile to open its edit page
         clickElement(By.xpath(
@@ -160,11 +166,9 @@ public class    ProfileManagementTest extends BaseTest {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
-        // Click on the Sebi profile access home page for next test
-        WebElement sebiProfile = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//button[@data-t='profile-button']" +
-                         "[.//p[@data-t='profile-name' and normalize-space()='Sebi']]")));
-        sebiProfile.click();
+        if (isElementPresent(MY_PROFILE)) {
+            driver.findElement(MY_PROFILE).click();
+        }
 
         try {
             Thread.sleep(2000);

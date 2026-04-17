@@ -13,11 +13,7 @@ import java.util.List;
 
 public class HomePageTest extends BaseTest {
 
-    // Locators
-    //logo to go back to homepage
-    private static final By LOGO = By.cssSelector(
-            "a.erc-logo, a[href='/discover'][aria-label*='logo'], " +
-            "[data-t='crunchyroll-horizontal-svg'], [data-t='crunchyroll-logo-only-svg']");
+    // Locators/ Selectors
 
     // featured "hero" carousel
     private static final By HERO_CAROUSEL = By.cssSelector(
@@ -37,10 +33,6 @@ public class HomePageTest extends BaseTest {
     private static final By FEED_SECTIONS = By.cssSelector(
             "[class*='erc-feed-section'], [class*='feed-section'], [class*='carousel-section']");
 
-    // Section header element inside a feed section
-    private static final By SECTION_HEADER = By.cssSelector(
-            "[class*='feed-section-header'], [class*='feed-header'], " +
-            "[class*='section-title'], [data-t='feed-section-header'], h2, h3");
 
     // Content cards (series / episode / browse cards on the home feed)
     private static final By CONTENT_CARDS = By.cssSelector(

@@ -11,11 +11,7 @@ import java.util.List;
 
 public class NavigationTest extends BaseTest {
 
-    // Locators
-
-    // Crunchyroll logo link
-    private static final By LOGO = By.cssSelector(
-            "a.erc-logo, a[href='/discover']");
+    // Locators/ Selectors
 
     // Watchlist icon in the header
     private static final By WATCHLIST_ICON = By.cssSelector(
@@ -37,13 +33,9 @@ public class NavigationTest extends BaseTest {
     private static final By GENRE_LINKS = By.cssSelector(
             "[data-t='browse-submenu-item'] a");
 
-    // Search icon/link in the header
-    private static final By SEARCH_ICON = By.cssSelector(
-            "a[aria-label='Search'][href*='/search'], [data-t='search-svg']");
 
 
-    // ── Tests ─────────────────────────────────────────────────────────────────
-
+    // Test cases
     @Test(description = "TC-NAV-01: Assure Crunchyroll logo returns user to homepage")
     public void testLogoNav() {
 

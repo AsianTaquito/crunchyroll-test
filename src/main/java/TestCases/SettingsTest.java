@@ -16,7 +16,7 @@ import java.util.List;
 
 public class SettingsTest extends BaseTest {
 
-    // Locators
+    // Locators/ Selectors
     // User menu dropdown button in the nav header
     private static final By USER_MENU_BTN = By.cssSelector(
             "[aria-label='User Menu'][data-t='header-tile']");
@@ -25,15 +25,15 @@ public class SettingsTest extends BaseTest {
     private static final By SETTINGS_LINK = By.cssSelector(
             "a[href='/account/preferences'][role='menuitem']");
 
-    // Subtitle/CC language dropdown trigger (on preferences page)
+    // Subtitle/CC language dropdown trigger
     private static final By SUBTITLE_DROPDOWN = By.cssSelector(
             "[data-t='subtitle-language-select'] [role='button']");
 
-    // Custom dropdown option items
+    // Dropdown option items
     private static final By DROPDOWN_OPTIONS = By.cssSelector(
             "[role='option']");
 
-    // Account sub-nav: Email Notifications
+    // Nav- Email Notifications
     private static final By NAV_NOTIFICATIONS = By.cssSelector(
             "[data-t='account-nav-notifications']");
 
@@ -41,7 +41,7 @@ public class SettingsTest extends BaseTest {
     private static final By TOGGLE_ALL_NOTIFS = By.cssSelector(
             "[data-t='toggle-all-notifications']");
 
-    // Account sub-nav: Email
+    // Nav: Email
     private static final By NAV_EMAIL = By.cssSelector(
             "[data-t='account-nav-email']");
 
@@ -55,7 +55,6 @@ public class SettingsTest extends BaseTest {
 
 
     // Tests
-
     @Test(description = "TC-ST-01: Settings page loads correctly")
     public void testSettingsPageLoads() {
 
@@ -124,13 +123,13 @@ public class SettingsTest extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains("/account/notifications"),
                 "Should be on the notifications settings page");
 
-        // Find the All Notifications toggle input
+        // Find the all Notifications toggle input
         WebElement toggleInput = wait.until(
                 ExpectedConditions.presenceOfElementLocated(TOGGLE_ALL_NOTIFS));
 
         boolean wasChecked = toggleInput.isSelected();
 
-        // trigger the toggle
+        // trigger toggle
         WebElement toggleLabel = toggleInput.findElement(By.xpath("./.."));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", toggleLabel);
         try {
