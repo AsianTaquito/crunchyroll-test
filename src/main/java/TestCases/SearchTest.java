@@ -12,23 +12,21 @@ import java.util.List;
 
 public class SearchTest extends BaseTest {
 
-
-    private static final By SEARCH_ICON = By.cssSelector(
-            "a.erc-search-header-button-old, a[href='/search'][aria-label='Search']");
-
-    // Search input: <input aria-label="Search" placeholder="Search..." class="search-input--4gZGM" type="text">
+    // Locators/ Selectors
+    // Search input
     private static final By SEARCH_INPUT = By.cssSelector(
             "input[class*='search-input'], input[placeholder*='Search'], input[aria-label='Search']");
 
     // Search result cards / titles
     private static final By RESULT_TITLES = By.cssSelector(
             "[data-t='search-series-card'] .search-show-card__title--kGOEF a, " +
-            "[data-t='search-series-card'] .search-show-card-hover__title--9ZRTG a, " +
-            "[data-t='search-episode-card'] [data-t='episode-title'] a, " +
-            "[data-t='search-episode-card'] [data-t='series-title']");
+                    "[data-t='search-series-card'] .search-show-card-hover__title--9ZRTG a, " +
+                    "[data-t='search-episode-card'] [data-t='episode-title'] a, " +
+                    "[data-t='search-episode-card'] [data-t='series-title']");
 
 
     private void performSearch(String query) {
+
         //clickElement(SEARCH_ICON);
         WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(SEARCH_INPUT));
         input.clear();
@@ -44,7 +42,7 @@ public class SearchTest extends BaseTest {
         try {
             List<WebElement> cards = driver.findElements(By.cssSelector(
                     "[data-t='search-series-card'], [data-t='search-episode-card'], " +
-                    "[data-t='single-song-card']"));
+                            "[data-t='single-song-card']"));
             return !cards.isEmpty();
         } catch (Exception e) {
             return false;
@@ -89,7 +87,7 @@ public class SearchTest extends BaseTest {
           dependsOnMethods = "testSearchPage")
     public void testEmptySearch() {
 
-        // Already on /search — submit an empty query
+        // Submit an empty query
         try {
             WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(SEARCH_INPUT));
             input.clear();
@@ -116,10 +114,12 @@ public class SearchTest extends BaseTest {
     @Test(description = "TC-SR-03: Test Search Functionality",
           dependsOnMethods = "testEmptySearch")
     public void testSearch() {
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException ignored) {}
 
+        // Test search One piece
         performSearch("One Piece");
 
         Assert.assertTrue(resultsPresent(), "Expected search results to be present for 'One Piece'");
@@ -141,6 +141,7 @@ public class SearchTest extends BaseTest {
             Thread.sleep(3000);
         } catch (InterruptedException ignored) {}
 
+        // Test search ball - expecting anything dragon ball related
         performSearch("ball");
 
         Assert.assertTrue(resultsPresent(), "Expected search results to be present for keyword 'ball'");
@@ -158,10 +159,12 @@ public class SearchTest extends BaseTest {
                         "Crunchyroll does not support abbreviation search)",
           dependsOnMethods = "keywordSearch")
     public void abbrevSearch() {
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException ignored) {}
 
+        // Test search "jjk" - abbreviation for Jujutsu Kaisen
         performSearch("jjk");
 
         boolean jjkFound = resultsTitleContains("jujutsu");
