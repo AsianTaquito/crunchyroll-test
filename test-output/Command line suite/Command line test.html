@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>37/2/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/9/26</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 18 19:12:36 EDT 2026</td>
+<td>Started on:</td><td>Sat Apr 18 19:34:25 EDT 2026</td>
 </tr>
-<tr><td>Total time:</td><td>285 seconds (285819 ms)</td>
+<tr><td>Total time:</td><td>89 seconds (89661 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,159 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.SubServicesTest.testAccountTransfer()'><b>testAccountTransfer</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-04: Assure account info transfers over to store for user ease</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://legacy.rightstufanime.com/secure/my_account.ssp?redirect=&amp;amp;fragment=purchases#purchases&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;...&lt;/a&gt; is not clickable at point (1047, 937). Other element would receive the click: &lt;div id=&quot;onetrust-button-group-parent&quot; class=&quot;ot-sdk-three ot-sdk-columns&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=147.0.7727.57)
+<td title='TestCases.HomePageTest.testFooterLinks()'><b>testFooterLinks</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-04: Assure home page has footer with extra links</td>
+<td><div><pre>java.lang.AssertionError: Footer should have more than 5 links, found: 4 expected [true] but found [false]
+	at TestCases.HomePageTest.testFooterLinks(HomePageTest.java:184)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1412656257", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1412656257'><pre>java.lang.AssertionError: Footer should have more than 5 links, found: 4 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at TestCases.HomePageTest.testFooterLinks(HomePageTest.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>1</td>
+<td>TestCases.HomePageTest@3b77a04f</td></tr>
+<tr>
+<td title='TestCases.SearchTest.testSearchPage()'><b>testSearchPage</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-01: Assure search page loads</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[aria-label=&apos;Search&apos;][href*=&apos;/search&apos;][data-t=&apos;search-svg&apos;], a.erc-search-header-button-old, a[href=&apos;/search&apos;][aria-label=&apos;Search&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ed5641c97b02dccbc20093ec2b74f85c, clickElement {id=f.797D2DFE4B88A68F921DD93C1CDBD507.d.0E618ABF633B1AA5587ADC1B825E2650.e.23620}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55606}, goog:processID: 4544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55606/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ed5641c97b02dccbc20093ec2b74f85c)] -&gt; css selector: a[href*=&apos;account&apos;], [data-t=&apos;my-account&apos;]]
-Session ID: ed5641c97b02dccbc20093ec2b74f85c
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.clickElement(BaseTest.java:235)
+	at TestCases.SearchTest.testSearchPage(SearchTest.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1872088401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1872088401'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[aria-label=&apos;Search&apos;][href*=&apos;/search&apos;][data-t=&apos;search-svg&apos;], a.erc-search-header-button-old, a[href=&apos;/search&apos;][aria-label=&apos;Search&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.clickElement(BaseTest.java:235)
+	at TestCases.SearchTest.testSearchPage(SearchTest.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>10</td>
+<td>TestCases.SearchTest@7b324585</td></tr>
+<tr>
+<td title='TestCases.SubServicesTest.testManga()'><b>testManga</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-01: Test manga sub service</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [data-t=&apos;header-menu-manga&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.clickElement(BaseTest.java:235)
+	at TestCases.SubServicesTest.testManga(SubServicesTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace824357143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace824357143'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [data-t=&apos;header-menu-manga&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.clickElement(BaseTest.java:235)
+	at TestCases.SubServicesTest.testManga(SubServicesTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>10</td>
+<td>TestCases.SubServicesTest@60dce7ea</td></tr>
+<tr>
+<td title='TestCases.ProfileManagementTest.testLogout()'><b>testLogout</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-01: Assure user can log out and log back in</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a.logout-link&quot;}
+  (Session info: chrome=147.0.7727.57)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8f9b27c2ce1c48224845f842f5af2580, findElement {using=css selector, value=a.logout-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -93,22 +236,23 @@ Session ID: ed5641c97b02dccbc20093ec2b74f85c
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at TestCases.BaseTest.clickElement(BaseTest.java:235)
-	at TestCases.SubServicesTest.testAccountTransfer(SubServicesTest.java:105)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at TestCases.ProfileManagementTest.testLogout(ProfileManagementTest.java:18)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.example.Main.main(Main.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace651992021", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace651992021'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://legacy.rightstufanime.com/secure/my_account.ssp?redirect=&amp;amp;fragment=purchases#purchases&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;...&lt;/a&gt; is not clickable at point (1047, 937). Other element would receive the click: &lt;div id=&quot;onetrust-button-group-parent&quot; class=&quot;ot-sdk-three ot-sdk-columns&quot;&gt;...&lt;/div&gt;
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace485686996", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace485686996'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a.logout-link&quot;}
   (Session info: chrome=147.0.7727.57)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ed5641c97b02dccbc20093ec2b74f85c, clickElement {id=f.797D2DFE4B88A68F921DD93C1CDBD507.d.0E618ABF633B1AA5587ADC1B825E2650.e.23620}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55606}, goog:processID: 4544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55606/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ed5641c97b02dccbc20093ec2b74f85c)] -&gt; css selector: a[href*=&apos;account&apos;], [data-t=&apos;my-account&apos;]]
-Session ID: ed5641c97b02dccbc20093ec2b74f85c
+Command: [8f9b27c2ce1c48224845f842f5af2580, findElement {using=css selector, value=a.logout-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -119,10 +263,11 @@ Session ID: ed5641c97b02dccbc20093ec2b74f85c
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at TestCases.BaseTest.clickElement(BaseTest.java:235)
-	at TestCases.SubServicesTest.testAccountTransfer(SubServicesTest.java:105)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at TestCases.ProfileManagementTest.testLogout(ProfileManagementTest.java:18)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -148,20 +293,31 @@ Session ID: ed5641c97b02dccbc20093ec2b74f85c
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at org.example.Main.main(Main.java:25)
 </pre></div></td>
-<td>2</td>
-<td>TestCases.SubServicesTest@2e11485</td></tr>
+<td>0</td>
+<td>TestCases.ProfileManagementTest@1c7fd41f</td></tr>
 <tr>
-<td title='TestCases.SearchTest.abbrevSearch()'><b>abbrevSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)</td>
-<td><div><pre>java.lang.AssertionError: Abbreviation &apos;jjk&apos; did not match &apos;Jujutsu Kaisen&apos; – Crunchyroll does not support abbreviation search expected [true] but found [false]
-	at TestCases.SearchTest.abbrevSearch(SearchTest.java:179)
+<td title='TestCases.ShowTest.seriesInfo()'><b>seriesInfo</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-01: Verify series info properly displays</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.header-logo a.erc-logo[aria-label=&apos;Crunchyroll logo&apos;][href=&apos;/discover&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.ShowTest.seriesInfo(ShowTest.java:57)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.example.Main.main(Main.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace196717412", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace196717412'><pre>java.lang.AssertionError: Abbreviation &apos;jjk&apos; did not match &apos;Jujutsu Kaisen&apos; – Crunchyroll does not support abbreviation search expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at TestCases.SearchTest.abbrevSearch(SearchTest.java:179)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace700837405", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace700837405'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.header-logo a.erc-logo[aria-label=&apos;Crunchyroll logo&apos;][href=&apos;/discover&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.ShowTest.seriesInfo(ShowTest.java:57)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -187,8 +343,212 @@ Session ID: ed5641c97b02dccbc20093ec2b74f85c
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at org.example.Main.main(Main.java:25)
 </pre></div></td>
-<td>8</td>
-<td>TestCases.SearchTest@3b77a04f</td></tr>
+<td>10</td>
+<td>TestCases.ShowTest@fd8294b</td></tr>
+<tr>
+<td title='TestCases.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-05: Assure user can login with valid credentials</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition to not be valid: url to contain &quot;/login&quot;. Current url: &quot;https://sso.crunchyroll.com/login?return_url=%2Fauthorize%3Fclient_id%3Dnoaihdevm_6iyg0a8l0q%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252F&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.loginWithValidCredentials(BaseTest.java:261)
+	at TestCases.LoginTest.testValidLogin(LoginTest.java:104)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1732410217", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1732410217'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition to not be valid: url to contain &quot;/login&quot;. Current url: &quot;https://sso.crunchyroll.com/login?return_url=%2Fauthorize%3Fclient_id%3Dnoaihdevm_6iyg0a8l0q%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252F&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.loginWithValidCredentials(BaseTest.java:261)
+	at TestCases.LoginTest.testValidLogin(LoginTest.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>11</td>
+<td>TestCases.LoginTest@e077866</td></tr>
+<tr>
+<td title='TestCases.SettingsTest.testSettingsPageLoads()'><b>testSettingsPageLoads</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-01: Settings page loads correctly</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [aria-label=&apos;User Menu&apos;][data-t=&apos;header-tile&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.clickElement(BaseTest.java:235)
+	at TestCases.SettingsTest.testSettingsPageLoads(SettingsTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace602830277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace602830277'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [aria-label=&apos;User Menu&apos;][data-t=&apos;header-tile&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.BaseTest.clickElement(BaseTest.java:235)
+	at TestCases.SettingsTest.testSettingsPageLoads(SettingsTest.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>12</td>
+<td>TestCases.SettingsTest@662f5666</td></tr>
+<tr>
+<td title='TestCases.NavigationTest.testLogoNav()'><b>testLogoNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-01: Assure Crunchyroll logo returns user to homepage</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;/discover&quot;. Current url: &quot;https://www.crunchyroll.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.NavigationTest.testLogoNav(NavigationTest.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1174687658", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1174687658'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain &quot;/discover&quot;. Current url: &quot;https://www.crunchyroll.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.NavigationTest.testLogoNav(NavigationTest.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>11</td>
+<td>TestCases.NavigationTest@2e11485</td></tr>
+<tr>
+<td title='TestCases.HomePageTest.testCarousel()'><b>testCarousel</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-02: Test home page carousel</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.cssSelector: [class*=&apos;erc-hero-carousel&apos;], [class*=&apos;hero-carousel&apos;], [data-t*=&apos;hero-carousel&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.HomePageTest.testCarousel(HomePageTest.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace827579900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace827579900'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.cssSelector: [class*=&apos;erc-hero-carousel&apos;], [class*=&apos;hero-carousel&apos;], [data-t*=&apos;hero-carousel&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at TestCases.HomePageTest.testCarousel(HomePageTest.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>10</td>
+<td>TestCases.HomePageTest@3b77a04f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -199,190 +559,30 @@ Session ID: ed5641c97b02dccbc20093ec2b74f85c
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.SearchTest.testSearchPage()'><b>testSearchPage</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-01: Assure search page loads</td>
-<td></td>
-<td>5</td>
-<td>TestCases.SearchTest@3b77a04f</td></tr>
-<tr>
-<td title='TestCases.HomePageTest.testFooterLinks()'><b>testFooterLinks</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-04: Assure home page has footer with extra links</td>
-<td></td>
-<td>2</td>
-<td>TestCases.HomePageTest@1c7fd41f</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.watchlistNav()'><b>watchlistNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-03: Assure easy navigation to watchlists</td>
-<td></td>
-<td>6</td>
-<td>TestCases.NavigationTest@7b324585</td></tr>
-<tr>
-<td title='TestCases.ProfileManagementTest.deleteUserProfile()'><b>deleteUserProfile</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-04: Assure user can delete user profile</td>
-<td></td>
-<td>2</td>
-<td>TestCases.ProfileManagementTest@a8e6492</td></tr>
-<tr>
-<td title='TestCases.ProfileManagementTest.testLogout()'><b>testLogout</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-01: Assure user can log out and log back in</td>
-<td></td>
-<td>7</td>
-<td>TestCases.ProfileManagementTest@a8e6492</td></tr>
-<tr>
-<td title='TestCases.HomePageTest.testCarousel()'><b>testCarousel</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-02: Test home page carousel</td>
-<td></td>
-<td>2</td>
-<td>TestCases.HomePageTest@1c7fd41f</td></tr>
-<tr>
-<td title='TestCases.SettingsTest.testNotifSettings()'><b>testNotifSettings</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-03: User can toggle notification settings</td>
-<td></td>
-<td>3</td>
-<td>TestCases.SettingsTest@60dce7ea</td></tr>
-<tr>
-<td title='TestCases.SubServicesTest.testManga()'><b>testManga</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-01: Test manga sub service</td>
-<td></td>
-<td>14</td>
-<td>TestCases.SubServicesTest@2e11485</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.navByCategory()'><b>navByCategory</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-04: Assure there is a category/genre filter/easy navigation</td>
-<td></td>
-<td>4</td>
-<td>TestCases.NavigationTest@7b324585</td></tr>
-<tr>
-<td title='TestCases.SettingsTest.testSettingsPageLoads()'><b>testSettingsPageLoads</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-01: Settings page loads correctly</td>
-<td></td>
-<td>5</td>
-<td>TestCases.SettingsTest@60dce7ea</td></tr>
-<tr>
-<td title='TestCases.ShowTest.seasonsMenu()'><b>seasonsMenu</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-03: Verify drop down menu for seasons</td>
-<td></td>
-<td>10</td>
-<td>TestCases.ShowTest@662f5666</td></tr>
-<tr>
-<td title='TestCases.HomePageTest.testHPcontent()'><b>testHPcontent</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-05: Assure home page has adequate content</td>
-<td></td>
-<td>4</td>
-<td>TestCases.HomePageTest@1c7fd41f</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.searchNav()'><b>searchNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-05: Assure nav has a search icon/bar</td>
-<td></td>
-<td>4</td>
-<td>TestCases.NavigationTest@7b324585</td></tr>
-<tr>
 <td title='TestCases.LoginTest.testInvalidLogin()'><b>testInvalidLogin</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-04: Assure system rejects wrong credentials</td>
 <td></td>
 <td>4</td>
-<td>TestCases.LoginTest@ea9b7c6</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.navLinks()'><b>navLinks</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-02: Assure there is an easy navigation bar with multiple links</td>
-<td></td>
-<td>7</td>
-<td>TestCases.NavigationTest@7b324585</td></tr>
-<tr>
-<td title='TestCases.ShowTest.continueWatching()'><b>continueWatching</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-05: Test continue watching – assure playback works from home feed</td>
-<td></td>
-<td>31</td>
-<td>TestCases.ShowTest@662f5666</td></tr>
-<tr>
-<td title='TestCases.SettingsTest.testSubtitleLanguage()'><b>testSubtitleLanguage</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-02: User can change subtitle language preference</td>
-<td></td>
-<td>3</td>
-<td>TestCases.SettingsTest@60dce7ea</td></tr>
-<tr>
-<td title='TestCases.NavigationTest.testLogoNav()'><b>testLogoNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-01: Assure Crunchyroll logo returns user to homepage</td>
-<td></td>
-<td>4</td>
-<td>TestCases.NavigationTest@7b324585</td></tr>
-<tr>
-<td title='TestCases.ShowTest.seriesInfo()'><b>seriesInfo</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-01: Verify series info properly displays</td>
-<td></td>
-<td>13</td>
-<td>TestCases.ShowTest@662f5666</td></tr>
-<tr>
-<td title='TestCases.ProfileManagementTest.addNewUser()'><b>addNewUser</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-02: Assure user can add new user profile to account</td>
-<td></td>
-<td>15</td>
-<td>TestCases.ProfileManagementTest@a8e6492</td></tr>
-<tr>
-<td title='TestCases.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-05: Assure user can login with valid credentials</td>
-<td></td>
-<td>4</td>
-<td>TestCases.LoginTest@ea9b7c6</td></tr>
-<tr>
-<td title='TestCases.ProfileManagementTest.chooseProfile()'><b>chooseProfile</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-05: Assure user can choose their own profile</td>
-<td></td>
-<td>4</td>
-<td>TestCases.ProfileManagementTest@a8e6492</td></tr>
-<tr>
-<td title='TestCases.SettingsTest.testCustomerSupport()'><b>testCustomerSupport</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-05: User can access customer support link</td>
-<td></td>
-<td>4</td>
-<td>TestCases.SettingsTest@60dce7ea</td></tr>
-<tr>
-<td title='TestCases.LoginTest.testButtons()'><b>testButtons</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-01: Login or signup buttons should be present</td>
-<td></td>
-<td>2</td>
-<td>TestCases.LoginTest@ea9b7c6</td></tr>
-<tr>
-<td title='TestCases.SubServicesTest.testStore()'><b>testStore</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-03: Test store sub service</td>
-<td></td>
-<td>12</td>
-<td>TestCases.SubServicesTest@2e11485</td></tr>
-<tr>
-<td title='TestCases.HomePageTest.titleANDlogo()'><b>titleANDlogo</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-01: Assure homepage displays title & logo</td>
-<td></td>
-<td>0</td>
-<td>TestCases.HomePageTest@1c7fd41f</td></tr>
-<tr>
-<td title='TestCases.SettingsTest.testChangeAccountInfo()'><b>testChangeAccountInfo</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-04: User should be able to change email info if needed</td>
-<td></td>
-<td>9</td>
-<td>TestCases.SettingsTest@60dce7ea</td></tr>
-<tr>
-<td title='TestCases.LoginTest.testForgotPassword()'><b>testForgotPassword</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-03: Assure forgot password link is present</td>
-<td></td>
-<td>2</td>
-<td>TestCases.LoginTest@ea9b7c6</td></tr>
-<tr>
-<td title='TestCases.ShowTest.testPlayback()'><b>testPlayback</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-04: Test playback on episode 146</td>
-<td></td>
-<td>13</td>
-<td>TestCases.ShowTest@662f5666</td></tr>
-<tr>
-<td title='TestCases.ShowTest.episodeDetails()'><b>episodeDetails</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-02: Verify episode details display correctly</td>
-<td></td>
-<td>9</td>
-<td>TestCases.ShowTest@662f5666</td></tr>
-<tr>
-<td title='TestCases.ProfileManagementTest.editUserProfile()'><b>editUserProfile</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-03: Assure user can edit existing user profile</td>
-<td></td>
-<td>11</td>
-<td>TestCases.ProfileManagementTest@a8e6492</td></tr>
-<tr>
-<td title='TestCases.SearchTest.testSearch()'><b>testSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-03: Test Search Functionality</td>
-<td></td>
-<td>13</td>
-<td>TestCases.SearchTest@3b77a04f</td></tr>
+<td>TestCases.LoginTest@e077866</td></tr>
 <tr>
 <td title='TestCases.LoginTest.testInputFields()'><b>testInputFields</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-02: Assure email/username & password input fields are present</td>
 <td></td>
 <td>2</td>
-<td>TestCases.LoginTest@ea9b7c6</td></tr>
+<td>TestCases.LoginTest@e077866</td></tr>
 <tr>
-<td title='TestCases.HomePageTest.testContinueWatching()'><b>testContinueWatching</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-03: Assure Continue Watching section is displayed</td>
+<td title='TestCases.LoginTest.testButtons()'><b>testButtons</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-01: Login or signup buttons should be present</td>
 <td></td>
-<td>3</td>
-<td>TestCases.HomePageTest@1c7fd41f</td></tr>
+<td>2</td>
+<td>TestCases.LoginTest@e077866</td></tr>
 <tr>
-<td title='TestCases.SubServicesTest.testGames()'><b>testGames</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-02: Test game sub service</td>
+<td title='TestCases.HomePageTest.titleANDlogo()'><b>titleANDlogo</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-01: Assure homepage displays title & logo</td>
 <td></td>
-<td>7</td>
-<td>TestCases.SubServicesTest@2e11485</td></tr>
+<td>0</td>
+<td>TestCases.HomePageTest@3b77a04f</td></tr>
 <tr>
-<td title='TestCases.SearchTest.testEmptySearch()'><b>testEmptySearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-02: Empty search cannot crash site or produce error page</td>
+<td title='TestCases.LoginTest.testForgotPassword()'><b>testForgotPassword</b><br>Test class: TestCases.LoginTest<br>Test method: TC-LGN-03: Assure forgot password link is present</td>
 <td></td>
-<td>5</td>
-<td>TestCases.SearchTest@3b77a04f</td></tr>
-<tr>
-<td title='TestCases.SearchTest.keywordSearch()'><b>keywordSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-04: Test Search by keyword</td>
-<td></td>
-<td>13</td>
-<td>TestCases.SearchTest@3b77a04f</td></tr>
+<td>2</td>
+<td>TestCases.LoginTest@e077866</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -393,14 +593,14 @@ Session ID: ed5641c97b02dccbc20093ec2b74f85c
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.SubServicesTest.testNews()'><b>testNews</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-05: Test news sub service</td>
-<td><div><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@2e11485 depends on not successfully finished methods 
-[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@2e11485]
+<td title='TestCases.SearchTest.testEmptySearch()'><b>testEmptySearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-02: Empty search cannot crash site or produce error page</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearchPage() on instance TestCases.SearchTest@7b324585]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.example.Main.main(Main.java:25)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace641980258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace641980258'><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@2e11485 depends on not successfully finished methods 
-[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@2e11485]
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace209360767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace209360767'><pre>java.lang.Throwable: Method TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearchPage() on instance TestCases.SearchTest@7b324585]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -420,7 +620,732 @@ Session ID: ed5641c97b02dccbc20093ec2b74f85c
 	at org.example.Main.main(Main.java:25)
 </pre></div></td>
 <td>0</td>
-<td>TestCases.SubServicesTest@2e11485</td></tr>
+<td>TestCases.SearchTest@7b324585</td></tr>
+<tr>
+<td title='TestCases.SettingsTest.testSubtitleLanguage()'><b>testSubtitleLanguage</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-02: User can change subtitle language preference</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSettingsPageLoads() on instance TestCases.SettingsTest@662f5666]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace296204898", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace296204898'><pre>java.lang.Throwable: Method TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSettingsPageLoads() on instance TestCases.SettingsTest@662f5666]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SettingsTest@662f5666</td></tr>
+<tr>
+<td title='TestCases.SubServicesTest.testNews()'><b>testNews</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-05: Test news sub service</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1877240674", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1877240674'><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SubServicesTest@60dce7ea</td></tr>
+<tr>
+<td title='TestCases.ProfileManagementTest.addNewUser()'><b>addNewUser</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-02: Assure user can add new user profile to account</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.testLogout() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1298380324", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1298380324'><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.testLogout() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ProfileManagementTest@1c7fd41f</td></tr>
+<tr>
+<td title='TestCases.ShowTest.seasonsMenu()'><b>seasonsMenu</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-03: Verify drop down menu for seasons</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace399699227", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace399699227'><pre>java.lang.Throwable: Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ShowTest@fd8294b</td></tr>
+<tr>
+<td title='TestCases.HomePageTest.testContinueWatching()'><b>testContinueWatching</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-03: Assure Continue Watching section is displayed</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.HomePageTest.testContinueWatching() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace358019805", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace358019805'><pre>java.lang.Throwable: Method TestCases.HomePageTest.testContinueWatching() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.HomePageTest@3b77a04f</td></tr>
+<tr>
+<td title='TestCases.SearchTest.abbrevSearch()'><b>abbrevSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SearchTest.abbrevSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace741883443", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace741883443'><pre>java.lang.Throwable: Method TestCases.SearchTest.abbrevSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SearchTest@7b324585</td></tr>
+<tr>
+<td title='TestCases.ProfileManagementTest.chooseProfile()'><b>chooseProfile</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-05: Assure user can choose their own profile</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.chooseProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace773348567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace773348567'><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.chooseProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ProfileManagementTest@1c7fd41f</td></tr>
+<tr>
+<td title='TestCases.SearchTest.keywordSearch()'><b>keywordSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-04: Test Search by keyword</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1837533591", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1837533591'><pre>java.lang.Throwable: Method TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SearchTest@7b324585</td></tr>
+<tr>
+<td title='TestCases.NavigationTest.navLinks()'><b>navLinks</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-02: Assure there is an easy navigation bar with multiple links</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.testLogoNav() on instance TestCases.NavigationTest@2e11485]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace324579982", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace324579982'><pre>java.lang.Throwable: Method TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.testLogoNav() on instance TestCases.NavigationTest@2e11485]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.NavigationTest@2e11485</td></tr>
+<tr>
+<td title='TestCases.SubServicesTest.testStore()'><b>testStore</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-03: Test store sub service</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace698498109", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace698498109'><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SubServicesTest@60dce7ea</td></tr>
+<tr>
+<td title='TestCases.ShowTest.testPlayback()'><b>testPlayback</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-04: Test playback on episode 146</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace408909888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace408909888'><pre>java.lang.Throwable: Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ShowTest@fd8294b</td></tr>
+<tr>
+<td title='TestCases.SubServicesTest.testGames()'><b>testGames</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-02: Test game sub service</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testManga() on instance TestCases.SubServicesTest@60dce7ea]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1397530667", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1397530667'><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testManga() on instance TestCases.SubServicesTest@60dce7ea]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SubServicesTest@60dce7ea</td></tr>
+<tr>
+<td title='TestCases.ProfileManagementTest.deleteUserProfile()'><b>deleteUserProfile</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-04: Assure user can delete user profile</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1535116392", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1535116392'><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ProfileManagementTest@1c7fd41f</td></tr>
+<tr>
+<td title='TestCases.NavigationTest.navByCategory()'><b>navByCategory</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-04: Assure there is a category/genre filter/easy navigation</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace435803541", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace435803541'><pre>java.lang.Throwable: Method TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.NavigationTest@2e11485</td></tr>
+<tr>
+<td title='TestCases.ProfileManagementTest.editUserProfile()'><b>editUserProfile</b><br>Test class: TestCases.ProfileManagementTest<br>Test method: TC-PM-03: Assure user can edit existing user profile</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1181545730", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1181545730'><pre>java.lang.Throwable: Method TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ProfileManagementTest@1c7fd41f</td></tr>
+<tr>
+<td title='TestCases.NavigationTest.watchlistNav()'><b>watchlistNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-03: Assure easy navigation to watchlists</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace444127949", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace444127949'><pre>java.lang.Throwable: Method TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.NavigationTest@2e11485</td></tr>
+<tr>
+<td title='TestCases.SettingsTest.testChangeAccountInfo()'><b>testChangeAccountInfo</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-04: User should be able to change email info if needed</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace809520570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace809520570'><pre>java.lang.Throwable: Method TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SettingsTest@662f5666</td></tr>
+<tr>
+<td title='TestCases.SettingsTest.testCustomerSupport()'><b>testCustomerSupport</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-05: User can access customer support link</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SettingsTest.testCustomerSupport() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1615873578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1615873578'><pre>java.lang.Throwable: Method TestCases.SettingsTest.testCustomerSupport() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SettingsTest@662f5666</td></tr>
+<tr>
+<td title='TestCases.NavigationTest.searchNav()'><b>searchNav</b><br>Test class: TestCases.NavigationTest<br>Test method: TC-NAV-05: Assure nav has a search icon/bar</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.NavigationTest.searchNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2112135199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2112135199'><pre>java.lang.Throwable: Method TestCases.NavigationTest.searchNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.NavigationTest@2e11485</td></tr>
+<tr>
+<td title='TestCases.SubServicesTest.testAccountTransfer()'><b>testAccountTransfer</b><br>Test class: TestCases.SubServicesTest<br>Test method: TC-SS-04: Assure account info transfers over to store for user ease</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1265287441", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1265287441'><pre>java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SubServicesTest@60dce7ea</td></tr>
+<tr>
+<td title='TestCases.HomePageTest.testHPcontent()'><b>testHPcontent</b><br>Test class: TestCases.HomePageTest<br>Test method: TC-HP-05: Assure home page has adequate content</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.HomePageTest.testHPcontent() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace904208473", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace904208473'><pre>java.lang.Throwable: Method TestCases.HomePageTest.testHPcontent() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.HomePageTest@3b77a04f</td></tr>
+<tr>
+<td title='TestCases.ShowTest.continueWatching()'><b>continueWatching</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-05: Test continue watching – assure playback works from home feed</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ShowTest.continueWatching() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace510445648", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace510445648'><pre>java.lang.Throwable: Method TestCases.ShowTest.continueWatching() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ShowTest@fd8294b</td></tr>
+<tr>
+<td title='TestCases.SettingsTest.testNotifSettings()'><b>testNotifSettings</b><br>Test class: TestCases.SettingsTest<br>Test method: TC-ST-03: User can toggle notification settings</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace873168630", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace873168630'><pre>java.lang.Throwable: Method TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SettingsTest@662f5666</td></tr>
+<tr>
+<td title='TestCases.ShowTest.episodeDetails()'><b>episodeDetails</b><br>Test class: TestCases.ShowTest<br>Test method: TC-VP-02: Verify episode details display correctly</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@fd8294b]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace365864880", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace365864880'><pre>java.lang.Throwable: Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@fd8294b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.ShowTest@fd8294b</td></tr>
+<tr>
+<td title='TestCases.SearchTest.testSearch()'><b>testSearch</b><br>Test class: TestCases.SearchTest<br>Test method: TC-SR-03: Test Search Functionality</td>
+<td><div><pre>java.lang.Throwable: Method TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.example.Main.main(Main.java:25)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1439361845", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1439361845'><pre>java.lang.Throwable: Method TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.example.Main.main(Main.java:25)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.SearchTest@7b324585</td></tr>
 </table><p>
 </body>
 </html>

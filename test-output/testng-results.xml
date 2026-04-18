@@ -1,39 +1,697 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="40" passed="37" failed="2" skipped="1">
+<testng-results ignored="0" total="40" passed="5" failed="9" skipped="26">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-18T19:12:36 EDT" name="Command line suite" finished-at="2026-04-18T19:17:22 EDT" duration-ms="285819">
+  <suite started-at="2026-04-18T19:34:25 EDT" name="Command line suite" finished-at="2026-04-18T19:35:54 EDT" duration-ms="89661">
     <groups>
     </groups>
-    <test started-at="2026-04-18T19:12:36 EDT" name="Command line test" finished-at="2026-04-18T19:17:22 EDT" duration-ms="285819">
+    <test started-at="2026-04-18T19:34:25 EDT" name="Command line test" finished-at="2026-04-18T19:35:54 EDT" duration-ms="89661">
       <class name="TestCases.SearchTest">
-        <test-method signature="testSearchPage()[pri:0, instance:TestCases.SearchTest@3b77a04f]" started-at="2026-04-18T19:13:46 EDT" name="testSearchPage" description="TC-SR-01: Assure search page loads" finished-at="2026-04-18T19:13:52 EDT" duration-ms="5431" status="PASS">
+        <test-method signature="testSearchPage()[pri:0, instance:TestCases.SearchTest@7b324585]" started-at="2026-04-18T19:34:59 EDT" name="testSearchPage" description="TC-SR-01: Assure search page loads" finished-at="2026-04-18T19:35:09 EDT" duration-ms="10274" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: a[aria-label='Search'][href*='/search'][data-t='search-svg'], a.erc-search-header-button-old, a[href='/search'][aria-label='Search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[aria-label='Search'][href*='/search'][data-t='search-svg'], a.erc-search-header-button-old, a[href='/search'][aria-label='Search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.BaseTest.clickElement(BaseTest.java:235)
+at TestCases.SearchTest.testSearchPage(SearchTest.java:69)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchPage -->
-        <test-method signature="testEmptySearch()[pri:0, instance:TestCases.SearchTest@3b77a04f]" started-at="2026-04-18T19:13:52 EDT" name="testEmptySearch" description="TC-SR-02: Empty search cannot crash site or produce error page" finished-at="2026-04-18T19:13:57 EDT" depends-on-methods="TestCases.SearchTest.testSearchPage" duration-ms="5096" status="PASS">
+        <test-method signature="testEmptySearch()[pri:0, instance:TestCases.SearchTest@7b324585]" started-at="2026-04-18T19:35:09 EDT" name="testEmptySearch" description="TC-SR-02: Empty search cannot crash site or produce error page" finished-at="2026-04-18T19:35:09 EDT" depends-on-methods="TestCases.SearchTest.testSearchPage" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearchPage() on instance TestCases.SearchTest@7b324585]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearchPage() on instance TestCases.SearchTest@7b324585]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptySearch -->
-        <test-method signature="testSearch()[pri:0, instance:TestCases.SearchTest@3b77a04f]" started-at="2026-04-18T19:13:57 EDT" name="testSearch" description="TC-SR-03: Test Search Functionality" finished-at="2026-04-18T19:14:10 EDT" depends-on-methods="TestCases.SearchTest.testEmptySearch" duration-ms="13125" status="PASS">
+        <test-method signature="testSearch()[pri:0, instance:TestCases.SearchTest@7b324585]" started-at="2026-04-18T19:35:09 EDT" name="testSearch" description="TC-SR-03: Test Search Functionality" finished-at="2026-04-18T19:35:09 EDT" depends-on-methods="TestCases.SearchTest.testEmptySearch" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testEmptySearch() on instance TestCases.SearchTest@7b324585]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearch -->
-        <test-method signature="keywordSearch()[pri:0, instance:TestCases.SearchTest@3b77a04f]" started-at="2026-04-18T19:14:10 EDT" name="keywordSearch" description="TC-SR-04: Test Search by keyword" finished-at="2026-04-18T19:14:23 EDT" depends-on-methods="TestCases.SearchTest.testSearch" duration-ms="13136" status="PASS">
+        <test-method signature="abbrevSearch()[pri:0, instance:TestCases.SearchTest@7b324585]" started-at="2026-04-18T19:35:09 EDT" name="abbrevSearch" description="TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)" finished-at="2026-04-18T19:35:09 EDT" depends-on-methods="TestCases.SearchTest.keywordSearch" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SearchTest.abbrevSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SearchTest.abbrevSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abbrevSearch -->
+        <test-method signature="keywordSearch()[pri:0, instance:TestCases.SearchTest@7b324585]" started-at="2026-04-18T19:35:09 EDT" name="keywordSearch" description="TC-SR-04: Test Search by keyword" finished-at="2026-04-18T19:35:09 EDT" depends-on-methods="TestCases.SearchTest.testSearch" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SearchTest.keywordSearch() on instance TestCases.SearchTest@7b324585 depends on not successfully finished methods 
+[TestCases.SearchTest.testSearch() on instance TestCases.SearchTest@7b324585]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keywordSearch -->
-        <test-method signature="abbrevSearch()[pri:0, instance:TestCases.SearchTest@3b77a04f]" started-at="2026-04-18T19:14:23 EDT" name="abbrevSearch" description="TC-SR-05: Test search by abbreviation (known limitation – Crunchyroll does not support abbreviation search)" finished-at="2026-04-18T19:14:31 EDT" depends-on-methods="TestCases.SearchTest.keywordSearch" duration-ms="8204" status="FAIL">
-          <exception class="java.lang.AssertionError">
+      </class> <!-- TestCases.SearchTest -->
+      <class name="TestCases.LoginTest">
+        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:TestCases.LoginTest@e077866]" started-at="2026-04-18T19:34:25 EDT" name="suiteSetUp" finished-at="2026-04-18T19:34:25 EDT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetUp -->
+        <test-method signature="testButtons()[pri:0, instance:TestCases.LoginTest@e077866]" started-at="2026-04-18T19:34:25 EDT" name="testButtons" description="TC-LGN-01: Login or signup buttons should be present" finished-at="2026-04-18T19:34:27 EDT" duration-ms="2609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testButtons -->
+        <test-method signature="testInputFields()[pri:0, instance:TestCases.LoginTest@e077866]" started-at="2026-04-18T19:34:27 EDT" name="testInputFields" description="TC-LGN-02: Assure email/username &amp; password input fields are present" finished-at="2026-04-18T19:34:29 EDT" depends-on-methods="TestCases.LoginTest.testButtons" duration-ms="2069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInputFields -->
+        <test-method signature="testForgotPassword()[pri:0, instance:TestCases.LoginTest@e077866]" started-at="2026-04-18T19:34:29 EDT" name="testForgotPassword" description="TC-LGN-03: Assure forgot password link is present" finished-at="2026-04-18T19:34:31 EDT" depends-on-methods="TestCases.LoginTest.testInputFields" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPassword -->
+        <test-method signature="testInvalidLogin()[pri:0, instance:TestCases.LoginTest@e077866]" started-at="2026-04-18T19:34:31 EDT" name="testInvalidLogin" description="TC-LGN-04: Assure system rejects wrong credentials" finished-at="2026-04-18T19:34:36 EDT" depends-on-methods="TestCases.LoginTest.testForgotPassword" duration-ms="4232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method signature="testValidLogin()[pri:0, instance:TestCases.LoginTest@e077866]" started-at="2026-04-18T19:34:36 EDT" name="testValidLogin" description="TC-LGN-05: Assure user can login with valid credentials" finished-at="2026-04-18T19:34:47 EDT" depends-on-methods="TestCases.LoginTest.testInvalidLogin" duration-ms="11563" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Abbreviation 'jjk' did not match 'Jujutsu Kaisen' – Crunchyroll does not support abbreviation search expected [true] but found [false]]]>
+              <![CDATA[Expected condition failed: waiting for condition to not be valid: url to contain "/login". Current url: "https://sso.crunchyroll.com/login?return_url=%2Fauthorize%3Fclient_id%3Dnoaihdevm_6iyg0a8l0q%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252F" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Abbreviation 'jjk' did not match 'Jujutsu Kaisen' – Crunchyroll does not support abbreviation search expected [true] but found [false]
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition to not be valid: url to contain "/login". Current url: "https://sso.crunchyroll.com/login?return_url=%2Fauthorize%3Fclient_id%3Dnoaihdevm_6iyg0a8l0q%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252F" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.BaseTest.loginWithValidCredentials(BaseTest.java:261)
+at TestCases.LoginTest.testValidLogin(LoginTest.java:104)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:TestCases.LoginTest@e077866]" started-at="2026-04-18T19:35:54 EDT" name="suiteTearDown" finished-at="2026-04-18T19:35:55 EDT" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteTearDown -->
+      </class> <!-- TestCases.LoginTest -->
+      <class name="TestCases.SettingsTest">
+        <test-method signature="testSettingsPageLoads()[pri:0, instance:TestCases.SettingsTest@662f5666]" started-at="2026-04-18T19:35:31 EDT" name="testSettingsPageLoads" description="TC-ST-01: Settings page loads correctly" finished-at="2026-04-18T19:35:44 EDT" duration-ms="12817" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: [aria-label='User Menu'][data-t='header-tile'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [aria-label='User Menu'][data-t='header-tile'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.BaseTest.clickElement(BaseTest.java:235)
+at TestCases.SettingsTest.testSettingsPageLoads(SettingsTest.java:67)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSettingsPageLoads -->
+        <test-method signature="testSubtitleLanguage()[pri:0, instance:TestCases.SettingsTest@662f5666]" started-at="2026-04-18T19:35:44 EDT" name="testSubtitleLanguage" description="TC-ST-02: User can change subtitle language preference" finished-at="2026-04-18T19:35:44 EDT" depends-on-methods="TestCases.SettingsTest.testSettingsPageLoads" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSettingsPageLoads() on instance TestCases.SettingsTest@662f5666]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSettingsPageLoads() on instance TestCases.SettingsTest@662f5666]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubtitleLanguage -->
+        <test-method signature="testChangeAccountInfo()[pri:0, instance:TestCases.SettingsTest@662f5666]" started-at="2026-04-18T19:35:44 EDT" name="testChangeAccountInfo" description="TC-ST-04: User should be able to change email info if needed" finished-at="2026-04-18T19:35:44 EDT" depends-on-methods="TestCases.SettingsTest.testNotifSettings" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangeAccountInfo -->
+        <test-method signature="testNotifSettings()[pri:0, instance:TestCases.SettingsTest@662f5666]" started-at="2026-04-18T19:35:44 EDT" name="testNotifSettings" description="TC-ST-03: User can toggle notification settings" finished-at="2026-04-18T19:35:44 EDT" depends-on-methods="TestCases.SettingsTest.testSubtitleLanguage" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testNotifSettings() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testSubtitleLanguage() on instance TestCases.SettingsTest@662f5666]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNotifSettings -->
+        <test-method signature="testCustomerSupport()[pri:0, instance:TestCases.SettingsTest@662f5666]" started-at="2026-04-18T19:35:44 EDT" name="testCustomerSupport" description="TC-ST-05: User can access customer support link" finished-at="2026-04-18T19:35:44 EDT" depends-on-methods="TestCases.SettingsTest.testChangeAccountInfo" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SettingsTest.testCustomerSupport() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SettingsTest.testCustomerSupport() on instance TestCases.SettingsTest@662f5666 depends on not successfully finished methods 
+[TestCases.SettingsTest.testChangeAccountInfo() on instance TestCases.SettingsTest@662f5666]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCustomerSupport -->
+      </class> <!-- TestCases.SettingsTest -->
+      <class name="TestCases.SubServicesTest">
+        <test-method signature="testManga()[pri:0, instance:TestCases.SubServicesTest@60dce7ea]" started-at="2026-04-18T19:35:21 EDT" name="testManga" description="TC-SS-01: Test manga sub service" finished-at="2026-04-18T19:35:31 EDT" duration-ms="10328" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: [data-t='header-menu-manga'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [data-t='header-menu-manga'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.BaseTest.clickElement(BaseTest.java:235)
+at TestCases.SubServicesTest.testManga(SubServicesTest.java:18)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testManga -->
+        <test-method signature="testGames()[pri:0, instance:TestCases.SubServicesTest@60dce7ea]" started-at="2026-04-18T19:35:31 EDT" name="testGames" description="TC-SS-02: Test game sub service" finished-at="2026-04-18T19:35:31 EDT" depends-on-methods="TestCases.SubServicesTest.testManga" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testManga() on instance TestCases.SubServicesTest@60dce7ea]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testManga() on instance TestCases.SubServicesTest@60dce7ea]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGames -->
+        <test-method signature="testNews()[pri:0, instance:TestCases.SubServicesTest@60dce7ea]" started-at="2026-04-18T19:35:31 EDT" name="testNews" description="TC-SS-05: Test news sub service" finished-at="2026-04-18T19:35:31 EDT" depends-on-methods="TestCases.SubServicesTest.testAccountTransfer" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNews -->
+        <test-method signature="testStore()[pri:0, instance:TestCases.SubServicesTest@60dce7ea]" started-at="2026-04-18T19:35:31 EDT" name="testStore" description="TC-SS-03: Test store sub service" finished-at="2026-04-18T19:35:31 EDT" depends-on-methods="TestCases.SubServicesTest.testGames" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testGames() on instance TestCases.SubServicesTest@60dce7ea]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStore -->
+        <test-method signature="testAccountTransfer()[pri:0, instance:TestCases.SubServicesTest@60dce7ea]" started-at="2026-04-18T19:35:31 EDT" name="testAccountTransfer" description="TC-SS-04: Assure account info transfers over to store for user ease" finished-at="2026-04-18T19:35:31 EDT" depends-on-methods="TestCases.SubServicesTest.testStore" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@60dce7ea depends on not successfully finished methods 
+[TestCases.SubServicesTest.testStore() on instance TestCases.SubServicesTest@60dce7ea]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccountTransfer -->
+      </class> <!-- TestCases.SubServicesTest -->
+      <class name="TestCases.HomePageTest">
+        <test-method signature="titleANDlogo()[pri:0, instance:TestCases.HomePageTest@3b77a04f]" started-at="2026-04-18T19:34:47 EDT" name="titleANDlogo" description="TC-HP-01: Assure homepage displays title &amp; logo" finished-at="2026-04-18T19:34:47 EDT" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleANDlogo -->
+        <test-method signature="testCarousel()[pri:0, instance:TestCases.HomePageTest@3b77a04f]" started-at="2026-04-18T19:34:47 EDT" name="testCarousel" description="TC-HP-02: Test home page carousel" finished-at="2026-04-18T19:34:57 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="10253" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of any elements located by By.cssSelector: [class*='erc-hero-carousel'], [class*='hero-carousel'], [data-t*='hero-carousel'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.cssSelector: [class*='erc-hero-carousel'], [class*='hero-carousel'], [data-t*='hero-carousel'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.HomePageTest.testCarousel(HomePageTest.java:69)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCarousel -->
+        <test-method signature="testFooterLinks()[pri:0, instance:TestCases.HomePageTest@3b77a04f]" started-at="2026-04-18T19:34:57 EDT" name="testFooterLinks" description="TC-HP-04: Assure home page has footer with extra links" finished-at="2026-04-18T19:34:59 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="1580" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Footer should have more than 5 links, found: 4 expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Footer should have more than 5 links, found: 4 expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at TestCases.SearchTest.abbrevSearch(SearchTest.java:179)
+at TestCases.HomePageTest.testFooterLinks(HomePageTest.java:184)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -63,110 +721,93 @@ at org.example.Main.main(Main.java:25)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- abbrevSearch -->
-      </class> <!-- TestCases.SearchTest -->
-      <class name="TestCases.LoginTest">
-        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:TestCases.LoginTest@ea9b7c6]" started-at="2026-04-18T19:12:36 EDT" name="suiteSetUp" finished-at="2026-04-18T19:12:36 EDT" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- suiteSetUp -->
-        <test-method signature="testButtons()[pri:0, instance:TestCases.LoginTest@ea9b7c6]" started-at="2026-04-18T19:12:36 EDT" name="testButtons" description="TC-LGN-01: Login or signup buttons should be present" finished-at="2026-04-18T19:12:39 EDT" duration-ms="2743" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testButtons -->
-        <test-method signature="testInputFields()[pri:0, instance:TestCases.LoginTest@ea9b7c6]" started-at="2026-04-18T19:12:39 EDT" name="testInputFields" description="TC-LGN-02: Assure email/username &amp; password input fields are present" finished-at="2026-04-18T19:12:41 EDT" depends-on-methods="TestCases.LoginTest.testButtons" duration-ms="2065" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInputFields -->
-        <test-method signature="testForgotPassword()[pri:0, instance:TestCases.LoginTest@ea9b7c6]" started-at="2026-04-18T19:12:41 EDT" name="testForgotPassword" description="TC-LGN-03: Assure forgot password link is present" finished-at="2026-04-18T19:12:43 EDT" depends-on-methods="TestCases.LoginTest.testInputFields" duration-ms="2012" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testForgotPassword -->
-        <test-method signature="testInvalidLogin()[pri:0, instance:TestCases.LoginTest@ea9b7c6]" started-at="2026-04-18T19:12:43 EDT" name="testInvalidLogin" description="TC-LGN-04: Assure system rejects wrong credentials" finished-at="2026-04-18T19:12:47 EDT" depends-on-methods="TestCases.LoginTest.testForgotPassword" duration-ms="4211" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidLogin -->
-        <test-method signature="testValidLogin()[pri:0, instance:TestCases.LoginTest@ea9b7c6]" started-at="2026-04-18T19:12:47 EDT" name="testValidLogin" description="TC-LGN-05: Assure user can login with valid credentials" finished-at="2026-04-18T19:12:51 EDT" depends-on-methods="TestCases.LoginTest.testInvalidLogin" duration-ms="4156" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:TestCases.LoginTest@ea9b7c6]" started-at="2026-04-18T19:17:22 EDT" name="suiteTearDown" finished-at="2026-04-18T19:17:22 EDT" duration-ms="182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- suiteTearDown -->
-      </class> <!-- TestCases.LoginTest -->
-      <class name="TestCases.SettingsTest">
-        <test-method signature="testSettingsPageLoads()[pri:0, instance:TestCases.SettingsTest@60dce7ea]" started-at="2026-04-18T19:15:36 EDT" name="testSettingsPageLoads" description="TC-ST-01: Settings page loads correctly" finished-at="2026-04-18T19:15:42 EDT" duration-ms="5901" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSettingsPageLoads -->
-        <test-method signature="testSubtitleLanguage()[pri:0, instance:TestCases.SettingsTest@60dce7ea]" started-at="2026-04-18T19:15:42 EDT" name="testSubtitleLanguage" description="TC-ST-02: User can change subtitle language preference" finished-at="2026-04-18T19:15:46 EDT" depends-on-methods="TestCases.SettingsTest.testSettingsPageLoads" duration-ms="3716" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSubtitleLanguage -->
-        <test-method signature="testNotifSettings()[pri:0, instance:TestCases.SettingsTest@60dce7ea]" started-at="2026-04-18T19:15:46 EDT" name="testNotifSettings" description="TC-ST-03: User can toggle notification settings" finished-at="2026-04-18T19:15:50 EDT" depends-on-methods="TestCases.SettingsTest.testSubtitleLanguage" duration-ms="3957" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNotifSettings -->
-        <test-method signature="testChangeAccountInfo()[pri:0, instance:TestCases.SettingsTest@60dce7ea]" started-at="2026-04-18T19:15:50 EDT" name="testChangeAccountInfo" description="TC-ST-04: User should be able to change email info if needed" finished-at="2026-04-18T19:15:59 EDT" depends-on-methods="TestCases.SettingsTest.testNotifSettings" duration-ms="9127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testChangeAccountInfo -->
-        <test-method signature="testCustomerSupport()[pri:0, instance:TestCases.SettingsTest@60dce7ea]" started-at="2026-04-18T19:15:59 EDT" name="testCustomerSupport" description="TC-ST-05: User can access customer support link" finished-at="2026-04-18T19:16:03 EDT" depends-on-methods="TestCases.SettingsTest.testChangeAccountInfo" duration-ms="4148" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCustomerSupport -->
-      </class> <!-- TestCases.SettingsTest -->
-      <class name="TestCases.SubServicesTest">
-        <test-method signature="testManga()[pri:0, instance:TestCases.SubServicesTest@2e11485]" started-at="2026-04-18T19:14:59 EDT" name="testManga" description="TC-SS-01: Test manga sub service" finished-at="2026-04-18T19:15:14 EDT" duration-ms="14347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testManga -->
-        <test-method signature="testGames()[pri:0, instance:TestCases.SubServicesTest@2e11485]" started-at="2026-04-18T19:15:14 EDT" name="testGames" description="TC-SS-02: Test game sub service" finished-at="2026-04-18T19:15:21 EDT" depends-on-methods="TestCases.SubServicesTest.testManga" duration-ms="7257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGames -->
-        <test-method signature="testStore()[pri:0, instance:TestCases.SubServicesTest@2e11485]" started-at="2026-04-18T19:15:21 EDT" name="testStore" description="TC-SS-03: Test store sub service" finished-at="2026-04-18T19:15:34 EDT" depends-on-methods="TestCases.SubServicesTest.testGames" duration-ms="12890" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testStore -->
-        <test-method signature="testAccountTransfer()[pri:0, instance:TestCases.SubServicesTest@2e11485]" started-at="2026-04-18T19:15:34 EDT" name="testAccountTransfer" description="TC-SS-04: Assure account info transfers over to store for user ease" finished-at="2026-04-18T19:15:36 EDT" depends-on-methods="TestCases.SubServicesTest.testStore" duration-ms="2422" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        </test-method> <!-- testFooterLinks -->
+        <test-method signature="testContinueWatching()[pri:0, instance:TestCases.HomePageTest@3b77a04f]" started-at="2026-04-18T19:34:59 EDT" name="testContinueWatching" description="TC-HP-03: Assure Continue Watching section is displayed" finished-at="2026-04-18T19:34:59 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[element click intercepted: Element <a href="https://legacy.rightstufanime.com/secure/my_account.ssp?redirect=&amp;fragment=purchases#purchases" target="_blank" rel="noopener noreferrer">...</a> is not clickable at point (1047, 937). Other element would receive the click: <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns">...</div>
-  (Session info: chrome=147.0.7727.57)
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ed5641c97b02dccbc20093ec2b74f85c, clickElement {id=f.797D2DFE4B88A68F921DD93C1CDBD507.d.0E618ABF633B1AA5587ADC1B825E2650.e.23620}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55606}, goog:processID: 4544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55606/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ed5641c97b02dccbc20093ec2b74f85c)] -> css selector: a[href*='account'], [data-t='my-account']]
-Session ID: ed5641c97b02dccbc20093ec2b74f85c]]>
+              <![CDATA[Method TestCases.HomePageTest.testContinueWatching() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://legacy.rightstufanime.com/secure/my_account.ssp?redirect=&amp;fragment=purchases#purchases" target="_blank" rel="noopener noreferrer">...</a> is not clickable at point (1047, 937). Other element would receive the click: <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns">...</div>
-  (Session info: chrome=147.0.7727.57)
+              <![CDATA[java.lang.Throwable: Method TestCases.HomePageTest.testContinueWatching() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContinueWatching -->
+        <test-method signature="testHPcontent()[pri:0, instance:TestCases.HomePageTest@3b77a04f]" started-at="2026-04-18T19:34:59 EDT" name="testHPcontent" description="TC-HP-05: Assure home page has adequate content" finished-at="2026-04-18T19:34:59 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.HomePageTest.testHPcontent() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.HomePageTest.testHPcontent() on instance TestCases.HomePageTest@3b77a04f depends on not successfully finished methods 
+[TestCases.HomePageTest.testCarousel() on instance TestCases.HomePageTest@3b77a04f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHPcontent -->
+      </class> <!-- TestCases.HomePageTest -->
+      <class name="TestCases.NavigationTest">
+        <test-method signature="testLogoNav()[pri:0, instance:TestCases.NavigationTest@2e11485]" started-at="2026-04-18T19:35:09 EDT" name="testLogoNav" description="TC-NAV-01: Assure Crunchyroll logo returns user to homepage" finished-at="2026-04-18T19:35:21 EDT" duration-ms="11572" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for url to contain "/discover". Current url: "https://www.crunchyroll.com/" (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ed5641c97b02dccbc20093ec2b74f85c, clickElement {id=f.797D2DFE4B88A68F921DD93C1CDBD507.d.0E618ABF633B1AA5587ADC1B825E2650.e.23620}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55606}, goog:processID: 4544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55606/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ed5641c97b02dccbc20093ec2b74f85c)] -> css selector: a[href*='account'], [data-t='my-account']]
-Session ID: ed5641c97b02dccbc20093ec2b74f85c
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at TestCases.BaseTest.clickElement(BaseTest.java:235)
-at TestCases.SubServicesTest.testAccountTransfer(SubServicesTest.java:105)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "/discover". Current url: "https://www.crunchyroll.com/" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.NavigationTest.testLogoNav(NavigationTest.java:45)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -193,19 +834,19 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.example.Main.main(Main.java:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAccountTransfer -->
-        <test-method signature="testNews()[pri:0, instance:TestCases.SubServicesTest@2e11485]" started-at="2026-04-18T19:15:36 EDT" name="testNews" description="TC-SS-05: Test news sub service" finished-at="2026-04-18T19:15:36 EDT" depends-on-methods="TestCases.SubServicesTest.testAccountTransfer" duration-ms="0" status="SKIP">
+        </test-method> <!-- testLogoNav -->
+        <test-method signature="navLinks()[pri:0, instance:TestCases.NavigationTest@2e11485]" started-at="2026-04-18T19:35:21 EDT" name="navLinks" description="TC-NAV-02: Assure there is an easy navigation bar with multiple links" finished-at="2026-04-18T19:35:21 EDT" depends-on-methods="TestCases.NavigationTest.testLogoNav" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@2e11485 depends on not successfully finished methods 
-[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@2e11485]]]>
+              <![CDATA[Method TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.testLogoNav() on instance TestCases.NavigationTest@2e11485]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestCases.SubServicesTest.testNews() on instance TestCases.SubServicesTest@2e11485 depends on not successfully finished methods 
-[TestCases.SubServicesTest.testAccountTransfer() on instance TestCases.SubServicesTest@2e11485]
+              <![CDATA[java.lang.Throwable: Method TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.testLogoNav() on instance TestCases.NavigationTest@2e11485]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -228,92 +869,478 @@ at org.example.Main.main(Main.java:25)
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNews -->
-      </class> <!-- TestCases.SubServicesTest -->
-      <class name="TestCases.HomePageTest">
-        <test-method signature="titleANDlogo()[pri:0, instance:TestCases.HomePageTest@1c7fd41f]" started-at="2026-04-18T19:13:33 EDT" name="titleANDlogo" description="TC-HP-01: Assure homepage displays title &amp; logo" finished-at="2026-04-18T19:13:33 EDT" duration-ms="106" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- titleANDlogo -->
-        <test-method signature="testCarousel()[pri:0, instance:TestCases.HomePageTest@1c7fd41f]" started-at="2026-04-18T19:13:33 EDT" name="testCarousel" description="TC-HP-02: Test home page carousel" finished-at="2026-04-18T19:13:36 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="2256" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCarousel -->
-        <test-method signature="testFooterLinks()[pri:0, instance:TestCases.HomePageTest@1c7fd41f]" started-at="2026-04-18T19:13:36 EDT" name="testFooterLinks" description="TC-HP-04: Assure home page has footer with extra links" finished-at="2026-04-18T19:13:38 EDT" depends-on-methods="TestCases.HomePageTest.titleANDlogo" duration-ms="2870" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFooterLinks -->
-        <test-method signature="testContinueWatching()[pri:0, instance:TestCases.HomePageTest@1c7fd41f]" started-at="2026-04-18T19:13:38 EDT" name="testContinueWatching" description="TC-HP-03: Assure Continue Watching section is displayed" finished-at="2026-04-18T19:13:42 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="3625" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testContinueWatching -->
-        <test-method signature="testHPcontent()[pri:0, instance:TestCases.HomePageTest@1c7fd41f]" started-at="2026-04-18T19:13:42 EDT" name="testHPcontent" description="TC-HP-05: Assure home page has adequate content" finished-at="2026-04-18T19:13:46 EDT" depends-on-methods="TestCases.HomePageTest.testCarousel" duration-ms="4313" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHPcontent -->
-      </class> <!-- TestCases.HomePageTest -->
-      <class name="TestCases.NavigationTest">
-        <test-method signature="testLogoNav()[pri:0, instance:TestCases.NavigationTest@7b324585]" started-at="2026-04-18T19:14:31 EDT" name="testLogoNav" description="TC-NAV-01: Assure Crunchyroll logo returns user to homepage" finished-at="2026-04-18T19:14:36 EDT" duration-ms="4924" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogoNav -->
-        <test-method signature="navLinks()[pri:0, instance:TestCases.NavigationTest@7b324585]" started-at="2026-04-18T19:14:36 EDT" name="navLinks" description="TC-NAV-02: Assure there is an easy navigation bar with multiple links" finished-at="2026-04-18T19:14:44 EDT" depends-on-methods="TestCases.NavigationTest.testLogoNav" duration-ms="7711" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- navLinks -->
-        <test-method signature="watchlistNav()[pri:0, instance:TestCases.NavigationTest@7b324585]" started-at="2026-04-18T19:14:44 EDT" name="watchlistNav" description="TC-NAV-03: Assure easy navigation to watchlists" finished-at="2026-04-18T19:14:51 EDT" depends-on-methods="TestCases.NavigationTest.navLinks" duration-ms="6499" status="PASS">
+        <test-method signature="watchlistNav()[pri:0, instance:TestCases.NavigationTest@2e11485]" started-at="2026-04-18T19:35:21 EDT" name="watchlistNav" description="TC-NAV-03: Assure easy navigation to watchlists" finished-at="2026-04-18T19:35:21 EDT" depends-on-methods="TestCases.NavigationTest.navLinks" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navLinks() on instance TestCases.NavigationTest@2e11485]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- watchlistNav -->
-        <test-method signature="navByCategory()[pri:0, instance:TestCases.NavigationTest@7b324585]" started-at="2026-04-18T19:14:51 EDT" name="navByCategory" description="TC-NAV-04: Assure there is a category/genre filter/easy navigation" finished-at="2026-04-18T19:14:55 EDT" depends-on-methods="TestCases.NavigationTest.watchlistNav" duration-ms="4931" status="PASS">
+        <test-method signature="navByCategory()[pri:0, instance:TestCases.NavigationTest@2e11485]" started-at="2026-04-18T19:35:21 EDT" name="navByCategory" description="TC-NAV-04: Assure there is a category/genre filter/easy navigation" finished-at="2026-04-18T19:35:21 EDT" depends-on-methods="TestCases.NavigationTest.watchlistNav" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.watchlistNav() on instance TestCases.NavigationTest@2e11485]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navByCategory -->
-        <test-method signature="searchNav()[pri:0, instance:TestCases.NavigationTest@7b324585]" started-at="2026-04-18T19:14:55 EDT" name="searchNav" description="TC-NAV-05: Assure nav has a search icon/bar" finished-at="2026-04-18T19:14:59 EDT" depends-on-methods="TestCases.NavigationTest.navByCategory" duration-ms="4008" status="PASS">
+        <test-method signature="searchNav()[pri:0, instance:TestCases.NavigationTest@2e11485]" started-at="2026-04-18T19:35:21 EDT" name="searchNav" description="TC-NAV-05: Assure nav has a search icon/bar" finished-at="2026-04-18T19:35:21 EDT" depends-on-methods="TestCases.NavigationTest.navByCategory" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.NavigationTest.searchNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.NavigationTest.searchNav() on instance TestCases.NavigationTest@2e11485 depends on not successfully finished methods 
+[TestCases.NavigationTest.navByCategory() on instance TestCases.NavigationTest@2e11485]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchNav -->
       </class> <!-- TestCases.NavigationTest -->
       <class name="TestCases.ProfileManagementTest">
-        <test-method signature="testLogout()[pri:0, instance:TestCases.ProfileManagementTest@a8e6492]" started-at="2026-04-18T19:12:51 EDT" name="testLogout" description="TC-PM-01: Assure user can log out and log back in" finished-at="2026-04-18T19:12:59 EDT" duration-ms="7903" status="PASS">
+        <test-method signature="testLogout()[pri:0, instance:TestCases.ProfileManagementTest@1c7fd41f]" started-at="2026-04-18T19:34:47 EDT" name="testLogout" description="TC-PM-01: Assure user can log out and log back in" finished-at="2026-04-18T19:34:47 EDT" duration-ms="7" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"a.logout-link"}
+  (Session info: chrome=147.0.7727.57)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8f9b27c2ce1c48224845f842f5af2580, findElement {using=css selector, value=a.logout-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a.logout-link"}
+  (Session info: chrome=147.0.7727.57)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8f9b27c2ce1c48224845f842f5af2580, findElement {using=css selector, value=a.logout-link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at TestCases.ProfileManagementTest.testLogout(ProfileManagementTest.java:18)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method signature="addNewUser()[pri:0, instance:TestCases.ProfileManagementTest@a8e6492]" started-at="2026-04-18T19:12:59 EDT" name="addNewUser" description="TC-PM-02: Assure user can add new user profile to account" finished-at="2026-04-18T19:13:15 EDT" depends-on-methods="TestCases.ProfileManagementTest.testLogout" duration-ms="15693" status="PASS">
+        <test-method signature="addNewUser()[pri:0, instance:TestCases.ProfileManagementTest@1c7fd41f]" started-at="2026-04-18T19:34:47 EDT" name="addNewUser" description="TC-PM-02: Assure user can add new user profile to account" finished-at="2026-04-18T19:34:47 EDT" depends-on-methods="TestCases.ProfileManagementTest.testLogout" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.testLogout() on instance TestCases.ProfileManagementTest@1c7fd41f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.testLogout() on instance TestCases.ProfileManagementTest@1c7fd41f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewUser -->
-        <test-method signature="editUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@a8e6492]" started-at="2026-04-18T19:13:15 EDT" name="editUserProfile" description="TC-PM-03: Assure user can edit existing user profile" finished-at="2026-04-18T19:13:26 EDT" depends-on-methods="TestCases.ProfileManagementTest.addNewUser" duration-ms="11120" status="PASS">
+        <test-method signature="editUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@1c7fd41f]" started-at="2026-04-18T19:34:47 EDT" name="editUserProfile" description="TC-PM-03: Assure user can edit existing user profile" finished-at="2026-04-18T19:34:47 EDT" depends-on-methods="TestCases.ProfileManagementTest.addNewUser" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.addNewUser() on instance TestCases.ProfileManagementTest@1c7fd41f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editUserProfile -->
-        <test-method signature="deleteUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@a8e6492]" started-at="2026-04-18T19:13:26 EDT" name="deleteUserProfile" description="TC-PM-04: Assure user can delete user profile" finished-at="2026-04-18T19:13:29 EDT" depends-on-methods="TestCases.ProfileManagementTest.editUserProfile" duration-ms="2943" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteUserProfile -->
-        <test-method signature="chooseProfile()[pri:0, instance:TestCases.ProfileManagementTest@a8e6492]" started-at="2026-04-18T19:13:29 EDT" name="chooseProfile" description="TC-PM-05: Assure user can choose their own profile" finished-at="2026-04-18T19:13:33 EDT" depends-on-methods="TestCases.ProfileManagementTest.deleteUserProfile" duration-ms="4621" status="PASS">
+        <test-method signature="chooseProfile()[pri:0, instance:TestCases.ProfileManagementTest@1c7fd41f]" started-at="2026-04-18T19:34:47 EDT" name="chooseProfile" description="TC-PM-05: Assure user can choose their own profile" finished-at="2026-04-18T19:34:47 EDT" depends-on-methods="TestCases.ProfileManagementTest.deleteUserProfile" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ProfileManagementTest.chooseProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ProfileManagementTest.chooseProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chooseProfile -->
+        <test-method signature="deleteUserProfile()[pri:0, instance:TestCases.ProfileManagementTest@1c7fd41f]" started-at="2026-04-18T19:34:47 EDT" name="deleteUserProfile" description="TC-PM-04: Assure user can delete user profile" finished-at="2026-04-18T19:34:47 EDT" depends-on-methods="TestCases.ProfileManagementTest.editUserProfile" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ProfileManagementTest.deleteUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f depends on not successfully finished methods 
+[TestCases.ProfileManagementTest.editUserProfile() on instance TestCases.ProfileManagementTest@1c7fd41f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserProfile -->
       </class> <!-- TestCases.ProfileManagementTest -->
       <class name="TestCases.ShowTest">
-        <test-method signature="seriesInfo()[pri:0, instance:TestCases.ShowTest@662f5666]" started-at="2026-04-18T19:16:03 EDT" name="seriesInfo" description="TC-VP-01: Verify series info properly displays" finished-at="2026-04-18T19:16:17 EDT" duration-ms="13260" status="PASS">
+        <test-method signature="seriesInfo()[pri:0, instance:TestCases.ShowTest@fd8294b]" started-at="2026-04-18T19:35:44 EDT" name="seriesInfo" description="TC-VP-01: Verify series info properly displays" finished-at="2026-04-18T19:35:54 EDT" duration-ms="10289" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: div.header-logo a.erc-logo[aria-label='Crunchyroll logo'][href='/discover'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.header-logo a.erc-logo[aria-label='Crunchyroll logo'][href='/discover'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\sebastian\Document...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 11704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f9b27c2ce1c48224845f842f5af2580
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestCases.ShowTest.seriesInfo(ShowTest.java:57)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seriesInfo -->
-        <test-method signature="episodeDetails()[pri:0, instance:TestCases.ShowTest@662f5666]" started-at="2026-04-18T19:16:17 EDT" name="episodeDetails" description="TC-VP-02: Verify episode details display correctly" finished-at="2026-04-18T19:16:26 EDT" depends-on-methods="TestCases.ShowTest.seriesInfo" duration-ms="9350" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- episodeDetails -->
-        <test-method signature="seasonsMenu()[pri:0, instance:TestCases.ShowTest@662f5666]" started-at="2026-04-18T19:16:26 EDT" name="seasonsMenu" description="TC-VP-03: Verify drop down menu for seasons" finished-at="2026-04-18T19:16:37 EDT" depends-on-methods="TestCases.ShowTest.episodeDetails" duration-ms="10718" status="PASS">
+        <test-method signature="seasonsMenu()[pri:0, instance:TestCases.ShowTest@fd8294b]" started-at="2026-04-18T19:35:54 EDT" name="seasonsMenu" description="TC-VP-03: Verify drop down menu for seasons" finished-at="2026-04-18T19:35:54 EDT" depends-on-methods="TestCases.ShowTest.episodeDetails" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seasonsMenu -->
-        <test-method signature="testPlayback()[pri:0, instance:TestCases.ShowTest@662f5666]" started-at="2026-04-18T19:16:37 EDT" name="testPlayback" description="TC-VP-04: Test playback on episode 146" finished-at="2026-04-18T19:16:50 EDT" depends-on-methods="TestCases.ShowTest.seasonsMenu" duration-ms="13627" status="PASS">
+        <test-method signature="testPlayback()[pri:0, instance:TestCases.ShowTest@fd8294b]" started-at="2026-04-18T19:35:54 EDT" name="testPlayback" description="TC-VP-04: Test playback on episode 146" finished-at="2026-04-18T19:35:54 EDT" depends-on-methods="TestCases.ShowTest.seasonsMenu" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seasonsMenu() on instance TestCases.ShowTest@fd8294b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlayback -->
-        <test-method signature="continueWatching()[pri:0, instance:TestCases.ShowTest@662f5666]" started-at="2026-04-18T19:16:50 EDT" name="continueWatching" description="TC-VP-05: Test continue watching – assure playback works from home feed" finished-at="2026-04-18T19:17:22 EDT" depends-on-methods="TestCases.ShowTest.testPlayback" duration-ms="31368" status="PASS">
+        <test-method signature="episodeDetails()[pri:0, instance:TestCases.ShowTest@fd8294b]" started-at="2026-04-18T19:35:54 EDT" name="episodeDetails" description="TC-VP-02: Verify episode details display correctly" finished-at="2026-04-18T19:35:54 EDT" depends-on-methods="TestCases.ShowTest.seriesInfo" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@fd8294b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.episodeDetails() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.seriesInfo() on instance TestCases.ShowTest@fd8294b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- episodeDetails -->
+        <test-method signature="continueWatching()[pri:0, instance:TestCases.ShowTest@fd8294b]" started-at="2026-04-18T19:35:54 EDT" name="continueWatching" description="TC-VP-05: Test continue watching – assure playback works from home feed" finished-at="2026-04-18T19:35:54 EDT" depends-on-methods="TestCases.ShowTest.testPlayback" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.ShowTest.continueWatching() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.ShowTest.continueWatching() on instance TestCases.ShowTest@fd8294b depends on not successfully finished methods 
+[TestCases.ShowTest.testPlayback() on instance TestCases.ShowTest@fd8294b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.example.Main.main(Main.java:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- continueWatching -->
