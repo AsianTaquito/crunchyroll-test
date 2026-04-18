@@ -1,3 +1,14 @@
-2026/04/18-18:48:16.241 17f4 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/04/18-18:48:16.245 17f4 Recovering log #261
-2026/04/18-18:48:16.247 17f4 Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/000261.log 
+2026/04/18-19:07:55.725 4d84 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/18-19:07:55.729 4d84 Recovering log #275
+2026/04/18-19:07:55.729 4d84 Level-0 table #278: started
+2026/04/18-19:07:55.733 4d84 Level-0 table #278: 32577 bytes OK
+2026/04/18-19:07:55.736 4d84 Delete type=0 #275
+2026/04/18-19:07:55.737 b0c Compacting 4@0 + 1@1 files
+2026/04/18-19:07:55.744 b0c Generated table #280@0: 137 keys, 529738 bytes
+2026/04/18-19:07:55.744 b0c Compacted 4@0 + 1@1 files => 529738 bytes
+2026/04/18-19:07:55.745 b0c compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/18-19:07:55.746 b0c Delete type=2 #270
+2026/04/18-19:07:55.746 b0c Delete type=2 #272
+2026/04/18-19:07:55.746 b0c Delete type=2 #274
+2026/04/18-19:07:55.746 b0c Delete type=2 #276
+2026/04/18-19:07:55.746 b0c Delete type=2 #278

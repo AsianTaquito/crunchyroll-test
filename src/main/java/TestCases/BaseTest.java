@@ -275,8 +275,9 @@ public class BaseTest {
 
     // Search icon/link in the header
     protected static final By SEARCH_ICON = By.cssSelector(
-            "a[aria-label='Search'][href*='/search'], [data-t='search-svg']" +
-                    "a.erc-search-header-button-old, a[href='/search'][aria-label='Search']");
+            "a[aria-label='Search'][href*='/search'][data-t='search-svg'], " +
+            "a.erc-search-header-button-old, " +
+            "a[href='/search'][aria-label='Search']");
 
     //logo to go back to homepage
     protected static final By LOGO = By.cssSelector(
