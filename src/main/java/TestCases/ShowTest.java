@@ -61,10 +61,6 @@ public class ShowTest extends BaseTest {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
-        // Dismiss cookie popup if present so card clicks are not intercepted.
-        dismissCookieConsent();
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#onetrust-banner-sdk, #onetrust-policy-text")));
-
         // Click on One Piece from the home page feed
         By onePieceCard = By.cssSelector("a[href='/series/GRMG8ZQZR/one-piece']");
         WebElement onePieceLink = wait.until(ExpectedConditions.presenceOfElementLocated(onePieceCard));

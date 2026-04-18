@@ -1,3 +1,6 @@
-2026/04/16-13:08:04.189 2374 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Session Storage/MANIFEST-000001
-2026/04/16-13:08:04.189 2374 Recovering log #16
-2026/04/16-13:08:04.192 2374 Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Session Storage/000016.log 
+2026/04/18-18:48:16.326 17f4 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Session Storage/MANIFEST-000001
+2026/04/18-18:48:16.327 17f4 Recovering log #16
+2026/04/18-18:48:16.333 17f4 Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Session Storage/000016.log 
+2026/04/18-18:48:59.431 4a8 Level-0 table #20: started
+2026/04/18-18:48:59.437 4a8 Level-0 table #20: 21480 bytes OK
+2026/04/18-18:48:59.438 4a8 Delete type=0 #16

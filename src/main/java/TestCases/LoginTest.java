@@ -67,7 +67,7 @@ public class LoginTest extends BaseTest {
         } catch (InterruptedException ignored) {}
     }
 
-/*
+
     @Test(description = "TC-LGN-04: Assure system rejects wrong credentials",
     dependsOnMethods = "testForgotPassword")
     public void testInvalidLogin() {
@@ -95,11 +95,11 @@ public class LoginTest extends BaseTest {
                 "Should remain on the login page after submitting invalid credentials");
 
         System.out.println("Invalid credentials correctly rejected — still on login page.\n");
-    }*/
+    }
 
 
     @Test(description = "TC-LGN-05: Assure user can login with valid credentials",
-    dependsOnMethods = "testInputFields")
+    dependsOnMethods = "testInvalidLogin")
     public void testValidLogin() {
         loginWithValidCredentials();
 

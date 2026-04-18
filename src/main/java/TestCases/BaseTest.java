@@ -34,8 +34,8 @@ public class BaseTest {
 
     // Shared credentials
     // Replace with real values before running the suite
-    protected static final String VALID_EMAIL    = "";
-    protected static final String VALID_PASSWORD = "";
+    protected static final String VALID_EMAIL    = "mouye.martin@gmail.com";
+    protected static final String VALID_PASSWORD = "Alfonse-6952!";
 
     // Saved between runs so the CAPTCHA only ever has to be solved once
     private static final String COOKIE_FILE = "crunchyroll_session.cookies";
@@ -219,23 +219,6 @@ public class BaseTest {
         } catch (NoSuchElementException ignored) { }
     }
 
-    //doesnt work - come back later to fix
-    protected void dismissCookieConsent() {
-        try {
-            WebElement btn = driver.findElement(By.cssSelector(
-                    "#onetrust-accept-btn-handler, " +
-                    "[class*='onetrust-accept'], " +
-                    "button[id*='accept-recommended'], " +
-                    "#accept-recommended-btn-handler"));
-            if (btn.isDisplayed()) {
-                btn.click();
-                System.out.println("Dismissed OneTrust cookie consent.");
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException ignored) {}
-            }
-        } catch (NoSuchElementException ignored) { }
-    }
 
     // Returns true if at least one element matching the locator exists
     protected boolean isElementPresent(By locator) {
