@@ -1,3 +1,6 @@
-2026/04/18-19:03:39.776 c3c Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\IndexedDB\https_store.crunchyroll.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/04/18-19:03:39.776 c3c Recovering log #3
-2026/04/18-19:03:39.787 c3c Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\IndexedDB\https_store.crunchyroll.com_0.indexeddb.leveldb/000003.log 
+2026/04/18-19:15:22.917 3008 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\IndexedDB\https_store.crunchyroll.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/18-19:15:22.917 3008 Recovering log #3
+2026/04/18-19:15:22.930 3008 Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\IndexedDB\https_store.crunchyroll.com_0.indexeddb.leveldb/000003.log 
+2026/04/18-19:15:35.790 8d0 Level-0 table #5: started
+2026/04/18-19:15:35.808 8d0 Level-0 table #5: 834443 bytes OK
+2026/04/18-19:15:35.810 8d0 Delete type=0 #3

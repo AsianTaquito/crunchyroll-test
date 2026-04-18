@@ -14,17 +14,17 @@
           <include name="suiteSetUp"/>
         </methods>
       </class> <!-- TestCases.SearchTest -->
-      <class name="TestCases.NavigationTest">
+      <class name="TestCases.SubServicesTest">
         <methods>
-          <include name="searchNav"/>
-          <include name="watchlistNav"/>
-          <include name="navLinks"/>
+          <include name="testStore"/>
+          <include name="testAccountTransfer"/>
+          <include name="testGames"/>
+          <include name="testNews"/>
+          <include name="testManga"/>
           <include name="suiteTearDown"/>
-          <include name="navByCategory"/>
-          <include name="testLogoNav"/>
           <include name="suiteSetUp"/>
         </methods>
-      </class> <!-- TestCases.NavigationTest -->
+      </class> <!-- TestCases.SubServicesTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

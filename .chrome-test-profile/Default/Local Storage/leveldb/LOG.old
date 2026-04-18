@@ -1,7 +1,5 @@
-2026/04/18-19:06:40.160 1994 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/04/18-19:06:40.165 1994 Recovering log #273
-2026/04/18-19:06:40.165 1994 Level-0 table #276: started
-2026/04/18-19:06:40.169 1994 Level-0 table #276: 32378 bytes OK
-2026/04/18-19:06:40.169 1994 Recovering log #275
-2026/04/18-19:06:40.171 1994 Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/000275.log 
-2026/04/18-19:06:40.172 1994 Delete type=0 #273
+2026/04/18-19:11:01.912 1324 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/18-19:11:01.915 1324 Recovering log #279
+2026/04/18-19:11:01.915 1324 Level-0 table #282: started
+2026/04/18-19:11:01.919 1324 Level-0 table #282: 32078 bytes OK
+2026/04/18-19:11:01.922 1324 Delete type=0 #279

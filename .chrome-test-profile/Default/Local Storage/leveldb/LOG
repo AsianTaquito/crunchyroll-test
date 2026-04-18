@@ -1,14 +1,24 @@
-2026/04/18-19:07:55.725 4d84 Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/04/18-19:07:55.729 4d84 Recovering log #275
-2026/04/18-19:07:55.729 4d84 Level-0 table #278: started
-2026/04/18-19:07:55.733 4d84 Level-0 table #278: 32577 bytes OK
-2026/04/18-19:07:55.736 4d84 Delete type=0 #275
-2026/04/18-19:07:55.737 b0c Compacting 4@0 + 1@1 files
-2026/04/18-19:07:55.744 b0c Generated table #280@0: 137 keys, 529738 bytes
-2026/04/18-19:07:55.744 b0c Compacted 4@0 + 1@1 files => 529738 bytes
-2026/04/18-19:07:55.745 b0c compacted to: files[ 0 1 0 0 0 0 0 ]
-2026/04/18-19:07:55.746 b0c Delete type=2 #270
-2026/04/18-19:07:55.746 b0c Delete type=2 #272
-2026/04/18-19:07:55.746 b0c Delete type=2 #274
-2026/04/18-19:07:55.746 b0c Delete type=2 #276
-2026/04/18-19:07:55.746 b0c Delete type=2 #278
+2026/04/18-19:12:02.668 434c Reusing MANIFEST C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/18-19:12:02.671 434c Recovering log #283
+2026/04/18-19:12:02.673 434c Reusing old log C:\Users\sebastian\Documents\GitHub\crunchyroll-test\.chrome-test-profile\Default\Local Storage\leveldb/000283.log 
+2026/04/18-19:14:03.449 1a90 Level-0 table #286: started
+2026/04/18-19:14:03.453 1a90 Level-0 table #286: 33418 bytes OK
+2026/04/18-19:14:03.455 1a90 Delete type=0 #283
+2026/04/18-19:15:03.445 1a90 Level-0 table #288: started
+2026/04/18-19:15:03.449 1a90 Level-0 table #288: 32160 bytes OK
+2026/04/18-19:15:03.450 1a90 Delete type=0 #285
+2026/04/18-19:15:28.602 1a90 Level-0 table #290: started
+2026/04/18-19:15:28.606 1a90 Level-0 table #290: 29214 bytes OK
+2026/04/18-19:15:28.607 1a90 Delete type=0 #287
+2026/04/18-19:15:28.607 1a90 Compacting 4@0 + 1@1 files
+2026/04/18-19:15:28.613 1a90 Generated table #291@0: 137 keys, 529916 bytes
+2026/04/18-19:15:28.613 1a90 Compacted 4@0 + 1@1 files => 529916 bytes
+2026/04/18-19:15:28.614 1a90 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/18-19:15:28.615 1a90 Delete type=2 #280
+2026/04/18-19:15:28.615 1a90 Delete type=2 #282
+2026/04/18-19:15:28.615 1a90 Delete type=2 #286
+2026/04/18-19:15:28.615 1a90 Delete type=2 #288
+2026/04/18-19:15:28.615 1a90 Delete type=2 #290
+2026/04/18-19:17:03.446 1a90 Level-0 table #293: started
+2026/04/18-19:17:03.450 1a90 Level-0 table #293: 34796 bytes OK
+2026/04/18-19:17:03.452 1a90 Delete type=0 #289
