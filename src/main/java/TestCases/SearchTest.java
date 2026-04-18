@@ -65,6 +65,11 @@ public class SearchTest extends BaseTest {
     @Test(description = "TC-SR-01: Assure search page loads")
     public void testSearchPage() {
 
+
+        if (isElementPresent(MY_PROFILE)) {
+            driver.findElement(MY_PROFILE).click();
+        }
+
         // Click the header search icon to navigate to the search page
         clickElement(SEARCH_ICON);
         try {

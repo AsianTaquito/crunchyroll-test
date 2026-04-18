@@ -52,22 +52,23 @@ public class ShowTest extends BaseTest {
     @Test(description = "TC-VP-01: Verify series info properly displays")
     public void seriesInfo() {
 
-        // Click the Crunchyroll header logo to refresh page
-        By homeLogo = By.cssSelector("div.header-logo a.erc-logo[aria-label='Crunchyroll logo'][href='/discover']");
-        WebElement logoLink = wait.until(ExpectedConditions.elementToBeClickable(homeLogo));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", logoLink);
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
+
+        if (isElementPresent(MY_PROFILE)) {
+            driver.findElement(MY_PROFILE).click();
+        }
 
         try {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
 
-        // Dismiss cookie popup if present so card clicks are not intercepted.
-        dismissCookieConsent();
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#onetrust-banner-sdk, #onetrust-policy-text")));
 
         // Click on One Piece from the home page feed
         By onePieceCard = By.cssSelector("a[href='/series/GRMG8ZQZR/one-piece']");
         WebElement onePieceLink = wait.until(ExpectedConditions.presenceOfElementLocated(onePieceCard));
+
         scrollToElement(onePieceLink);
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", onePieceLink);
         wait.until(ExpectedConditions.urlContains("one-piece"));

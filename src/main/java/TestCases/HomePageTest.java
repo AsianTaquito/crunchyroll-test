@@ -47,6 +47,14 @@ public class HomePageTest extends BaseTest {
     @Test(description = "TC-HP-01: Assure homepage displays title & logo")
     public void titleANDlogo() {
 
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
+
+        if (isElementPresent(MY_PROFILE)) {
+            driver.findElement(MY_PROFILE).click();
+        }
+
         // Title check
         boolean titlePresent = driver.getTitle().contains("Crunchyroll");
         Assert.assertTrue(titlePresent,

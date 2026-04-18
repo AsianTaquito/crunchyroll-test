@@ -34,6 +34,7 @@ public class    ProfileManagementTest extends BaseTest {
     @Test(description = "TC-PM-02: Assure user can add new user profile to account")
     public void addNewUser() {
 
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException ignored) {}
