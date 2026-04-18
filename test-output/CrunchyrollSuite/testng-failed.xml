@@ -3,19 +3,6 @@
 <suite name="Failed suite [CrunchyrollSuite]">
   <test thread-count="5" parallel="classes" name="ParallelTests(failed)">
     <classes>
-      <class name="TestCases.NavigationTest">
-        <methods>
-          <include name="classSetUp"/>
-          <include name="searchNav"/>
-          <include name="watchlistNav"/>
-          <include name="navLinks"/>
-          <include name="classTearDown"/>
-          <include name="suiteTearDown"/>
-          <include name="navByCategory"/>
-          <include name="testLogoNav"/>
-          <include name="suiteSetUp"/>
-        </methods>
-      </class> <!-- TestCases.NavigationTest -->
       <class name="TestCases.SearchTest">
         <methods>
           <include name="classSetUp"/>
@@ -29,23 +16,11 @@
           <include name="suiteSetUp"/>
         </methods>
       </class> <!-- TestCases.SearchTest -->
-      <class name="TestCases.ProfileManagementTest">
-        <methods>
-          <include name="classSetUp"/>
-          <include name="editUserProfile"/>
-          <include name="classTearDown"/>
-          <include name="addNewUser"/>
-          <include name="suiteTearDown"/>
-          <include name="chooseProfile"/>
-          <include name="deleteUserProfile"/>
-          <include name="suiteSetUp"/>
-        </methods>
-      </class> <!-- TestCases.ProfileManagementTest -->
       <class name="TestCases.SubServicesTest">
         <methods>
-          <include name="testStore"/>
           <include name="classSetUp"/>
           <include name="testAccountTransfer"/>
+          <include name="testStore"/>
           <include name="testGames"/>
           <include name="testNews"/>
           <include name="testManga"/>

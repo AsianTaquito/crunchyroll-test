@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class    ProfileManagementTest extends BaseTest {
 
-/*
+
     @Test(description = "TC-PM-01: Assure user can log out and log back in")
     public void testLogout(){
 
@@ -28,10 +28,11 @@ public class    ProfileManagementTest extends BaseTest {
         loginWithValidCredentials();
         System.out.println("Successfully logged back in.\n");
 
-    }*/
+    }
 
 
-    @Test(description = "TC-PM-02: Assure user can add new user profile to account")
+    @Test(description = "TC-PM-02: Assure user can add new user profile to account",
+        dependsOnMethods = "testLogout")
     public void addNewUser() {
 
 
