@@ -40,8 +40,8 @@ public class BaseTest {
     private static final AtomicInteger launchSlot = new AtomicInteger(0);
 
     protected static final String BASE_URL       = "https://www.crunchyroll.com";
-    protected static final String VALID_EMAIL    = "mouye.martin@gmail.com";
-    protected static final String VALID_PASSWORD = "Alfonse-6952!";
+    protected static final String VALID_EMAIL    = "";
+    protected static final String VALID_PASSWORD = "";
     private   static final String COOKIE_FILE    = "crunchyroll_session.cookies";
 
     // Suite-level setup (runs once — on the LoginTest instance)
